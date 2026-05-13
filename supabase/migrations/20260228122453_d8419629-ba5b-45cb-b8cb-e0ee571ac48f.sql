@@ -1,0 +1,1 @@
+DELETE FROM public.free_trial_requests WHERE email = 'test@smithlaw.co.uk';

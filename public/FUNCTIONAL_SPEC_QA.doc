@@ -1,0 +1,635 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<title>Olimey AI AI Agents — Functional Specification for QA</title>
+<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View></w:WordDocument></xml><![endif]-->
+<style>
+body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.5; margin: 40px 60px; color: #1a1a1a; }
+h1 { font-size: 22pt; color: #1a365d; border-bottom: 3px solid #1a365d; padding-bottom: 8px; page-break-before: auto; }
+h2 { font-size: 16pt; color: #1a365d; border-bottom: 1px solid #cbd5e0; padding-bottom: 4px; margin-top: 28px; page-break-before: always; }
+h3 { font-size: 13pt; color: #2d3748; margin-top: 20px; }
+h4 { font-size: 11pt; color: #4a5568; margin-top: 14px; font-weight: bold; }
+table { border-collapse: collapse; width: 100%; margin: 10px 0 16px 0; font-size: 10pt; }
+th { background: #1a365d; color: white; padding: 8px 10px; text-align: left; border: 1px solid #1a365d; }
+td { padding: 6px 10px; border: 1px solid #cbd5e0; vertical-align: top; }
+tr:nth-child(even) { background: #f7fafc; }
+.red { color: #c53030; font-weight: bold; }
+.amber { color: #c05621; font-weight: bold; }
+.green { color: #276749; font-weight: bold; }
+.critical { color: #9b2c2c; font-weight: bold; background: #fff5f5; padding: 2px 6px; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #edf2f7; padding: 1px 4px; }
+.box { border: 1px solid #cbd5e0; background: #f7fafc; padding: 12px 16px; margin: 10px 0; border-radius: 4px; }
+.warning-box { border: 2px solid #c05621; background: #fffaf0; padding: 12px 16px; margin: 12px 0; }
+.red-box { border: 2px solid #c53030; background: #fff5f5; padding: 12px 16px; margin: 12px 0; }
+ul { margin: 4px 0 10px 20px; }
+li { margin: 3px 0; }
+.cover { text-align: center; padding: 120px 40px 60px 40px; }
+.cover h1 { border: none; font-size: 28pt; }
+.cover p { font-size: 13pt; color: #4a5568; }
+.toc { page-break-after: always; }
+.toc a { text-decoration: none; color: #1a365d; }
+.footer { font-size: 9pt; color: #718096; text-align: center; margin-top: 40px; border-top: 1px solid #e2e8f0; padding-top: 8px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ COVER ═══════════════════════ -->
+<div class="cover">
+<h1>Olimey AI AI Agents<br/>Functional Specification for QA</h1>
+<p><strong>Agents Covered:</strong> Olimey AI &amp; TerraGuard™</p>
+<p><strong>Purpose:</strong> Hallucination Detection, Error Taxonomy &amp; QA Testing Guide</p>
+<p><strong>Version:</strong> 1.0 &nbsp;|&nbsp; <strong>Date:</strong> March 2026</p>
+<p><strong>Classification:</strong> Internal — QA Team Only</p>
+</div>
+
+<!-- ═══════════════════════ TOC ═══════════════════════ -->
+<div class="toc">
+<h2 style="page-break-before:avoid;">Table of Contents</h2>
+<ol>
+<li><a href="#part-a">Part A — Olimey AI (Source of Wealth Agent)</a></li>
+<li style="margin-left:20px;">A1. Purpose &amp; Scope</li>
+<li style="margin-left:20px;">A2. Input Data &amp; Document Types</li>
+<li style="margin-left:20px;">A3. Processing Pipeline</li>
+<li style="margin-left:20px;">A4. Deterministic Logic (Non-AI)</li>
+<li style="margin-left:20px;">A5. Expected Outputs</li>
+<li style="margin-left:20px;">A6. Hallucination Taxonomy</li>
+<li style="margin-left:20px;">A7. Common Errors &amp; Edge Cases</li>
+<li style="margin-left:20px;">A8. QA Verification Checklist</li>
+<li><a href="#part-b">Part B — TerraGuard™ (Search Review Agent)</a></li>
+<li style="margin-left:20px;">B1. Purpose &amp; Scope</li>
+<li style="margin-left:20px;">B2. Input Data &amp; Document Types</li>
+<li style="margin-left:20px;">B3. Processing Pipeline</li>
+<li style="margin-left:20px;">B4. Expected Outputs</li>
+<li style="margin-left:20px;">B5. Hallucination Taxonomy</li>
+<li style="margin-left:20px;">B6. Common Errors &amp; Edge Cases</li>
+<li style="margin-left:20px;">B7. QA Verification Checklist</li>
+<li><a href="#part-c">Part C — Cross-Agent Anti-Hallucination Controls</a></li>
+<li><a href="#part-d">Part D — Deterministic Validation Layer Reference</a></li>
+<li><a href="#glossary">Glossary</a></li>
+</ol>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART A — WEALTHVERIFY™
+     ═══════════════════════════════════════════════════════════════ -->
+<h1 id="part-a">Part A — Olimey AI (Source of Wealth Agent)</h1>
+
+<h2 style="page-break-before:avoid;">A1. Purpose &amp; Scope</h2>
+<p>Olimey AI performs structured Source of Wealth (SoW) assessments for residential property transactions in England &amp; Wales. It is aligned with:</p>
+<ul>
+<li>Money Laundering Regulations 2017 (MLR 2017), specifically Regulation 28</li>
+<li>Proceeds of Crime Act 2002 (POCA 2002)</li>
+<li>LSAG 2026 Anti-Money Laundering Guidance</li>
+<li>SRA/CLC regulatory requirements</li>
+</ul>
+
+<div class="red-box">
+<strong>🚨 CRITICAL DOMAIN CONSTRAINT:</strong> Olimey AI must ONLY reference <strong>financial evidence</strong> (bank statements, payslips, tax returns, mortgage offers, investment certificates). It is <strong>explicitly prohibited</strong> from referencing TA6, TA7, TA10 forms, title registers, leases, or search results. Any reference to these documents in a Olimey AI output is a <strong>cross-agent hallucination</strong>.
+</div>
+
+<h2>A2. Input Data &amp; Document Types</h2>
+
+<h3>A2.1 Form Data (Intake Wizard — 4 steps)</h3>
+<table>
+<tr><th>Step</th><th>Fields</th><th>QA Relevance</th></tr>
+<tr><td>1. Property</td><td>Case Reference, Property Address, Purchase Price, Tenure, Property Type, Lender, Transaction Type</td><td>Purchase Price drives SDLT calculation and funding gap</td></tr>
+<tr><td>2. Funding</td><td>Mortgage Amount, Primary Funding Source, per-person Contribution Amount, Employment Status</td><td>Mortgage Amount is critical — if missing, funding gap will be wrong</td></tr>
+<tr><td>3. Risk</td><td>PEP Status, Buyer Type (FTB/Additional Dwelling/Non-UK Resident/Company), Raise Enquiry toggles</td><td>Buyer Type determines SDLT surcharges (5% HRAD)</td></tr>
+<tr><td>4. Context</td><td>Additional Context narrative, per-person file attachments</td><td>Narrative is a fallback source for funding amounts — lower trust</td></tr>
+</table>
+
+<h3>A2.2 Accepted Document Types</h3>
+<table>
+<tr><th>Document Type</th><th>What AI Extracts</th><th>Hallucination Risk</th></tr>
+<tr><td>Bank Statements</td><td>Balances, transaction patterns, regular income</td><td class="amber">Medium — OCR errors on £ symbols, amounts</td></tr>
+<tr><td>Payslips</td><td>Gross/net salary, employer name, NI number</td><td class="amber">Medium — tax calculation verification needed</td></tr>
+<tr><td>Mortgage Offers</td><td>Advance amount, lender name, conditions</td><td class="green">Low — structured documents</td></tr>
+<tr><td>Tax Returns (SA302)</td><td>Declared income, tax paid</td><td class="amber">Medium — multi-year data can confuse LLM</td></tr>
+<tr><td>Investment Certificates</td><td>Current value, fund name, platform</td><td class="amber">Medium — ISA/SIPP valuations fluctuate</td></tr>
+<tr><td>Gift Letters</td><td>Amount, donor name, relationship</td><td class="red">High — unstructured, hand-written, varied formats</td></tr>
+<tr><td>Armalytix Reports</td><td>Consolidated financial analysis</td><td class="green">Low — auto-extracted via dedicated function</td></tr>
+<tr><td>Solicitor Confirmations</td><td>Property sale proceeds, completion dates</td><td class="amber">Medium — date format parsing issues</td></tr>
+</table>
+
+<h2>A3. Processing Pipeline</h2>
+
+<h3>A3.1 Pipeline Stages</h3>
+<table>
+<tr><th>#</th><th>Stage</th><th>Method</th><th>What to Verify</th></tr>
+<tr><td>1</td><td>Document Pre-processing</td><td>Multimodal Gemini extraction + OCR</td><td>Text extracted completely, no truncation</td></tr>
+<tr><td>2</td><td>Symbol Normalisation</td><td>Deterministic regex (£, E, L, &amp;, A3 → £)</td><td>All currency symbols correctly normalised</td></tr>
+<tr><td>3</td><td>Funds Ledger Construction</td><td>Deterministic: regex + fuzzy matching to fixed keys</td><td>Amounts correctly mapped to ledger categories</td></tr>
+<tr><td>4</td><td>SDLT Calculation</td><td>Deterministic: March 2026 bands + 5% HRAD</td><td>Exact match to HMRC calculator</td></tr>
+<tr><td>5</td><td>Funding Gap Calculation</td><td>Deterministic: (Purchase + SDLT + Fees) − (Mortgage + Ledger)</td><td>Gap must be ≤ £100 of manual calculation</td></tr>
+<tr><td>6</td><td>AI Risk Analysis</td><td>LLM (Gemini 2.5 Pro / Flash)</td><td>Evidence-grounded, no fabricated sources</td></tr>
+<tr><td>7</td><td>Cross-Family Judge</td><td>Different-provider LLM (GPT-5-nano)</td><td>Judge verifies AI findings against documents</td></tr>
+<tr><td>8</td><td>Deterministic Post-Validation</td><td>Programmatic: discrepancy check (>£100 = flag)</td><td>DISCREPANCY DETECTED flag fires correctly</td></tr>
+</table>
+
+<h3>A3.2 Ledger Key Mapping</h3>
+<p>The system maps all funding sources to exactly <strong>8 fixed keys</strong>. Any output that references a key not in this list is an error:</p>
+<table>
+<tr><th>Ledger Key</th><th>Mapped From (examples)</th></tr>
+<tr><td><code>mortgage</code></td><td>Mortgage, Mortgage Advance, Mortgage Offer</td></tr>
+<tr><td><code>savings</code></td><td>Savings, Bank Savings, Deposit, Current Account</td></tr>
+<tr><td><code>gift</code></td><td>Gift, Gifted Deposit, Family Gift, Parental Gift</td></tr>
+<tr><td><code>inheritance</code></td><td>Inheritance, Probate, Estate, Bequest</td></tr>
+<tr><td><code>investment</code></td><td>ISA, LISA, Stocks &amp; Shares ISA, Bonds, Premium Bonds, Unit Trust</td></tr>
+<tr><td><code>pension</code></td><td>SIPP, SIPP Drawdown, Pension, PCLS, Tax-Free Lump Sum</td></tr>
+<tr><td><code>other</code></td><td>Bonus, Salary, Redundancy, Loan, Director Loan, Crypto, Compensation</td></tr>
+<tr><td><code>pending_funds</code></td><td>House Sale, Property Sale Proceeds, ISA Withdrawal (within 14 days)</td></tr>
+</table>
+
+<h2>A4. Deterministic Logic (Non-AI) — What MUST Be Exact</h2>
+
+<div class="warning-box">
+<strong>⚠️ KEY PRINCIPLE:</strong> The following calculations are performed by deterministic JavaScript code, NOT by the AI model. If the AI output contradicts these numbers, the system should show a <strong>DISCREPANCY DETECTED</strong> flag. If it doesn't, that's a bug.
+</div>
+
+<h3>A4.1 SDLT Calculation (March 2026 Rates)</h3>
+<table>
+<tr><th>Band</th><th>Rate</th></tr>
+<tr><td>£0 – £250,000</td><td>0%</td></tr>
+<tr><td>£250,001 – £925,000</td><td>5%</td></tr>
+<tr><td>£925,001 – £1,500,000</td><td>10%</td></tr>
+<tr><td>Over £1,500,000</td><td>12%</td></tr>
+<tr><td colspan="2"><em>Additional Dwelling Surcharge (HRAD): +5% on entire purchase price</em></td></tr>
+</table>
+
+<h3>A4.2 Funding Gap Formula</h3>
+<div class="box">
+<code>Total Required = Purchase Price + SDLT + Legal Fees</code><br/>
+<code>Total Available = Mortgage + Sum(All Ledger Items)</code><br/>
+<code>Funding Gap = Total Required − Total Available</code><br/><br/>
+<strong>Materiality Threshold:</strong> Gap ÷ Purchase Price. If &lt; 2%, classified as immaterial.<br/>
+<strong>Discrepancy Threshold:</strong> If AI-calculated gap differs from deterministic gap by &gt; £100, flag fires.
+</div>
+
+<h3>A4.3 Bonus Tax Delta Check</h3>
+<div class="box">
+<code>Expected Net = Gross Bonus × (1 − 0.40)</code><br/>
+<code>Tolerance = Gross Bonus × 0.05</code><br/>
+If <code>|Actual Net − Expected Net| &gt; Tolerance</code> → flag as UNVERIFIED.
+</div>
+
+<h3>A4.4 In-Flight Funds (14-Day Rule)</h3>
+<p>Funds from property sales or ISA withdrawals are included if the expected date is within <strong>30 days</strong> of the current date. The system parses dates in UK format (DD/MM/YYYY) and ISO format.</p>
+
+<h2>A5. Expected Outputs</h2>
+
+<h3>A5.1 Structured Report Sections</h3>
+<table>
+<tr><th>Section</th><th>Content</th><th>QA Focus</th></tr>
+<tr><td>Funding Summary</td><td>Tabulated ledger with verified/unverified status</td><td>Every amount must trace to a document</td></tr>
+<tr><td>Funding Gap Analysis</td><td>Gap calculation with breakdown</td><td>Must match deterministic calculation within £100</td></tr>
+<tr><td>SDLT Breakdown</td><td>Band-by-band calculation</td><td>Must exactly match HMRC rates</td></tr>
+<tr><td>Risk Assessment</td><td>Green/Amber/Red rating with reasoning</td><td>Rating must be supported by evidence</td></tr>
+<tr><td>Enquiries</td><td>Structured questions for further investigation</td><td>Each enquiry must reference a specific document</td></tr>
+<tr><td>Math Audit</td><td>AI vs deterministic comparison</td><td>Discrepancies &gt; £100 must be flagged</td></tr>
+<tr><td>Compliance Check</td><td>MLR 2017 / POCA 2002 / LSAG alignment</td><td>Regulations cited must be real and relevant</td></tr>
+</table>
+
+<h2>A6. Hallucination Taxonomy — Olimey AI</h2>
+
+<div class="red-box">
+<strong>This section is the core reference for QA specialists.</strong> Each hallucination type includes what it looks like, how to detect it, and severity.
+</div>
+
+<h3>H1. Fabricated Financial Amounts</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI reports a specific £ amount that does not appear in any uploaded document</td></tr>
+<tr><td>Example</td><td>"Bank statement shows savings of £45,000" when the actual document shows £35,000</td></tr>
+<tr><td>Detection</td><td>Cross-reference every £ amount in the report against the uploaded documents. Check the "Ledger Match" column — unverified amounts should be labelled "(unverified_amount — narrative only)"</td></tr>
+<tr><td>Severity</td><td class="critical">CRITICAL — directly affects funding gap and risk rating</td></tr>
+<tr><td>Frequency</td><td>Most common with OCR-processed documents where £ is misread as E, L, or &amp;</td></tr>
+</table>
+
+<h3>H2. Phantom Document References</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI cites a document that was never uploaded (e.g., "As confirmed in the mortgage offer from Halifax…" when no Halifax mortgage offer exists in the case)</td></tr>
+<tr><td>Detection</td><td>Compare every [Doc: …] citation against the actual document inventory. Check the document_inventory section of the structured output.</td></tr>
+<tr><td>Severity</td><td class="critical">CRITICAL — creates false audit trail</td></tr>
+</table>
+
+<h3>H3. Incorrect Risk Level Classification</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI classifies risk as Green when evidence warrants Amber/Red, or vice versa</td></tr>
+<tr><td>Common Causes</td><td>
+<ul>
+<li>Funding gap exists but AI says "Funding fully verified" (if gap &gt; 2% of purchase price)</li>
+<li>Gift from third party not flagged as requiring a gift letter</li>
+<li>Director's Loan from company with strike-off notice not flagged as High Risk</li>
+<li>Hawala/informal transfers not escalated</li>
+</ul></td></tr>
+<tr><td>Detection</td><td>Compare risk level against the deterministic funding gap. If gap is material (&gt;2%) and risk is Green → hallucination</td></tr>
+<tr><td>Severity</td><td class="red">HIGH — compliance failure</td></tr>
+</table>
+
+<h3>H4. Cross-Agent Domain Leakage</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>Olimey AI references documents or concepts from TerraGuard™'s domain (search results, environmental reports, local authority data)</td></tr>
+<tr><td>Example</td><td>"The environmental search indicates flood risk which may affect the property valuation…" — this is TerraGuard's domain</td></tr>
+<tr><td>Detection</td><td>Search report for: "environmental search", "local authority", "drainage", "TA6", "TA7", "TA10", "title register", "lease", "conservation area"</td></tr>
+<tr><td>Severity</td><td class="red">HIGH — indicates model confusion between agent system prompts</td></tr>
+</table>
+
+<h3>H5. Fabricated Regulatory References</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI cites a regulation, section, or guidance note that doesn't exist</td></tr>
+<tr><td>Example</td><td>"Under Regulation 35 of MLR 2017…" (MLR 2017 only has 107 regulations — so plausible but check the actual content matches)</td></tr>
+<tr><td>Detection</td><td>Verify all regulation references against legislation.gov.uk. Check that the substance matches what the regulation actually says.</td></tr>
+<tr><td>Severity</td><td class="red">HIGH — undermines regulatory credibility</td></tr>
+</table>
+
+<h3>H6. Funding Gap Inversion</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI reports a surplus when there's actually a shortfall, or vice versa</td></tr>
+<tr><td>Detection</td><td>Manually compute: (Purchase Price + SDLT + Legal Fees) − (Mortgage + All Sources). Compare to AI output and deterministic output.</td></tr>
+<tr><td>Severity</td><td class="critical">CRITICAL — the deterministic override should prevent this, but check the DISCREPANCY flag</td></tr>
+</table>
+
+<h3>H7. OCR-Induced Numeric Errors</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI faithfully reports an OCR-corrupted number (e.g., £45,0OO instead of £45,000 — letter O vs zero)</td></tr>
+<tr><td>Detection</td><td>Check for suspiciously round/unround numbers. Compare against the symbol normaliser output. Look for amounts that are exactly 10× or 0.1× the actual amount.</td></tr>
+<tr><td>Severity</td><td class="amber">MEDIUM — the symbol normaliser should catch £→E/L/& but may miss O→0</td></tr>
+</table>
+
+<h3>H8. Temporal Confusion</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI confuses dates across documents, e.g., reporting a 2024 bank balance as the current balance, or treating a completed property sale as still pending</td></tr>
+<tr><td>Detection</td><td>Check that statement dates, valuation dates, and completion dates are accurately extracted and not confused</td></tr>
+<tr><td>Severity</td><td class="amber">MEDIUM — affects in-flight funds and pending status</td></tr>
+</table>
+
+<h3>H9. Double-Counting</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>Same funds counted twice — e.g., savings mentioned in a bank statement AND in the narrative, both added to the ledger</td></tr>
+<tr><td>Detection</td><td>Sum all ledger items and compare against the totalAvailable in the deterministic output. The ledger construction code should prevent this but narrative fallback can introduce duplicates.</td></tr>
+<tr><td>Severity</td><td class="red">HIGH — inflates available funds, hides shortfall</td></tr>
+</table>
+
+<h2>A7. Common Errors &amp; Edge Cases</h2>
+
+<h3>A7.1 Stress Test Failure Categories</h3>
+<p>The adversarial stress test framework groups failures into 5 categories:</p>
+<table>
+<tr><th>Category</th><th>Description</th><th>Example</th></tr>
+<tr><td>Math Failure</td><td>Incorrect arithmetic in funding calculations</td><td>SDLT calculated with wrong bands or missing HRAD surcharge</td></tr>
+<tr><td>UK Law Misinterpretation</td><td>Incorrect application of UK legislation</td><td>Applying Scottish LBTT rates instead of English SDLT</td></tr>
+<tr><td>OCR/Symbol Failure</td><td>Misreading currency symbols or numbers</td><td>£ read as E, treating E50,000 as euros</td></tr>
+<tr><td>Risk Classification Error</td><td>Wrong risk level for the evidence</td><td>Dormant company loan classified as Low Risk</td></tr>
+<tr><td>Legal &amp; Regulatory Risk</td><td>Missing tax avoidance/evasion patterns</td><td>Circular payment patterns not flagged</td></tr>
+</table>
+
+<h3>A7.2 Specific Red Flag Patterns That MUST Be Caught</h3>
+<table>
+<tr><th>Pattern</th><th>Expected Outcome</th><th>If Missing = Error Type</th></tr>
+<tr><td>Director's Loan from company with strike-off notice</td><td>Flag as High Risk, cite LSAG guidance</td><td>Risk Classification Error</td></tr>
+<tr><td>Hawala / informal value transfer</td><td>Escalate immediately, flag for SAR consideration</td><td>Legal &amp; Regulatory Risk</td></tr>
+<tr><td>Circular payment patterns (A→B→C→A)</td><td>Flag as potential money laundering indicator</td><td>Legal &amp; Regulatory Risk</td></tr>
+<tr><td>Offshore trust distributions without documentation</td><td>Flag for enhanced due diligence</td><td>Risk Classification Error</td></tr>
+<tr><td>Gift from non-family member with no gift letter</td><td>Flag as Amber minimum, request gift letter</td><td>Risk Classification Error</td></tr>
+<tr><td>Cash deposits without explanation</td><td>Flag and enquire about source</td><td>Risk Classification Error</td></tr>
+<tr><td>Bonus with &gt;5% tax delta</td><td>Flag as UNVERIFIED with calculation</td><td>Math Failure</td></tr>
+</table>
+
+<h2>A8. QA Verification Checklist — Olimey AI</h2>
+
+<table>
+<tr><th>#</th><th>Check</th><th>Pass/Fail</th></tr>
+<tr><td>W1</td><td>Every £ amount in the report can be traced to a specific uploaded document</td><td></td></tr>
+<tr><td>W2</td><td>SDLT calculation matches HMRC calculator exactly</td><td></td></tr>
+<tr><td>W3</td><td>Funding gap matches deterministic calculation within £100</td><td></td></tr>
+<tr><td>W4</td><td>All 8 ledger keys are present in output (even if £0)</td><td></td></tr>
+<tr><td>W5</td><td>No references to TA6/TA7/TA10, title registers, leases, or search documents</td><td></td></tr>
+<tr><td>W6</td><td>Risk level is consistent with funding gap (gap &gt;2% ≠ Green)</td><td></td></tr>
+<tr><td>W7</td><td>All regulatory citations reference real legislation with correct section numbers</td><td></td></tr>
+<tr><td>W8</td><td>HRAD surcharge applied when buyer is "Additional Dwelling" type</td><td></td></tr>
+<tr><td>W9</td><td>"Math Audit" section present with AI vs deterministic comparison</td><td></td></tr>
+<tr><td>W10</td><td>DISCREPANCY DETECTED flag fires when AI/deterministic gap differs by &gt;£100</td><td></td></tr>
+<tr><td>W11</td><td>Unverified amounts labelled "(unverified_amount — narrative only)"</td><td></td></tr>
+<tr><td>W12</td><td>In-flight funds only included if completion within 30 days</td><td></td></tr>
+<tr><td>W13</td><td>Gift from non-family member triggers enquiry about gift letter</td><td></td></tr>
+<tr><td>W14</td><td>Cross-family judge (GPT-5-nano) verdict is APPROVED or REVISION REQUIRED</td><td></td></tr>
+<tr><td>W15</td><td>Hallucination statement is present and non-empty</td><td></td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART B — TERRAGUARD™
+     ═══════════════════════════════════════════════════════════════ -->
+<h1 id="part-b">Part B — TerraGuard™ (Search Review Agent)</h1>
+
+<h2 style="page-break-before:avoid;">B1. Purpose &amp; Scope</h2>
+<p>TerraGuard™ analyses local authority, environmental, drainage &amp; water searches, and Energy Performance Certificates (EPCs) for residential conveyancing transactions. It produces:</p>
+<ul>
+<li>A risk-scored <strong>Internal Report</strong> for the conveyancer</li>
+<li>A <strong>Client Report</strong> summarising findings in plain English</li>
+<li>A <strong>Draft Enquiry Email</strong> for the seller's conveyancer</li>
+</ul>
+
+<div class="red-box">
+<strong>🚨 CRITICAL DOMAIN CONSTRAINT:</strong> TerraGuard™ must ONLY reference <strong>search documents, environmental reports, EPCs, and local authority data</strong>. It must NOT reference bank statements, payslips, mortgage offers, or any financial evidence. Any such reference is a <strong>cross-agent hallucination</strong>.
+</div>
+
+<h2>B2. Input Data &amp; Document Types</h2>
+
+<h3>B2.1 Accepted Document Types</h3>
+<table>
+<tr><th>Document Type</th><th>What AI Analyses</th><th>Hallucination Risk</th></tr>
+<tr><td>Local Authority Search</td><td>Planning history, conservation areas, TPOs, Article 4, highways, building regs, smoke control zones</td><td class="red">High — dense multi-page, many data points to miss or fabricate</td></tr>
+<tr><td>Environmental Search</td><td>Flood risk, contaminated land, radon, subsidence, mining, energy infrastructure</td><td class="amber">Medium — typically structured but numeric scores can be misread</td></tr>
+<tr><td>Drainage &amp; Water Search</td><td>Mains connection, public sewers, water supply, surface water drainage</td><td class="amber">Medium — pass/fail results can be inverted</td></tr>
+<tr><td>EPC (Energy Performance Certificate)</td><td>Rating, recommendations, property characteristics</td><td class="green">Low — highly structured document</td></tr>
+<tr><td>Mining/Tin Search</td><td>Historic mining activity, subsidence risk</td><td class="amber">Medium — regional specificity can be hallucinated</td></tr>
+</table>
+
+<h3>B2.2 Case Data Used</h3>
+<table>
+<tr><th>Field</th><th>Usage</th></tr>
+<tr><td>Property Address</td><td>Verified against address in search documents (Address Match Check)</td></tr>
+<tr><td>Tenure</td><td>Affects which searches are expected</td></tr>
+<tr><td>Lender</td><td>Lender handbook requirements affect risk scoring</td></tr>
+<tr><td>Case Flags</td><td>Leasehold, new-build etc. affect credit cost and expected documents</td></tr>
+</table>
+
+<h2>B3. Processing Pipeline</h2>
+<table>
+<tr><th>#</th><th>Stage</th><th>Method</th><th>What to Verify</th></tr>
+<tr><td>1</td><td>Document Download &amp; OCR</td><td>Multimodal Gemini + visual OCR fallback</td><td>All pages processed, no truncation</td></tr>
+<tr><td>2</td><td>Document Caching</td><td>Deterministic hash-based cache</td><td>Cache hits don't serve stale data from different cases</td></tr>
+<tr><td>3</td><td>Prompt Resolution</td><td>DB-deployed prompt (prompt_versions table)</td><td>Correct prompt version used for the agent</td></tr>
+<tr><td>4</td><td>AI Analysis</td><td>LLM (Gemini 2.5 Pro, fallback to Flash)</td><td>Evidence-grounded analysis with citations</td></tr>
+<tr><td>5</td><td>Cross-Family Verification</td><td>GPT-5-nano judge</td><td>Judge from different provider family than generator</td></tr>
+<tr><td>6</td><td>Deterministic Validation</td><td>validateAiReview() function</td><td>Risk scores 0-100, risk_level matches thresholds</td></tr>
+<tr><td>7</td><td>QA Checklist</td><td>Automated hallucination evaluation</td><td>All checks pass or failures logged</td></tr>
+</table>
+
+<h2>B4. Expected Outputs</h2>
+
+<h3>B4.1 Risk Scores</h3>
+<table>
+<tr><th>Score Field</th><th>Range</th><th>Validation Rule</th></tr>
+<tr><td>local_search_score</td><td>0–100</td><td>Must reflect planning, conservation, TPOs, building regs findings</td></tr>
+<tr><td>drainage_water_score</td><td>0–100</td><td>Must reflect connection status, sewer proximity</td></tr>
+<tr><td>environmental_score</td><td>0–100</td><td>Must reflect flood, contamination, radon, subsidence</td></tr>
+<tr><td>epc_score</td><td>0–100</td><td>Must reflect EPC rating and recommendations</td></tr>
+<tr><td>total_score</td><td>0–100</td><td>Weighted aggregate of above scores</td></tr>
+<tr><td>risk_level</td><td>green/amber/red</td><td><strong>Deterministic rule:</strong> &lt;30 = green, 30-59 = amber, ≥60 = red</td></tr>
+</table>
+
+<div class="warning-box">
+<strong>⚠️ CRITICAL CHECK:</strong> The <code>risk_level</code> MUST match the <code>total_score</code> using the thresholds above. If <code>total_score</code> is 45 but <code>risk_level</code> is "green" → this is a deterministic validation failure and hallucination.
+</div>
+
+<h3>B4.2 Report Structure Requirements</h3>
+<table>
+<tr><th>Output</th><th>Required Content</th><th>Prohibited Content</th></tr>
+<tr><td>Internal Report</td><td>Risk findings with [Doc: type | section | ref] citations, typical practice notes, risk scoring breakdown</td><td>Legal advice, speculative conclusions</td></tr>
+<tr><td>Client Report</td><td>Plain English findings, risk level explanation</td><td>Internal practice notes, raw scores</td></tr>
+<tr><td>Draft Email</td><td>ONLY fact-grounded enquiries from document evidence</td><td>Typical practice notes, assumptions, advice</td></tr>
+<tr><td>Top Drivers</td><td>Each must have a non-empty <code>reference</code> field citing a document</td><td>Generic descriptions without source</td></tr>
+</table>
+
+<h2>B5. Hallucination Taxonomy — TerraGuard™</h2>
+
+<h3>H1. Phantom Search Results</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI reports findings from a search type that was never uploaded (e.g., "The mining search reveals…" when no mining search was uploaded)</td></tr>
+<tr><td>Detection</td><td>Cross-reference every [Doc: type] citation against actually uploaded document types</td></tr>
+<tr><td>Severity</td><td class="critical">CRITICAL</td></tr>
+</table>
+
+<h3>H2. Invented Planning History</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI fabricates planning application numbers, dates, or decisions not present in the local authority search</td></tr>
+<tr><td>Example</td><td>"Planning ref 22/01234 granted for rear extension on 15/03/2023" — when this reference doesn't exist in the search</td></tr>
+<tr><td>Detection</td><td>Every planning reference number in the Internal Report must appear in the uploaded Local Authority Search document</td></tr>
+<tr><td>Severity</td><td class="critical">CRITICAL — creates false legal record</td></tr>
+</table>
+
+<h3>H3. Risk Score / Risk Level Mismatch</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>total_score says 55 but risk_level says "green" (should be amber per the &lt;30/30-59/≥60 rule)</td></tr>
+<tr><td>Detection</td><td>Deterministic validation catches this automatically. If it doesn't fire → bug in validation layer.</td></tr>
+<tr><td>Severity</td><td class="red">HIGH</td></tr>
+</table>
+
+<h3>H4. Address Mismatch Silence</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>Search document is for a different address than the case property, but AI doesn't flag it</td></tr>
+<tr><td>Detection</td><td>Compare the property address in the case record against the address shown in each search document</td></tr>
+<tr><td>Severity</td><td class="critical">CRITICAL — wrong search applied to wrong property</td></tr>
+</table>
+
+<h3>H5. Pass/Fail Inversion</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>Search provider marks a section as FAIL/REFER but AI reports it as passed or low risk</td></tr>
+<tr><td>Detection</td><td>Check each search result's overall status and individual section statuses against AI's analysis</td></tr>
+<tr><td>Severity</td><td class="red">HIGH — missed material risk</td></tr>
+</table>
+
+<h3>H6. Conservation/Listed Building Omission</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>Property is in a conservation area or is listed, but AI doesn't flag permitted development restrictions</td></tr>
+<tr><td>Detection</td><td>Check local authority search for conservation area / listed building entries and verify they appear in AI output</td></tr>
+<tr><td>Severity</td><td class="amber">MEDIUM — but HIGH if planning works are present</td></tr>
+</table>
+
+<h3>H7. Missing Planning Entries</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI skips/omits planning applications that ARE present in the local authority search. The system prompt requires ALL entries to be listed.</td></tr>
+<tr><td>Detection</td><td>Count planning entries in the raw search vs entries in AI output. Every approved permission must be listed AND have enquiries raised.</td></tr>
+<tr><td>Severity</td><td class="red">HIGH — silent omission of material data</td></tr>
+</table>
+
+<h3>H8. Fabricated EPC Ratings</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI reports wrong EPC band (e.g., says "C" when document shows "D")</td></tr>
+<tr><td>Detection</td><td>Compare the EPC rating letter in the AI output against the actual EPC document</td></tr>
+<tr><td>Severity</td><td class="amber">MEDIUM</td></tr>
+</table>
+
+<h3>H9. Cross-Agent Domain Leakage</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>TerraGuard™ references financial documents (bank statements, payslips) or SoW analysis</td></tr>
+<tr><td>Detection</td><td>Search output for: "bank statement", "payslip", "mortgage offer", "source of wealth", "funding gap", "gifted deposit"</td></tr>
+<tr><td>Severity</td><td class="red">HIGH</td></tr>
+</table>
+
+<h3>H10. Planning Risk Score Errors</h3>
+<table>
+<tr><th>Aspect</th><th>Detail</th></tr>
+<tr><td>Description</td><td>AI applies wrong weighted risk factors to planning entries (e.g., a loft conversion scored as non-structural +1 instead of +3)</td></tr>
+<tr><td>Detection</td><td>For each planning entry, verify the weighted scoring against the published methodology (Age + Nature + Conditions + Building Regs + Designations + Lender)</td></tr>
+<tr><td>Severity</td><td class="amber">MEDIUM — affects individual entry risk bands</td></tr>
+</table>
+
+<h2>B6. Common Errors &amp; Edge Cases — TerraGuard™</h2>
+
+<table>
+<tr><th>Scenario</th><th>Expected Behaviour</th><th>Common AI Error</th></tr>
+<tr><td>Multiple search documents for same type</td><td>Analyse both, note discrepancies</td><td>Only analyses one, ignores the other</td></tr>
+<tr><td>Scanned/poor quality search PDF</td><td>Visual OCR fallback, note quality issues</td><td>Hallucinates content from illegible sections</td></tr>
+<tr><td>Search from wrong date (stale search)</td><td>Flag age of search, recommend refresh</td><td>Treats old data as current</td></tr>
+<tr><td>Property with extensive planning history (10+ entries)</td><td>List ALL entries with individual risk scoring</td><td>Summarises or omits entries</td></tr>
+<tr><td>Flood Zone 2/3 designation</td><td>Flag as Red, raise lender notification enquiry</td><td>Downgrades to Amber</td></tr>
+<tr><td>No EPC uploaded</td><td>Note absence, score epc_score as 0 or N/A</td><td>Fabricates an EPC rating</td></tr>
+<tr><td>Search shows property near landfill/contaminated land</td><td>Flag as Red environmental risk with distance/type details</td><td>Mentions contamination generically without specifics</td></tr>
+</table>
+
+<h2>B7. QA Verification Checklist — TerraGuard™</h2>
+
+<table>
+<tr><th>#</th><th>Check</th><th>Pass/Fail</th></tr>
+<tr><td>T1</td><td>Every finding has a [Doc: type | section | reference] citation</td><td></td></tr>
+<tr><td>T2</td><td>risk_level matches total_score thresholds (&lt;30=green, 30-59=amber, ≥60=red)</td><td></td></tr>
+<tr><td>T3</td><td>No references to bank statements, payslips, mortgage offers, or financial documents</td><td></td></tr>
+<tr><td>T4</td><td>Property address in search documents matches case property address</td><td></td></tr>
+<tr><td>T5</td><td>ALL planning entries from local authority search are listed individually</td><td></td></tr>
+<tr><td>T6</td><td>Each planning entry has: reference number, description, decision, date, conditions status</td><td></td></tr>
+<tr><td>T7</td><td>Conservation area / listed building correctly identified and flagged</td><td></td></tr>
+<tr><td>T8</td><td>TPOs identified and implications explained</td><td></td></tr>
+<tr><td>T9</td><td>Building regulations completion certificates queried for all physical works</td><td></td></tr>
+<tr><td>T10</td><td>Highway adoption status correctly reported</td><td></td></tr>
+<tr><td>T11</td><td>Draft email contains ONLY evidence-based enquiries (no practice notes)</td><td></td></tr>
+<tr><td>T12</td><td>Internal report contains practice notes where appropriate</td><td></td></tr>
+<tr><td>T13</td><td>All 4 sub-scores (local, drainage, environmental, EPC) are between 0-100</td><td></td></tr>
+<tr><td>T14</td><td>top_drivers array has non-empty reference fields</td><td></td></tr>
+<tr><td>T15</td><td>Cross-family judge verdict present</td><td></td></tr>
+<tr><td>T16</td><td>QA hallucination evaluation checklist result present</td><td></td></tr>
+<tr><td>T17</td><td>Search PASS/FAIL status correctly interpreted and analysed</td><td></td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART C — CROSS-AGENT ANTI-HALLUCINATION CONTROLS
+     ═══════════════════════════════════════════════════════════════ -->
+<h1 id="part-c">Part C — Cross-Agent Anti-Hallucination Controls</h1>
+
+<h2 style="page-break-before:avoid;">C1. 4-Layer Anti-Hallucination Architecture</h2>
+<table>
+<tr><th>Layer</th><th>Control</th><th>Implementation</th><th>QA Verification</th></tr>
+<tr><td>1</td><td>Evidence-Only Grounding</td><td>System prompt: "Every finding MUST cite [Doc: &lt;type&gt; | &lt;section&gt; | &lt;reference&gt;]"</td><td>Search for unsourced claims in output</td></tr>
+<tr><td>2</td><td>Structured Reasoning</td><td>AI must reason through each finding before concluding</td><td>Check reasoning depth matches finding severity</td></tr>
+<tr><td>3</td><td>Cross-Family LLM Judge</td><td>Generator = Gemini, Judge = GPT-5-nano. Judge returns APPROVED, APPROVED WITH COMMENTS, or REVISION REQUIRED</td><td>Verify judge is from different provider family. Check judge verdict.</td></tr>
+<tr><td>4</td><td>Deterministic Validation</td><td><code>deterministicValidation.ts</code> — programmatic checks on scores, references, arrays</td><td>Check validation warnings are logged and surfaced</td></tr>
+</table>
+
+<h2>C2. Model Independence Rule</h2>
+<div class="warning-box">
+<strong>⚠️ MANDATORY:</strong> The AI judge must ALWAYS belong to a <strong>different provider family</strong> than the generator.<br/>
+<ul>
+<li>Generator: Gemini (Google) → Judge: GPT-5-nano (OpenAI) ✅</li>
+<li>Generator: Gemini → Judge: Gemini Flash ❌ VIOLATION</li>
+</ul>
+If both generator and judge are from the same family, this is a <strong>configuration error</strong> that undermines all hallucination controls.
+</div>
+
+<h2>C3. Domain Boundary Enforcement</h2>
+<table>
+<tr><th>Agent</th><th>Allowed Documents</th><th>Prohibited Documents</th></tr>
+<tr><td>Olimey AI</td><td>Bank statements, payslips, tax returns, mortgage offers, investment certificates, gift letters, Armalytix reports</td><td>TA6, TA7, TA10, title registers, leases, search results, EPCs</td></tr>
+<tr><td>TerraGuard™</td><td>Local authority searches, environmental searches, drainage &amp; water searches, EPCs, mining searches</td><td>Bank statements, payslips, mortgage offers, tax returns, gift letters</td></tr>
+</table>
+
+<h2>C4. Prompt Deployment Audit Trail</h2>
+<p>All AI behaviour is driven by prompts stored in the database (<code>prompt_versions</code> and <code>prompt_defaults</code> tables). The <code>getDeployedPrompt()</code> function ensures:</p>
+<ul>
+<li>Active prompt is loaded from DB (not hardcoded) for auditability</li>
+<li>Prompt must be &gt;50 characters to be valid</li>
+<li>If no prompt exists → hard fail with <code>PROMPT_NOT_FOUND</code> error (never uses a fallback that bypasses audit)</li>
+<li>QA should verify: prompt version in the report matches the deployed version in the database</li>
+</ul>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART D — DETERMINISTIC VALIDATION REFERENCE
+     ═══════════════════════════════════════════════════════════════ -->
+<h1 id="part-d">Part D — Deterministic Validation Layer Reference</h1>
+
+<h2 style="page-break-before:avoid;">D1. validateAiReview() — TerraGuard™ Checks</h2>
+<table>
+<tr><th>Check</th><th>Validated Field</th><th>Rule</th></tr>
+<tr><td>Score range</td><td>local_search_score, drainage_water_score, environmental_score, epc_score, total_score</td><td>Must be 0–100</td></tr>
+<tr><td>Risk level</td><td>risk_level</td><td>Must be "green", "amber", or "red"</td></tr>
+<tr><td>Risk level consistency</td><td>risk_level vs total_score</td><td>&lt;30=green, 30-59=amber, ≥60=red</td></tr>
+<tr><td>Top drivers</td><td>top_drivers[].reference</td><td>Each must have non-empty document reference</td></tr>
+<tr><td>Reports</td><td>internal_report, draft_email</td><td>Must be non-empty strings</td></tr>
+</table>
+
+<h2>D2. Olimey AI Deterministic Checks</h2>
+<table>
+<tr><th>Check</th><th>Rule</th><th>Threshold</th></tr>
+<tr><td>SDLT accuracy</td><td>AI SDLT must match deterministic SDLT</td><td>Exact match required</td></tr>
+<tr><td>Funding gap</td><td>AI gap vs deterministic gap</td><td>Difference &gt; £100 triggers DISCREPANCY flag</td></tr>
+<tr><td>Zero-gap override</td><td>If deterministic gap = £0, AI forbidden from flagging "Funding Gap"</td><td>Zero tolerance</td></tr>
+<tr><td>Materiality</td><td>Gap ÷ Purchase Price</td><td>&lt; 2% = immaterial</td></tr>
+<tr><td>Bonus delta</td><td>|Actual Net − Expected Net| vs 5% tolerance</td><td>Beyond tolerance = UNVERIFIED</td></tr>
+</table>
+
+<h2>D3. Validation Warning Output Format</h2>
+<p>All validation warnings follow this structure:</p>
+<div class="box">
+<code>[L4_VALIDATION] &lt;function_name&gt; | run=&lt;ai_run_id&gt; | &lt;n&gt; WARNING(S):</code><br/>
+<code>&nbsp;&nbsp;⚠ &lt;field&gt;: &lt;issue&gt; (value: &lt;actual_value&gt;)</code>
+</div>
+<p>QA should check edge function logs for these L4_VALIDATION entries to confirm the deterministic layer is running.</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     GLOSSARY
+     ═══════════════════════════════════════════════════════════════ -->
+<h1 id="glossary">Glossary</h1>
+
+<table>
+<tr><th>Term</th><th>Definition</th></tr>
+<tr><td>Cross-Agent Hallucination</td><td>When an AI agent references documents or concepts from a different agent's domain</td></tr>
+<tr><td>Deterministic Override</td><td>Programmatic calculation that supersedes AI output when they conflict</td></tr>
+<tr><td>DISCREPANCY DETECTED</td><td>Flag that fires when AI calculation differs from deterministic calculation by &gt;£100</td></tr>
+<tr><td>Domain Leakage</td><td>See Cross-Agent Hallucination</td></tr>
+<tr><td>EPC</td><td>Energy Performance Certificate — rates property energy efficiency A–G</td></tr>
+<tr><td>Funds Ledger</td><td>8-key fixed structure mapping all funding sources to standardised categories</td></tr>
+<tr><td>HRAD</td><td>Higher Rates for Additional Dwellings — 5% SDLT surcharge</td></tr>
+<tr><td>HNW</td><td>High Net Worth — triggers "Chain of Wealth" verification requirements</td></tr>
+<tr><td>In-Flight Funds</td><td>Funds expected from pending transactions (property sales, ISA withdrawals) within 30 days</td></tr>
+<tr><td>L4 Validation</td><td>Layer 4 Deterministic Validation — post-AI programmatic checks</td></tr>
+<tr><td>LSAG</td><td>Legal Sector Affinity Group — produces AML guidance for legal sector</td></tr>
+<tr><td>Materiality Threshold</td><td>2% of purchase price — below this, funding gaps are considered immaterial</td></tr>
+<tr><td>MLR 2017</td><td>Money Laundering, Terrorist Financing and Transfer of Funds Regulations 2017</td></tr>
+<tr><td>Model Independence</td><td>Rule that AI judge must be from different provider family than generator</td></tr>
+<tr><td>PCLS</td><td>Pension Commencement Lump Sum — tax-free 25% pension withdrawal</td></tr>
+<tr><td>Phantom Reference</td><td>Citation to a document that was never uploaded</td></tr>
+<tr><td>POCA 2002</td><td>Proceeds of Crime Act 2002</td></tr>
+<tr><td>SDLT</td><td>Stamp Duty Land Tax — transaction tax on property purchases in England</td></tr>
+<tr><td>SIPP</td><td>Self-Invested Personal Pension</td></tr>
+<tr><td>Symbol Normaliser</td><td>Deterministic regex that converts OCR-corrupted £ symbols (E, L, &amp;, A3) back to £</td></tr>
+<tr><td>TPO</td><td>Tree Preservation Order — protects specific trees from unauthorised works</td></tr>
+</table>
+
+<div class="footer">
+<p>Olimey AI AI Agents — Functional Specification for QA | Version 1.0 | March 2026<br/>
+Confidential — For internal QA use only</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+DROP POLICY IF EXISTS "Deny anonymous select on draft_reviews" ON public.draft_reviews;

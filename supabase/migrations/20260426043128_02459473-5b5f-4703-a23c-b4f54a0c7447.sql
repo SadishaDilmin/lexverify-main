@@ -1,0 +1,1 @@
+DROP FUNCTION IF EXISTS public.search_knowledge_chunks_keyword(text, text, integer, text[], text);

@@ -1,0 +1,1 @@
+ALTER TABLE public.ai_reports ADD COLUMN confidence_level text NOT NULL DEFAULT 'medium' CHECK (confidence_level IN ('high', 'medium', 'low'));

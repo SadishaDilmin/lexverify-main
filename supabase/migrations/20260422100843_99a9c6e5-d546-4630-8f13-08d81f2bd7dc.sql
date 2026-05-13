@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX IF NOT EXISTS ai_reports_ai_run_id_uidx ON public.ai_reports (ai_run_id);

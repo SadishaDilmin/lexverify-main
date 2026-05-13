@@ -1,0 +1,1 @@
+ALTER TABLE public.cms_integrations ADD COLUMN provider_user_email text NOT NULL DEFAULT '';

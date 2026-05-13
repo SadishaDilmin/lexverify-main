@@ -1,0 +1,1 @@
+ALTER TABLE public.synthetic_generated_cases ADD COLUMN IF NOT EXISTS current_step text NOT NULL DEFAULT 'queued';

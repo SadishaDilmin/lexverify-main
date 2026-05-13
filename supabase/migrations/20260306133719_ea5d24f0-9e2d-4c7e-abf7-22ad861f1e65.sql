@@ -1,0 +1,1 @@
+DROP POLICY "Deny anonymous select on profiles" ON public.profiles;

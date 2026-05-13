@@ -1,0 +1,1 @@
+ALTER TABLE public.knowledge_documents ADD COLUMN IF NOT EXISTS fetch_method text DEFAULT NULL;

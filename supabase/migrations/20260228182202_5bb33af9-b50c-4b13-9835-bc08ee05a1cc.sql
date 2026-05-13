@@ -1,0 +1,1 @@
+ALTER TABLE public.cases ADD COLUMN case_flags text[] NOT NULL DEFAULT '{}'::text[];

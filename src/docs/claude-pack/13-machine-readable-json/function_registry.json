@@ -1,0 +1,39 @@
+{
+  "functions": [
+    {"name": "agent-chat", "purpose": "Main Olimey AI orchestration", "lines": 3815, "auth": "jwt", "sync": "streaming_sse", "status": "current", "wave": "1+"},
+    {"name": "sow-chunk-worker", "purpose": "Per-domain document batch analysis", "auth": "jwt", "sync": "sync", "status": "current", "wave": "3+"},
+    {"name": "sow-finalise", "purpose": "Background consolidation", "auth": "jwt", "sync": "background", "status": "current_recovery", "wave": "3+"},
+    {"name": "resolve-sow-context", "purpose": "Context assembly for SoW", "auth": "jwt", "sync": "sync", "status": "current", "wave": "1+"},
+    {"name": "classify-aml-docs", "purpose": "AI document classification", "auth": "jwt", "sync": "sync", "status": "current"},
+    {"name": "ingest-file-to-text", "purpose": "Document text extraction", "auth": "jwt", "sync": "sync", "status": "current"},
+    {"name": "review-actions", "purpose": "Review disposition actions", "auth": "jwt", "sync": "sync", "status": "current", "wave": "6"},
+    {"name": "search-knowledge", "purpose": "Semantic knowledge search", "auth": "jwt", "sync": "sync", "status": "current"},
+    {"name": "benchmark-compare", "purpose": "Benchmark comparison", "auth": "jwt", "sync": "sync", "status": "current", "wave": "13"},
+    {"name": "benchmark-worker", "purpose": "Benchmark batch processing", "auth": "jwt", "sync": "sync", "status": "current", "wave": "13"},
+    {"name": "companies-house-lookup", "purpose": "Companies House API", "auth": "jwt", "sync": "sync", "status": "current", "wave": "7"},
+    {"name": "fca-register-check", "purpose": "FCA Register API", "auth": "jwt", "sync": "sync", "status": "current", "wave": "7"},
+    {"name": "sync-hoowla", "purpose": "Hoowla CMS sync", "auth": "jwt", "sync": "sync", "status": "current"},
+    {"name": "generate-agent-context", "purpose": "Pre-analysis context", "auth": "jwt", "sync": "sync", "status": "current"},
+    {"name": "create-checkout", "purpose": "Stripe checkout", "auth": "jwt", "sync": "sync", "status": "current"}
+  ],
+  "shared_modules": [
+    {"name": "aiGateway.ts", "purpose": "Hybrid AI routing", "lines": 336, "wave": null},
+    {"name": "wealthVerifyPrompt.ts", "purpose": "System prompt", "lines": 2490, "wave": "1+"},
+    {"name": "deterministicPostProcessing.ts", "purpose": "LSAG enforcement, guardrails", "lines": 2872, "wave": "1+"},
+    {"name": "inputGuardrails.ts", "purpose": "Injection detection", "lines": 218, "wave": "1+"},
+    {"name": "judgeOrchestration.ts", "purpose": "Judge pipeline", "lines": 454, "wave": "1+"},
+    {"name": "judgeOutcomes.ts", "purpose": "Validation state model", "lines": 596, "wave": "1"},
+    {"name": "evidenceEngine.ts", "purpose": "Evidence references, findings", "lines": 1357, "wave": "2"},
+    {"name": "operationalEngine.ts", "purpose": "Roadmaps, readiness", "lines": 912, "wave": "3"},
+    {"name": "compliancePolicy.ts", "purpose": "Firm policy, overreach", "lines": 943, "wave": "4"},
+    {"name": "policyGovernance.ts", "purpose": "DB policy loading", "lines": 332, "wave": "5"},
+    {"name": "reviewEngine.ts", "purpose": "Review workflow", "lines": 781, "wave": "6"},
+    {"name": "externalIntelligence.ts", "purpose": "External enrichment", "lines": 699, "wave": "7"},
+    {"name": "taskLifecycleEngine.ts", "purpose": "Task generation", "lines": 495, "wave": "8"},
+    {"name": "documentIntelligence.ts", "purpose": "Doc quality/entities", "lines": 864, "wave": "9"},
+    {"name": "transactionExtraction.ts", "purpose": "Financial extraction", "lines": 1317, "wave": "10"},
+    {"name": "narrativeGrounding.ts", "purpose": "Finding-evidence linkage", "lines": 632, "wave": "11"},
+    {"name": "groundedReportPlan.ts", "purpose": "Two-pass generation", "lines": 670, "wave": "12"},
+    {"name": "calibrationBenchmarking.ts", "purpose": "Evaluation engine", "lines": 712, "wave": "13"}
+  ]
+}

@@ -1,0 +1,1 @@
+ALTER TABLE public.benchmark_cases ADD COLUMN IF NOT EXISTS trigger_context JSONB DEFAULT NULL;

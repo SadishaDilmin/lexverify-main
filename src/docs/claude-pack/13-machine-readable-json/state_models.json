@@ -1,0 +1,54 @@
+{
+  "state_models": {
+    "validation_status": {
+      "states": ["FULLY_VALIDATED", "DEGRADED", "PARTIALLY_VALIDATED", "MANUAL_REVIEW_REQUIRED", "QUARANTINED"],
+      "terminal": ["FULLY_VALIDATED", "QUARANTINED"],
+      "blocking": ["MANUAL_REVIEW_REQUIRED", "QUARANTINED"],
+      "source": "judgeOutcomes.ts"
+    },
+    "review_status": {
+      "states": ["PENDING_REVIEW", "IN_REVIEW", "REVIEW_COMPLETED", "REVIEW_SUPERSEDED", "CLOSED_NO_ACTION", "CLOSED_REPLACED_BY_NEWER_RUN"],
+      "terminal": ["REVIEW_COMPLETED", "REVIEW_SUPERSEDED", "CLOSED_NO_ACTION", "CLOSED_REPLACED_BY_NEWER_RUN"],
+      "source": "reviewEngine.ts"
+    },
+    "task_status": {
+      "states": ["open", "in_progress", "blocked", "resolved", "superseded", "closed_no_action", "cancelled", "duplicate"],
+      "terminal": ["resolved", "superseded", "closed_no_action", "cancelled", "duplicate"],
+      "source": "taskLifecycleEngine.ts"
+    },
+    "calibration_signal_status": {
+      "states": ["open", "under_review", "accepted", "rejected", "deferred", "implemented"],
+      "terminal": ["rejected", "implemented"],
+      "source": "calibration_signals table"
+    },
+    "finalisation_status": {
+      "states": ["pending_consolidation", "finalisation_running", "completed", "failed", "timeout"],
+      "terminal": ["completed", "failed"],
+      "source": "ai_reports.finalisation_status"
+    },
+    "judge_outcome": {
+      "states": ["PASS", "FAIL", "TIMEOUT", "ERROR", "SKIPPED_BY_POLICY", "NOT_RUN", "PARTIAL", "DEGRADED"],
+      "safe_to_serve": ["PASS"],
+      "blocks_delivery": ["FAIL", "TIMEOUT", "ERROR"],
+      "source": "judgeOutcomes.ts"
+    }
+  },
+  "review_dispositions": [
+    "APPROVED_AS_IS", "APPROVED_WITH_NOTES", "REQUIRES_REGENERATION",
+    "REQUIRES_FURTHER_EVIDENCE", "REQUIRES_MLRO_ESCALATION",
+    "REQUIRES_LENDER_CONSIDERATION", "REJECTED_UNSAFE_TO_USE", "DUPLICATE_OR_SUPERSEDED"
+  ],
+  "benchmark_risk_classes": [
+    "unexplained_credit", "third_party_funding", "copurchaser_gift_confusion",
+    "funding_gap", "lender_consideration", "mlro_consideration",
+    "external_discrepancy", "document_mismatch", "poor_quality_evidence",
+    "source_of_funds_route", "contradiction", "beneficial_interest"
+  ],
+  "mismatch_categories": [
+    "false_positive", "false_negative", "severity_error",
+    "explanation_quality_error", "evidence_support_error",
+    "proportionality_error", "wording_tier_mismatch",
+    "escalation_error", "task_consequence_error"
+  ],
+  "wording_tiers": ["FIRM", "SUPPORTED", "CAUTIOUS", "WEAK", "LIMITATION"]
+}

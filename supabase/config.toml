@@ -1,0 +1,6 @@
+project_id = "cjlugjtxosgdzvxelecg"
+
+[functions.send-welcome-email]
+verify_jwt = false
+[functions.admin-purge-client-data]
+verify_jwt = false

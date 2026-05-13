@@ -1,0 +1,730 @@
+[
+  {
+    "case_id": "WV-STRESS-001",
+    "title": "Insolvent Ltd Director's Loan with Overdue Accounts",
+    "property_address": "14 Montague Terrace, Clifton, Bristol, BS8 4HW",
+    "purchase_price": 520000,
+    "mortgage_amount": 364000,
+    "sdlt": 16000,
+    "legal_fees": 2400,
+    "tenure": "Freehold",
+    "transaction_type": "Purchase",
+    "difficulty": "expert",
+    "correct_assessment": "High Risk",
+    "regulations_violated": ["MLR 2017 Regulation 28(11) — Source of funds inconsistent with risk profile", "MLR 2017 Regulation 33 — Enhanced due diligence for complex/unusual transactions", "POCA 2002 s.330 — Potential SAR obligation"],
+    "parties": [
+      {
+        "full_name": "Richard James Pemberton",
+        "date_of_birth": "1976-11-22",
+        "address": "Flat 2, 9 Royal York Crescent, Bristol, BS8 4JZ",
+        "occupation": "Managing Director",
+        "employer": "Pemberton Logistics Ltd (Company No. 08293741)",
+        "annual_income": 78000
+      }
+    ],
+    "documents": [
+      {
+        "title": "Source of Wealth Declaration",
+        "content": "## Source of Wealth Declaration\n\n**Full Name:** Richard James Pemberton\n**Date of Birth:** 22 November 1976\n**Occupation:** Managing Director — Pemberton Logistics Ltd\n**Annual Income:** £78,000 (salary £48,000 + dividends £30,000)\n\n### Funding Breakdown\n\n| Source | Amount |\n|---|---|\n| Mortgage (Coventry Building Society) | £364,000 |\n| Director's Loan from Pemberton Logistics Ltd | £95,000 |\n| SIPP Partial Drawdown (Aegon) | £35,000 |\n| NS&I Premium Bonds | £25,000 |\n| Personal Savings | £3,400 |\n| **Total** | **£522,400** |\n\n### Director's Loan\nPemberton Logistics Ltd has retained significant profits over the past decade. I am drawing down accumulated retained earnings as a director's loan.\n\n*Signed: R. Pemberton, Date: 09/03/26*"
+      },
+      {
+        "title": "Bank Statements — Pemberton Logistics Ltd (NatWest Business)",
+        "content": "## NatWest Business Account — Sort Code: 60-01-18 | Account: 48271936\n**Statement Period:** 1 October 2025 — 28 February 2026\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/10/2025 | Balance B/F | | | -£12,340.00 |\n| 15/10/2025 | Customer Payment — Avon Haulage | £8,200.00 | | -£4,140.00 |\n| 20/10/2025 | HMRC — PAYE/NIC | | £6,480.00 | -£10,620.00 |\n| 31/10/2025 | NatWest Arranged Overdraft Fee | | £45.00 | -£10,665.00 |\n| 15/11/2025 | Customer Payment — GreenCo Freight | £11,400.00 | | £735.00 |\n| 28/11/2025 | Staff Wages (x3) | | £9,200.00 | -£8,465.00 |\n| 05/12/2025 | TRANSFER IN — R PEMBERTON PERSONAL | £50,000.00 | | £41,535.00 |\n| 10/12/2025 | TRANSFER IN — R PEMBERTON PERSONAL | £45,000.00 | | £86,535.00 |\n| 12/12/2025 | Director's Loan — R PEMBERTON | | £95,000.00 | -£8,465.00 |\n| 31/12/2025 | NatWest Arranged Overdraft Fee | | £45.00 | -£8,510.00 |"
+      },
+      {
+        "title": "Companies House — Pemberton Logistics Ltd",
+        "content": "## Companies House Extract\n\n**Company Number:** 08293741\n**Status:** Active — Proposal to strike off\n**Incorporated:** 14 June 2013\n**SIC Code:** 49410 — Freight transport by road\n**Director:** Richard James Pemberton (sole director)\n\n### Filing History\n- Last Accounts Filed: Small company accounts to 30 June 2024 (filed 28 March 2025)\n- Confirmation Statement: 14 June 2025\n- **GAZ2 notice published 12 January 2026** — First Gazette notice for compulsory strike-off (failure to file confirmation statement)\n\n### Key Financials (Year to 30 June 2024)\n- Net Assets: -£42,180\n- Creditors falling due within one year: £187,400\n- Called-up share capital: £100\n- Profit & Loss account: -£42,280\n- **Auditor's report: Going concern qualification — 'material uncertainty regarding the company's ability to continue as a going concern'**"
+      },
+      {
+        "title": "SIPP Drawdown Confirmation — Aegon",
+        "content": "## Aegon SIPP — Partial Drawdown Confirmation\n\n**Member:** Richard James Pemberton\n**SIPP Reference:** AE-SIPP-7829341\n**Drawdown Date:** 3 March 2026\n**Amount Drawn:** £35,000 (25% tax-free lump sum from uncrystallised funds)\n**Remaining Fund Value:** £102,400\n**Tax Treatment:** PCLS — no income tax liability on this withdrawal\n\nFunds transferred to: NatWest Current Account, Sort Code 60-01-18, Account 73829164\n\n*This confirmation is issued for record purposes. Please retain for your tax records.*"
+      },
+      {
+        "title": "NS&I Premium Bonds — Redemption",
+        "content": "## National Savings & Investments\n**Premium Bonds Encashment Confirmation**\n\n**Holder:** Mr Richard J Pemberton\n**Holder Number:** 284NS917364\n**Amount Encashed:** E25,000.00\n**Encashment Date:** 15 February 2026\n**Payment Method:** BACS to nominated bank account\n**Prize Draw Status:** Bonds removed from March 2026 draw\n\n*Note: E = OCR scan artefact. Original document shows £ symbol.*"
+      }
+    ],
+    "gold_standard": [
+      {
+        "issue_type": "Circular Payment — Director's Loan from Insolvent Company",
+        "severity": "Critical",
+        "evidence_source": "NatWest Business Statements / Companies House",
+        "evidence_text": "Personal transfers of £95,000 into company (Dec 2025), immediately withdrawn as 'Director's Loan'. Company has net assets of -£42,180 and going concern qualification.",
+        "correct_conclusion": "The company is technically insolvent (net assets -£42,180, creditors £187,400) with a going concern qualification and a GAZ2 strike-off notice. It cannot legitimately fund a £95,000 director's loan. The bank statements reveal the funds were personally deposited by Mr Pemberton into the company and immediately re-extracted as a 'loan' — a textbook circular payment pattern. The company is being used as a conduit to obscure the true origin of the funds.",
+        "correct_recommended_action": "Reject the Director's Loan as a legitimate funding source. Request full explanation of the personal source of the £95,000. Consider filing a SAR under POCA 2002 s.330. Flag the GAZ2 strike-off notice."
+      },
+      {
+        "issue_type": "OCR Error — NS&I Document",
+        "severity": "Low",
+        "evidence_source": "NS&I Premium Bonds Redemption",
+        "evidence_text": "'E25,000.00' — pound sign scanned as 'E'",
+        "correct_conclusion": "OCR scanning artefact. The document itself acknowledges the error. Original should show £25,000.",
+        "correct_recommended_action": "Request original digital confirmation from NS&I or accept with file note acknowledging OCR error."
+      },
+      {
+        "issue_type": "SIPP Drawdown — Legitimate but Verify",
+        "severity": "Low",
+        "evidence_source": "Aegon SIPP Confirmation",
+        "evidence_text": "£35,000 PCLS drawdown from pension with £102,400 remaining.",
+        "correct_conclusion": "The SIPP drawdown of £35,000 as a Pension Commencement Lump Sum (25% tax-free) is a legitimate source of funds. The remaining fund value (£102,400) is consistent with a reasonable pension pot for a 49-year-old. The Aegon confirmation is an official document.",
+        "correct_recommended_action": "Accept as verified. Note SIPP reference in compliance file."
+      }
+    ]
+  },
+  {
+    "case_id": "WV-STRESS-002",
+    "title": "Offshore Gifted Deposit — UAE Uncle Without Giftor Declaration",
+    "property_address": "22 Regency Square, Brighton, East Sussex, BN1 2FH",
+    "purchase_price": 465000,
+    "mortgage_amount": 325500,
+    "sdlt": 13250,
+    "legal_fees": 2100,
+    "tenure": "Leasehold",
+    "transaction_type": "Purchase",
+    "difficulty": "expert",
+    "correct_assessment": "High Risk",
+    "regulations_violated": ["MLR 2017 Regulation 33 — Enhanced due diligence for high-risk third country", "MLR 2017 Regulation 35 — Failure to apply EDD measures", "SRA Warning Notice — Gifts from non-UK sources"],
+    "parties": [
+      {
+        "full_name": "Yasmin Fatima Al-Rashidi",
+        "date_of_birth": "1995-03-17",
+        "address": "Flat 8, Marine Parade Mansions, Brighton, BN2 1TL",
+        "occupation": "Junior Doctor (ST3 Registrar)",
+        "employer": "Brighton & Sussex University Hospitals NHS Trust",
+        "annual_income": 52000
+      }
+    ],
+    "documents": [
+      {
+        "title": "Source of Wealth Declaration",
+        "content": "## Source of Wealth Declaration\n\n**Full Name:** Dr Yasmin Fatima Al-Rashidi\n**Date of Birth:** 17 March 1995\n**Occupation:** ST3 Registrar (General Medicine), Brighton & Sussex University Hospitals\n**Annual Gross Salary:** £52,000 (inclusive of on-call supplements)\n\n### Funding Breakdown\n\n| Source | Amount |\n|---|---|\n| Mortgage (HSBC) | £325,500 |\n| Gift from Uncle — Mr Khalid Al-Rashidi (Dubai, UAE) | £115,000 |\n| Lifetime ISA (Nutmeg) | £18,200 |\n| Personal Savings | £21,450 |\n| **Total** | **£480,150** |\n\n### Gift Details\nMy uncle, Mr Khalid Al-Rashidi, is a successful property developer based in Dubai. He has generously offered to help me purchase my first home. He transferred the funds in two tranches from his Emirates NBD account.\n\n*Signed: Dr Y. Al-Rashidi, Date: 3 March 2026*"
+      },
+      {
+        "title": "Bank Statements — Dr Al-Rashidi (Lloyds Current Account)",
+        "content": "## Lloyds Current Account — Sort Code: 30-94-72 | Account: 59182734\n**Statement Period:** 01/11/2025 — 28/02/2026\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/11/2025 | Balance B/F | | | £14,380.00 |\n| 28/11/2025 | BSUH NHS Trust — Salary | £3,450.00 | | £17,830.00 |\n| 10/12/2025 | SWIFT IN — EMIRATES NBD PJSC — K AL-RASHIDI | £60,000.00 | | £77,830.00 |\n| 28/12/2025 | BSUH NHS Trust — Salary | £3,450.00 | | £81,280.00 |\n| 15/01/2026 | SWIFT IN — EMIRATES NBD PJSC — K AL-RASHIDI | £55,000.00 | | £136,280.00 |\n| 28/01/2026 | BSUH NHS Trust — Salary | £3,450.00 | | £139,730.00 |\n| 05/02/2026 | Nutmeg LISA Withdrawal | £18,200.00 | | £157,930.00 |\n| 15/02/2026 | Solicitor Deposit — Whitfield & Co | | £139,500.00 | £18,430.00 |"
+      },
+      {
+        "title": "Email from Khalid Al-Rashidi (Screenshot)",
+        "content": "## Email Screenshot\n\n**From:** khalid.alrashidi@emiratesnbd.ae\n**To:** yasmin.alrashidi@nhs.net\n**Date:** 8 December 2025\n**Subject:** Property Purchase — Gift\n\nDear Yasmin,\n\nI have arranged the transfer of AED 280,000 (approx. £60,000) from my Emirates NBD account today. A second transfer will follow in January.\n\nThis is a gift with no expectation of repayment. I am very proud of your achievements.\n\nBest regards,\nUncle Khalid\n\n---\n*Note: No formal Giftor Declaration has been provided. No evidence of Khalid Al-Rashidi's identity documents, source of wealth, or relationship verification beyond the email.*"
+      },
+      {
+        "title": "Lifetime ISA Statement — Nutmeg",
+        "content": "## Nutmeg Lifetime ISA\n**Account Holder:** Dr Yasmin Al-Rashidi\n**Statement Date:** 31 January 2026\n\n| Tax Year | Contributions | Gov Bonus | Value |\n|---|---|---|---|\n| 2021/22 | £4,000.00 | £1,000.00 | £5,100.00 |\n| 2022/23 | £4,000.00 | £1,000.00 | £9,800.00 |\n| 2023/24 | £4,000.00 | £1,000.00 | £14,200.00 |\n| 2024/25 | £4,000.00 | £1,000.00 | £18,200.00 |\n\n**Current Value:** £18,200.00\n**Withdrawal Reason:** First home purchase — eligible"
+      }
+    ],
+    "gold_standard": [
+      {
+        "issue_type": "High-Risk Jurisdiction Gift — No Giftor Declaration",
+        "severity": "Critical",
+        "evidence_source": "SOW Declaration / Email Screenshot",
+        "evidence_text": "£115,000 gift from uncle in Dubai (UAE). No signed Giftor Declaration. Only evidence is an informal email.",
+        "correct_conclusion": "The UAE is classified as a higher-risk jurisdiction for AML purposes. Under MLR 2017 Reg 33 and SRA guidance, enhanced due diligence is mandatory for funds originating from high-risk third countries. No formal Giftor Declaration has been provided — only an informal email from an unverified email address. The gift of £115,000 (representing 24.7% of the purchase price) from a non-immediate family member in a high-risk jurisdiction without: (a) a signed Giftor Declaration, (b) identity verification of the giftor, (c) evidence of the giftor's source of wealth, (d) confirmation of the relationship, constitutes a significant AML risk.",
+        "correct_recommended_action": "Require a formal signed Giftor Declaration from Mr Khalid Al-Rashidi. Request certified copy of his passport/Emirates ID. Request evidence of his source of wealth (e.g., business registration, property portfolio evidence). Verify the familial relationship independently. Consider whether the firm's risk appetite permits this transaction."
+      },
+      {
+        "issue_type": "Structured Gift Transfers",
+        "severity": "High",
+        "evidence_source": "Lloyds Bank Statements",
+        "evidence_text": "Two SWIFT transfers: £60,000 (10/12/2025) and £55,000 (15/01/2026) from Emirates NBD.",
+        "correct_conclusion": "The gift was structured across two transfers of different amounts (£60,000 and £55,000) approximately one month apart. While this could reflect normal banking logistics, structured transfers from high-risk jurisdictions are a recognised AML typology. The unequal split (not round numbers in the second transfer) warrants enquiry.",
+        "correct_recommended_action": "Enquire why the gift was split into two transfers. Request Emirates NBD bank statement showing the source of the funds in Khalid's account."
+      },
+      {
+        "issue_type": "Non-Family Gift — Relationship Verification",
+        "severity": "Medium",
+        "evidence_source": "SOW Declaration",
+        "evidence_text": "Described as 'Uncle' — no evidence of familial relationship beyond self-declaration.",
+        "correct_conclusion": "The term 'uncle' is used loosely in many cultures and may not indicate a direct blood relationship. Under the Law Society AML Guide, the relationship between giftor and recipient must be independently verified, particularly where the gift constitutes a material portion of the deposit and originates overseas.",
+        "correct_recommended_action": "Request documentary evidence of the familial relationship (e.g., family tree documentation, birth certificates showing parental links)."
+      }
+    ]
+  },
+  {
+    "case_id": "WV-STRESS-003",
+    "title": "Hawala-Style Informal Value Transfer",
+    "property_address": "47 Belgrave Road, Leicester, LE4 6AR",
+    "purchase_price": 235000,
+    "mortgage_amount": 176250,
+    "sdlt": 0,
+    "legal_fees": 1450,
+    "tenure": "Freehold",
+    "transaction_type": "Purchase",
+    "difficulty": "expert",
+    "correct_assessment": "High Risk",
+    "regulations_violated": ["MLR 2017 Regulation 33(1)(b) — Complex or unusually large transaction", "MLR 2017 Regulation 28 — Inconsistent with risk profile", "POCA 2002 s.330 — Failure to report suspicion", "The Payment Services Regulations 2017 — Unlicensed money service business"],
+    "parties": [
+      {
+        "full_name": "Mohammad Irfan Hussain",
+        "date_of_birth": "1980-04-30",
+        "address": "189 Narborough Road, Leicester, LE3 0PF",
+        "occupation": "Restaurant Owner",
+        "employer": "Spice Garden Leicester Ltd",
+        "annual_income": 38000
+      }
+    ],
+    "documents": [
+      {
+        "title": "Source of Wealth Declaration",
+        "content": "## Source of Wealth Declaration\n\n**Full Name:** Mohammad Irfan Hussain\n**Date of Birth:** 30/04/1980\n**Occupation:** Owner — Spice Garden Leicester Ltd\n**Annual Income:** £38,000 (self-assessment)\n\n### Funding Breakdown\n\n| Source | Amount |\n|---|---|\n| Mortgage (Al Rayan Bank — Sharia compliant) | £176,250 |\n| Business Savings | £22,000 |\n| Family Contributions (various) | £28,000 |\n| Personal Savings | £10,200 |\n| **Total** | **£236,450** |\n\n### Family Contributions\nVarious family members have contributed towards my deposit as is customary. Small amounts from brothers, cousins, and parents.\n\n*Signed: M. I. Hussain, Date: 18 February 2026*"
+      },
+      {
+        "title": "Bank Statements — M. Hussain (Barclays Current Account)",
+        "content": "## Barclays Current Account — Sort Code: 20-45-91 | Account: 63829174\n**Statement Period:** 01/09/2025 — 28/02/2026\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/09/2025 | Balance B/F | | | £4,280.00 |\n| 05/09/2025 | FPS IN — A HUSSAIN | £2,500.00 | | £6,780.00 |\n| 08/09/2025 | FPS IN — Y KHAN | £3,000.00 | | £9,780.00 |\n| 12/09/2025 | FPS IN — M AHMED | £2,000.00 | | £11,780.00 |\n| 20/09/2025 | FPS IN — S HUSSAIN | £2,500.00 | | £14,280.00 |\n| 03/10/2025 | FPS IN — R BEGUM | £3,000.00 | | £17,280.00 |\n| 10/10/2025 | FPS IN — CASH DEP BRANCH | £2,000.00 | | £19,280.00 |\n| 18/10/2025 | FPS IN — K MALIK | £2,500.00 | | £21,780.00 |\n| 25/10/2025 | FPS IN — Z HUSSAIN | £2,000.00 | | £23,780.00 |\n| 02/11/2025 | FPS IN — N CHAUDHRY | £2,500.00 | | £26,280.00 |\n| 10/11/2025 | FPS IN — A SHAH | £2,000.00 | | £28,280.00 |\n| 18/11/2025 | FPS IN — F HUSSAIN | £3,000.00 | | £31,280.00 |\n| 25/11/2025 | FPS IN — B IQBAL | £1,000.00 | | £32,280.00 |\n| 28/11/2025 | Cash Deposit — Branch | £3,000.00 | | £35,280.00 |\n| Various | Spice Garden — Card takings | ~£3,200/mo | | |\n| 28/02/2026 | Closing Balance | | | £60,480.00 |"
+      },
+      {
+        "title": "Bank Statements — Spice Garden Leicester Ltd (HSBC Business)",
+        "content": "## HSBC Business Account — Spice Garden Leicester Ltd\n**Sort Code:** 40-11-58 | **Account:** 82917364\n**Statement Period:** 01/09/2025 — 28/02/2026\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/09/2025 | Balance B/F | | | £8,420.00 |\n| Various | Card terminal takings (weekly) | ~£3,800/wk | | |\n| Various | Cash deposits (weekly) | ~£2,200/wk | | |\n| Various | Suppliers, rent, wages | | ~£4,800/wk | |\n| 15/01/2026 | Transfer to M HUSSAIN PERSONAL | | £22,000.00 | £6,180.00 |\n| 28/02/2026 | Closing Balance | | | £9,340.00 |"
+      },
+      {
+        "title": "Self-Assessment Tax Return — 2024/25 (HMRC Summary)",
+        "content": "## HMRC Self-Assessment Summary — Tax Year 2024/25\n\n**Taxpayer:** Mohammad Irfan Hussain\n**UTR:** 1234567890\n\n### Income\n- Self-employment income (Spice Garden): £38,200\n- Employment income: £0\n- Rental income: £0\n- Dividends/Interest: £120\n\n### Tax Calculation\n- Total income: £38,320\n- Personal allowance: £12,570\n- Taxable income: £25,750\n- Tax due: £5,150\n- NIC Class 4: £1,658.50\n\n**Total tax & NIC due: £6,808.50**\n**Status: PAID — 31 January 2026**"
+      }
+    ],
+    "gold_standard": [
+      {
+        "issue_type": "Informal Value Transfer — Hawala/Hundi Typology",
+        "severity": "Critical",
+        "evidence_source": "Barclays Bank Statements",
+        "evidence_text": "13 separate FPS transfers from different individuals (A Hussain, Y Khan, M Ahmed, S Hussain, R Begum, K Malik, Z Hussain, N Chaudhry, A Shah, F Hussain, B Iqbal) plus cash deposits, totalling ~£28,000, all in amounts of £1,000-£3,000 over 3 months.",
+        "correct_conclusion": "The pattern of multiple small transfers from numerous different individuals, combined with branch cash deposits, is consistent with an informal value transfer system (IVTS) such as hawala. While the client describes these as 'family contributions,' the number of transferors (13+ unique names), the regularity of timing, and the uniform small amounts (all below common bank reporting thresholds) are characteristic red flags. Many of the surnames differ (Khan, Ahmed, Begum, Malik, Chaudhry, Shah, Iqbal), making the 'family' explanation less plausible without verification. Under MLR 2017 Reg 33(1)(b), this constitutes a complex transaction pattern requiring enhanced due diligence.",
+        "correct_recommended_action": "Request a detailed schedule identifying each transferor: full name, relationship to purchaser, address, source of funds. Obtain signed gift letters from each contributor confirming the gift is non-repayable. Verify at least a sample of relationships. Consider whether the pattern warrants a SAR under POCA 2002 s.330."
+      },
+      {
+        "issue_type": "Cash-Intensive Business — Structuring Concern",
+        "severity": "High",
+        "evidence_source": "HSBC Business Account / Barclays Statements",
+        "evidence_text": "Business cash deposits ~£2,200/week. Personal account cash deposits: £2,000 (Oct) + £3,000 (Nov) = £5,000.",
+        "correct_conclusion": "The restaurant business generates approximately £2,200/week in cash (~£114,400 annually). Additionally, £5,000 in cash was deposited directly into the personal account. Cash-intensive businesses are inherently higher risk for money laundering. The personal cash deposits may represent business takings diverted through the personal account, which would be inconsistent with the self-assessment return.",
+        "correct_recommended_action": "Request 2 years of HMRC Self-Assessment returns to verify income consistency. Cross-reference card terminal takings with total declared income. Request explanation for personal account cash deposits."
+      },
+      {
+        "issue_type": "Income vs. Deposit Proportionality",
+        "severity": "Medium",
+        "evidence_source": "SOW Declaration / HMRC Summary",
+        "evidence_text": "Annual income £38,000. Personal savings claimed: £10,200 + business savings £22,000 = £32,200 from own resources.",
+        "correct_conclusion": "On an income of £38,200 (after tax ~£31,400), accumulating £32,200 in savings would require saving virtually all post-tax income. The business account shows the £22,000 transfer depleted the business to £6,180. While possible over multiple years, this level of savings from this income level warrants verification.",
+        "correct_recommended_action": "Request 12 months of personal bank statements to evidence savings accumulation. Accept the business transfer as evidenced but note the low post-transfer balance."
+      }
+    ]
+  },
+  {
+    "case_id": "WV-STRESS-004",
+    "title": "Mixed OCR Chaos — Premium Bonds, Stale Dates, and Format Errors",
+    "property_address": "Unit 3, The Maltings, Ware, Hertfordshire, SG12 9PY",
+    "purchase_price": 290000,
+    "mortgage_amount": 232000,
+    "sdlt": 1500,
+    "legal_fees": 1550,
+    "tenure": "Leasehold",
+    "transaction_type": "Purchase",
+    "difficulty": "medium",
+    "correct_assessment": "Medium Risk",
+    "regulations_violated": ["MLR 2017 Regulation 28(11) — Inadequate documentation", "SRA Standards — Reliance on unverifiable documents"],
+    "parties": [
+      {
+        "full_name": "Karen Louise Mitchell",
+        "date_of_birth": "1987-12-04",
+        "address": "15 Hertford Road, Ware, SG12 7AA",
+        "occupation": "Dental Hygienist",
+        "employer": "Ware Dental Practice",
+        "annual_income": 36000
+      }
+    ],
+    "documents": [
+      {
+        "title": "Source of Wealth Declaration",
+        "content": "## Source of Wealth Declaration\n\n**Full Name:** Karen Louise Mitchell\n**Date of Birth:** 04/12/1987\n**Occupation:** Dental Hygienist — Ware Dental Practice\n**Annual Gross Salary:** £36,000\n\n### Funding Breakdown\n\n| Source | Amount |\n|---|---|\n| Mortgage (Leeds Building Society) | £232,000 |\n| NS&I Premium Bonds | £18,500 |\n| Cash ISA (Nationwide) | £22,800 |\n| Gifted Deposit — Mother (Mrs Janet Mitchell) | £15,000 |\n| Personal Savings | £3,250 |\n| **Total** | **£291,550** |\n\n*Signed: K. Mitchell, Date: 12 February 2026*"
+      },
+      {
+        "title": "NS&I Premium Bonds Statement (OCR Scan)",
+        "content": "## National Savings & Investments — Premium Bonds\n**Holder:** Ms Karen L Mitchell\n**Holder Number:** 193NS284752\n\n**Current Holdings as at 28 February 2026:**\n- Bonds Purchased: A318,500.00\n- Unclaimed Prizes: E0.00\n- Total Value: £l8,500.00\n\n### Purchase History\n| Date | Amount | Method |\n|---|---|---|\n| 14/06/2019 | £5,000 | Standing Order |\n| 22/03/2020 | E5,000 | Bank Transfer |\n| 09/11/2021 | &5,000 | Online |\n| 03/08/2023 | £3,500 | Online |\n\n**Encashment Request:** E18,500.00 — submitted 20/02/2026\n**Expected Payment Date:** 8 working days from request"
+      },
+      {
+        "title": "Cash ISA Statement — Nationwide (OCR Scan)",
+        "content": "## Nationwide Cash ISA\n**Account:** 91827364\n**Statement Date:** 31/01/2026\n\n### Transaction Summary\n\n| Tax Year | Deposits | Interest | Year-End Balance |\n|---|---|---|---|\n| 2020/21 | £5.000,00 | E18.40 | £5.018,40 |\n| 2021/22 | E5,000.00 | £42.10 | £10.060,50 |\n| 2022/23 | E5,000 | £185.20 | E15.245,70 |\n| 2023/24 | £5,000.00 | £380.50 | £20.626,20 |\n| 2024/25 | £2,500.00 | £485.30 | £22,800.00 |\n\n**Current Balance:** £22,800.00"
+      },
+      {
+        "title": "Gift Letter — Mrs Janet Mitchell",
+        "content": "## Gift Declaration\n\nI, Janet Mitchell, of 42 Stanstead Road, Ware, Hertfordshire, SG12 0EJ, confirm that I am gifting £15,000 to my daughter Karen Louise Mitchell towards the purchase of Unit 3, The Maltings, Ware.\n\nThe funds come from my personal savings and the sale of Premium Bonds I have held since 2008.\n\nThis gift is freely given with no expectation of repayment and I will have no interest in the property.\n\nRelationship: Mother\n\nSigned: Janet Mitchell\nDate: 8 February 2026"
+      },
+      {
+        "title": "Bank Statements — Karen Mitchell (Barclays Current Account)",
+        "content": "## Barclays Current Account — Sort Code: 20-72-13 | Account: 82731945\n**Statement Period:** 1 June 2025 — 31 August 2025\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/06/2025 | Balance B/F | | | £4,180.00 |\n| 28/06/2025 | Ware Dental — Salary | £2,380.00 | | £6,560.00 |\n| 15/07/2025 | BACS — J MITCHELL | £15,000.00 | | £21,560.00 |\n| 28/07/2025 | Ware Dental — Salary | £2,380.00 | | £23,940.00 |\n| 28/08/2025 | Ware Dental — Salary | £2,380.00 | | £26,320.00 |\n| 31/08/2025 | Closing Balance | | | £25,440.00 |"
+      }
+    ],
+    "gold_standard": [
+      {
+        "issue_type": "Multiple OCR Currency Symbol Errors",
+        "severity": "Medium",
+        "evidence_source": "NS&I Statement / Nationwide ISA Statement",
+        "evidence_text": "'A318,500.00', 'E0.00', '£l8,500.00', 'E5,000', '&5,000', 'E18,500.00', 'E18.40', 'E15.245,70'",
+        "correct_conclusion": "Pervasive OCR errors across both scanned documents. The £ sign has been misread as 'A3', 'E', '&', and '£l' (lowercase L instead of 1). The NS&I statement shows 'A318,500.00' which likely reads '£18,500.00' but could be ambiguous (is it £318,500 or £18,500?). These errors introduce significant uncertainty in the verified amounts.",
+        "correct_recommended_action": "Reject scanned copies. Request original digital statements from NS&I and Nationwide. Do not rely on OCR-scanned financial documents for compliance purposes."
+      },
+      {
+        "issue_type": "European Decimal Notation Inconsistency",
+        "severity": "Medium",
+        "evidence_source": "Nationwide ISA Statement",
+        "evidence_text": "'£5.000,00', '£10.060,50', 'E15.245,70', '£20.626,20' — European format mixed with UK format",
+        "correct_conclusion": "The Nationwide ISA statement uses European decimal notation (period as thousands separator, comma for decimals) in most rows but switches to UK format in the final row (£22,800.00). A genuine Nationwide Building Society statement would use consistent UK formatting. This inconsistency suggests either OCR processing errors or document manipulation.",
+        "correct_recommended_action": "Request original Nationwide ISA statement. Flag the formatting inconsistency in the compliance file."
+      },
+      {
+        "issue_type": "Bank Statement Recency Gap",
+        "severity": "Critical",
+        "evidence_source": "Barclays Bank Statements",
+        "evidence_text": "Statement period: 1 June 2025 — 31 August 2025. SOW Declaration dated 12 February 2026. Gap of ~6 months.",
+        "correct_conclusion": "Bank statements are approximately 6 months old. This is a 'Red' recency gap. The gift of £15,000 is visible (July 2025) but the current balance and any subsequent transactions are unknown. The declared personal savings of £3,250 cannot be verified against the August 2025 closing balance of £25,440.",
+        "correct_recommended_action": "Request bank statements covering September 2025 to date. Do not finalise assessment until current statements are provided."
+      },
+      {
+        "issue_type": "Gift from Mother — Acceptable with Caveats",
+        "severity": "Low",
+        "evidence_source": "Gift Letter / Barclays Statements",
+        "evidence_text": "£15,000 gift from mother Janet Mitchell. Gift letter signed. BACS transfer visible.",
+        "correct_conclusion": "The gift is from an immediate family member (mother), supported by a signed gift letter, and the bank transfer is visible on the statements. The letter states funds are from personal savings and Premium Bond sales. This is a low-risk gift source, but ideally evidence of Mrs Mitchell's Premium Bond encashment should be obtained.",
+        "correct_recommended_action": "Accept with file note. Optionally request Mrs Mitchell's NS&I encashment confirmation as additional verification."
+      }
+    ]
+  },
+  {
+    "case_id": "WV-STRESS-005",
+    "title": "Cayman Islands Trust Distribution — Beneficial Ownership Opacity",
+    "property_address": "The Coach House, Alderley Edge, Cheshire, SK9 7BQ",
+    "purchase_price": 785000,
+    "mortgage_amount": 471000,
+    "sdlt": 29250,
+    "legal_fees": 3200,
+    "tenure": "Freehold",
+    "transaction_type": "Purchase",
+    "difficulty": "expert",
+    "correct_assessment": "High Risk",
+    "regulations_violated": ["MLR 2017 Regulation 33 — EDD for high-risk third countries", "MLR 2017 Regulation 6(1)(b) — Verification of beneficial ownership of trust", "MLR 2017 Regulation 45 — Trust registration requirements", "POCA 2002 s.330 — Potential reporting obligation"],
+    "parties": [
+      {
+        "full_name": "Charlotte Anne Fitzwilliam",
+        "date_of_birth": "1982-08-14",
+        "address": "Wilmslow Lodge, 18 Brook Lane, Alderley Edge, SK9 7QR",
+        "occupation": "Art Dealer (Self-employed)",
+        "employer": "Fitzwilliam Fine Art Ltd",
+        "annual_income": 95000
+      },
+      {
+        "full_name": "Hugo Edward Fitzwilliam",
+        "date_of_birth": "1980-02-26",
+        "address": "Wilmslow Lodge, 18 Brook Lane, Alderley Edge, SK9 7QR",
+        "occupation": "Hedge Fund Manager",
+        "employer": "Albion Capital Management LLP",
+        "annual_income": 280000
+      }
+    ],
+    "documents": [
+      {
+        "title": "Source of Wealth Declaration — Joint",
+        "content": "## Source of Wealth Declaration\n\n**Purchaser 1:** Charlotte Anne Fitzwilliam\n**DOB:** 14/08/1982 | **Occupation:** Art Dealer / Director, Fitzwilliam Fine Art Ltd | **Income:** £95,000\n\n**Purchaser 2:** Hugo Edward Fitzwilliam\n**DOB:** 26/02/1980 | **Occupation:** Fund Manager, Albion Capital Management LLP | **Income:** £280,000\n\n### Joint Funding Breakdown\n\n| Source | Amount |\n|---|---|\n| Mortgage (Handelsbanken) | £471,000 |\n| Hugo — Distribution from Fitzwilliam Family Trust | £185,000 |\n| Hugo — Personal Savings (Coutts) | £80,000 |\n| Charlotte — Sale of Artwork | £48,000 |\n| Charlotte — Stocks & Shares ISA | £33,750 |\n| **Total** | **£817,750** |\n\n### Trust Distribution\nThe Fitzwilliam Family Trust is an irrevocable discretionary trust established by Hugo's late grandfather in 1995, administered by Trident Trust Company (Cayman) Ltd. Hugo received a distribution of £185,000 in November 2025.\n\n*Signed: C. Fitzwilliam & H. Fitzwilliam, Date: 1 March 2026*"
+      },
+      {
+        "title": "Bank Statements — Hugo Fitzwilliam (Coutts & Co)",
+        "content": "## Coutts & Co — Current Account\n**Statement Period:** 01/10/2025 — 28/02/2026\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/10/2025 | Balance B/F | | | £112,400.00 |\n| 15/10/2025 | Albion Capital — Monthly Drawing | £23,333.00 | | £135,733.00 |\n| 12/11/2025 | SWIFT IN — TRIDENT TRUST CO (CAYMAN) LTD — FITZWILLIAM FAMILY TRUST | £185,000.00 | | £320,733.00 |\n| 15/11/2025 | Albion Capital — Monthly Drawing | £23,333.00 | | £344,066.00 |\n| 20/11/2025 | Transfer to Joint Savings | | £185,000.00 | £159,066.00 |\n| 15/12/2025 | Albion Capital — Monthly Drawing | £23,333.00 | | £182,399.00 |\n| 15/01/2026 | Albion Capital — Monthly Drawing | £23,333.00 | | £205,732.00 |\n| 01/02/2026 | Solicitor — Addleshaws LLP | | £265,000.00 | -£59,268.00 |\n| 15/02/2026 | Albion Capital — Monthly Drawing | £23,333.00 | | -£35,935.00 |"
+      },
+      {
+        "title": "Trust Distribution Letter — Trident Trust (Cayman)",
+        "content": "## Trident Trust Company (Cayman) Limited\nP.O. Box 847, George Town, Grand Cayman, KY1-1103\n\nDate: 8 November 2025\n\n**PRIVATE & CONFIDENTIAL**\n\nMr Hugo Edward Fitzwilliam\nWilmslow Lodge, 18 Brook Lane\nAlderley Edge, SK9 7QR\nUnited Kingdom\n\nDear Mr Fitzwilliam,\n\nRe: The Fitzwilliam Family Trust — Distribution\n\nFurther to the resolution of the Trustees dated 5 November 2025, we confirm that a distribution of USD 235,000 (GBP equivalent approximately £185,000) has been made to you as a discretionary beneficiary of the above Trust.\n\nThe distribution has been remitted via SWIFT transfer from the Trust's account at Butterfield Bank (Cayman) Limited to your Coutts & Co account.\n\nPlease note that, as a discretionary trust, the Trustees are not obliged to disclose the trust assets, the identity of other beneficiaries, or the settlor's letter of wishes.\n\nYours faithfully,\n\nJames R. Hartley\nDirector, Trident Trust Company (Cayman) Limited"
+      },
+      {
+        "title": "Art Sale Invoice — Charlotte Fitzwilliam",
+        "content": "## Fitzwilliam Fine Art Ltd\nInvoice No: FFA-2026-0041\n\n**Sold To:** Private Collector (name redacted for client confidentiality)\n**Date:** 14 January 2026\n\n| Item | Description | Price |\n|---|---|---|\n| 1 | 'Estuary at Dawn' — Oil on canvas, attributed to J.M.W. Turner (workshop), c.1835 | £48,000.00 |\n\n**Payment Terms:** Wire transfer within 14 days\n**Payment Received:** 28 January 2026\n\n*Note: This is a legitimate business sale. The buyer's identity has been redacted per gallery policy.*"
+      }
+    ],
+    "gold_standard": [
+      {
+        "issue_type": "Cayman Islands Trust — High-Risk Jurisdiction & Beneficial Ownership",
+        "severity": "Critical",
+        "evidence_source": "Trust Distribution Letter / SOW Declaration",
+        "evidence_text": "£185,000 distribution from Fitzwilliam Family Trust administered by Trident Trust (Cayman). Trust letter states 'Trustees are not obliged to disclose trust assets, identity of other beneficiaries, or settlor's letter of wishes.'",
+        "correct_conclusion": "The Cayman Islands is a high-risk jurisdiction for AML purposes. Under MLR 2017 Reg 6(1)(b), the beneficial ownership structure of the trust must be verified. The trust administrator has explicitly refused to disclose: (a) trust assets, (b) other beneficiaries, (c) the settlor's letter of wishes. This opacity prevents adequate CDD. The trust was established in 1995 by Hugo's late grandfather — the original source of the trust's wealth is unverified. Under Reg 33, enhanced due diligence is mandatory for funds from high-risk third countries.",
+        "correct_recommended_action": "Request the Trust Deed (or relevant extracts). Identify the settlor and verify their source of wealth. Request confirmation of whether the trust is registered with HMRC's Trust Registration Service (Reg 45). If the trustee refuses disclosure, consider whether the firm can proceed. Consider filing a SAR."
+      },
+      {
+        "issue_type": "Art Sale — Buyer Identity Redacted",
+        "severity": "High",
+        "evidence_source": "Art Sale Invoice",
+        "evidence_text": "Buyer described as 'Private Collector (name redacted for client confidentiality)'. Sale of £48,000 artwork.",
+        "correct_conclusion": "The art market is identified by HMRC and the NCA as a sector vulnerable to money laundering. The sale of a £48,000 artwork where the buyer's identity is redacted raises concerns. Under the Anti-Money Laundering: Guidance for the Art Market (2020), art dealers acting as high-value dealers must conduct CDD on buyers for transactions above €10,000. While Charlotte may have conducted CDD as the dealer, the redaction prevents the conveyancing firm from verifying the legitimacy of this income.",
+        "correct_recommended_action": "Request Charlotte to provide the buyer's identity confidentially or provide confirmation that AML checks were conducted on the buyer. Request the corresponding bank receipt showing the £48,000 payment."
+      },
+      {
+        "issue_type": "Overdrawn Account After Solicitor Payment",
+        "severity": "Medium",
+        "evidence_source": "Coutts Bank Statements",
+        "evidence_text": "Balance after solicitor payment: -£59,268. Subsequent drawing brings it to -£35,935.",
+        "correct_conclusion": "Hugo's Coutts account went significantly overdrawn (-£59,268) after the solicitor payment. While Coutts may permit substantial overdrafts for high-net-worth clients, this suggests the available liquid funds were stretched. The overall funding appears to rely heavily on the trust distribution.",
+        "correct_recommended_action": "Note in compliance file. No further action required if Coutts confirms the overdraft facility."
+      }
+    ]
+  },
+  {
+    "case_id": "WV-STRESS-006",
+    "title": "Chinese Underground Banking — Structured Domestic Transfers",
+    "property_address": "28 Gerrard Street, London, W1D 6JW",
+    "purchase_price": 380000,
+    "mortgage_amount": 266000,
+    "sdlt": 6500,
+    "legal_fees": 1950,
+    "tenure": "Leasehold",
+    "transaction_type": "Purchase",
+    "difficulty": "expert",
+    "correct_assessment": "High Risk",
+    "regulations_violated": ["MLR 2017 Regulation 33(1)(b) — Unusually complex transaction pattern", "MLR 2017 Regulation 28 — Source of funds inconsistent with profile", "POCA 2002 s.330 — Duty to report", "The Money Laundering and Terrorist Financing (Amendment) Regulations 2019"],
+    "parties": [
+      {
+        "full_name": "Li Wei Chen",
+        "date_of_birth": "1988-09-12",
+        "address": "Flat 5, 14 Wardour Street, London, W1D 6QF",
+        "occupation": "Restaurant Manager",
+        "employer": "Golden Dragon Dining Ltd",
+        "annual_income": 32000
+      }
+    ],
+    "documents": [
+      {
+        "title": "Source of Wealth Declaration",
+        "content": "## Source of Wealth Declaration\n\n**Full Name:** Li Wei Chen\n**Date of Birth:** 12/09/1988\n**Occupation:** Restaurant Manager — Golden Dragon Dining Ltd\n**Annual Gross Salary:** £32,000\n\n### Funding Breakdown\n\n| Source | Amount |\n|---|---|\n| Mortgage (Bank of China (UK) Ltd) | £266,000 |\n| Family Savings from China | £85,000 |\n| Personal Savings | £28,750 |\n| NS&I Premium Bonds | £3,750 |\n| **Total** | **£383,500** |\n\n### Family Savings\nMy parents, Mr Chen Guowei and Mrs Liu Xiaomei, reside in Fuzhou, Fujian Province, China. They have saved throughout their careers (father: civil servant; mother: school teacher) and wish to help me purchase a property in the UK.\n\nDue to Chinese capital controls (USD 50,000 annual limit per individual), the funds were transferred in multiple smaller amounts by various family members over the past 12 months.\n\n*Signed: Li Wei Chen, Date: 20 February 2026*"
+      },
+      {
+        "title": "Bank Statements — Li Wei Chen (HSBC Current Account)",
+        "content": "## HSBC Current Account — Sort Code: 40-02-14 | Account: 73918264\n**Statement Period:** 01/03/2025 — 28/02/2026\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/03/2025 | Balance B/F | | | £8,420.00 |\n| 20/03/2025 | FPS IN — WANG JING | £4,900.00 | | £13,320.00 |\n| 05/04/2025 | FPS IN — ZHANG MING | £4,800.00 | | £18,120.00 |\n| 18/04/2025 | FPS IN — LIU HONG | £4,950.00 | | £23,070.00 |\n| 02/05/2025 | FPS IN — CHEN YAN | £4,700.00 | | £27,770.00 |\n| 20/05/2025 | FPS IN — XU PING | £4,900.00 | | £32,670.00 |\n| 08/06/2025 | FPS IN — ZHAO WEI | £4,850.00 | | £37,520.00 |\n| 25/06/2025 | FPS IN — HUANG LEI | £4,800.00 | | £42,320.00 |\n| 10/07/2025 | FPS IN — SUN QIANG | £4,900.00 | | £47,220.00 |\n| 28/07/2025 | FPS IN — WANG FANG | £4,750.00 | | £51,970.00 |\n| 15/08/2025 | FPS IN — LI JUN | £4,950.00 | | £56,920.00 |\n| 01/09/2025 | FPS IN — CHEN BO | £4,800.00 | | £61,720.00 |\n| 18/09/2025 | FPS IN — ZHOU MIN | £4,850.00 | | £66,570.00 |\n| 05/10/2025 | FPS IN — MA YU | £4,900.00 | | £71,470.00 |\n| 22/10/2025 | FPS IN — WU DONG | £4,750.00 | | £76,220.00 |\n| 10/11/2025 | FPS IN — YANG HUA | £4,850.00 | | £81,070.00 |\n| 28/11/2025 | FPS IN — HE XIAN | £4,930.00 | | £86,000.00 |\n| 15/12/2025 | FPS IN — DENG LI | £4,780.00 | | £90,780.00 |\n| Various | Golden Dragon — Salary | £2,667/mo | | |\n| 28/02/2026 | Closing Balance | | | £116,920.00 |"
+      },
+      {
+        "title": "Letter from Parents (Translated)",
+        "content": "## Letter from Chen Guowei & Liu Xiaomei\n*(Translated from Mandarin Chinese — Translation by: ABC Translation Services Ltd, London)*\n\nTo Whom It May Concern,\n\nWe, Chen Guowei (ID: 350102196305124517) and Liu Xiaomei (ID: 350102196708230024), parents of Chen Li Wei, confirm that we have arranged for the sum of approximately RMB 780,000 (£85,000 equivalent) to be sent to our son to assist with a property purchase in the United Kingdom.\n\nDue to the annual foreign exchange limit of USD 50,000 per person imposed by the State Administration of Foreign Exchange (SAFE), we arranged for several family members and friends to remit smaller amounts on our behalf using their individual quotas.\n\nWe confirm that these are our personal savings accumulated over our careers:\n- Chen Guowei: Retired civil servant, Fujian Provincial Government (35 years service)\n- Liu Xiaomei: Retired primary school teacher (30 years service)\n\nThis money is a gift and we expect no repayment.\n\nSigned: Chen Guowei & Liu Xiaomei\nDate: 1 March 2025\nFuzhou, Fujian Province, PRC"
+      }
+    ],
+    "gold_standard": [
+      {
+        "issue_type": "Chinese Underground Banking / Daigou Structuring",
+        "severity": "Critical",
+        "evidence_source": "HSBC Bank Statements / Parents' Letter",
+        "evidence_text": "17 separate FPS transfers from 17 different individuals, all in amounts of £4,700–£4,950, over 12 months. Parents' letter confirms funds were sent 'using family members' and friends' individual quotas' to circumvent SAFE limits.",
+        "correct_conclusion": "This is a textbook example of Chinese underground banking / structured transfers to circumvent China's USD 50,000 annual capital control limit. The parents' own letter explicitly confirms the arrangement: using other people's foreign exchange quotas ('daigou') to transfer funds internationally. This practice: (a) violates Chinese foreign exchange regulations, (b) constitutes structuring under UK AML law, (c) uses third parties as conduits, obscuring the true source. The uniformity of amounts (~£4,800-£4,950) and the use of 17 different transferors from domestic UK FPS transfers (not SWIFT) suggests the funds were first consolidated within the UK through an informal value transfer network, rather than sent directly from China.",
+        "correct_recommended_action": "This transaction presents unacceptable AML risk. The firm should: (1) Consider filing a SAR under POCA 2002 s.330, (2) Consider whether to continue acting, (3) If continuing, require full identification of all 17 transferors, their relationship to the family, and evidence of their own source of funds, (4) Request SWIFT transfer records showing the original remittances from China, (5) Note that the parents' letter constitutes a self-incriminating admission of regulatory evasion."
+      },
+      {
+        "issue_type": "Income vs. Deposit Proportionality — Severe Mismatch",
+        "severity": "High",
+        "evidence_source": "SOW Declaration / HSBC Statements",
+        "evidence_text": "Annual salary £32,000. Declared personal savings £28,750. Account balance grew from £8,420 to £116,920 in 12 months.",
+        "correct_conclusion": "On a salary of £32,000 (net approximately £26,000), accumulating £28,750 in personal savings would require saving virtually all post-tax income. The account balance increase from £8,420 to £116,920 is almost entirely explained by the third-party transfers, not by salary accumulation. The declared 'personal savings' of £28,750 need independent verification.",
+        "correct_recommended_action": "Request evidence of savings accumulation over time. The personal savings claim appears overstated relative to income."
+      }
+    ]
+  },
+  {
+    "case_id": "WV-STRESS-007",
+    "title": "Legitimate High-Net-Worth — SIPP Drawdown and ISA Portfolio",
+    "property_address": "Woodlands Farm, Little Missenden, Buckinghamshire, HP7 0QZ",
+    "purchase_price": 1250000,
+    "mortgage_amount": 625000,
+    "sdlt": 61250,
+    "legal_fees": 4500,
+    "tenure": "Freehold",
+    "transaction_type": "Purchase",
+    "difficulty": "easy",
+    "correct_assessment": "Low Risk",
+    "regulations_violated": [],
+    "parties": [
+      {
+        "full_name": "Dr Sarah Elizabeth Worthington-Clarke",
+        "date_of_birth": "1968-05-19",
+        "address": "12 Hampstead Lane, London, NW3 2PL",
+        "occupation": "Consultant Neurologist",
+        "employer": "University College London Hospitals NHS Foundation Trust",
+        "annual_income": 145000
+      },
+      {
+        "full_name": "Professor Michael Ian Clarke",
+        "date_of_birth": "1965-11-08",
+        "address": "12 Hampstead Lane, London, NW3 2PL",
+        "occupation": "Professor of Economics",
+        "employer": "London School of Economics",
+        "annual_income": 125000
+      }
+    ],
+    "documents": [
+      {
+        "title": "Source of Wealth Declaration — Joint",
+        "content": "## Source of Wealth Declaration\n\n**Purchaser 1:** Dr Sarah Elizabeth Worthington-Clarke\n**DOB:** 19 May 1968 | **Occupation:** Consultant Neurologist, UCLH | **Income:** £145,000\n\n**Purchaser 2:** Professor Michael Ian Clarke\n**DOB:** 8 November 1965 | **Occupation:** Professor of Economics, LSE | **Income:** £125,000\n\n### Joint Funding Breakdown\n\n| Source | Amount |\n|---|---|\n| Mortgage (Handelsbanken) | £625,000 |\n| Sale of 12 Hampstead Lane (net equity) | £420,000 |\n| Michael — SIPP Drawdown (Aviva) | £125,000 |\n| Sarah — Stocks & Shares ISA (Hargreaves Lansdown) | £85,000 |\n| Michael — NS&I Income Bonds | £35,250 |\n| Joint Current Account Savings | £25,500 |\n| **Total** | **£1,315,750** |\n\n*Signed: Dr S. Worthington-Clarke & Prof M. Clarke, Date: 25 February 2026*"
+      },
+      {
+        "title": "Sale Memorandum — 12 Hampstead Lane",
+        "content": "## Sale Memorandum\n\n**Property:** 12 Hampstead Lane, London, NW3 2PL\n**Seller:** Dr S. Worthington-Clarke & Prof M. I. Clarke\n**Buyer:** Mr & Mrs J. Patel\n**Sale Price:** £1,680,000\n**Outstanding Mortgage:** £1,260,000 (Nationwide)\n**Net Equity:** £420,000\n**Expected Completion:** 15 March 2026\n\n**Estate Agent:** Savills, Hampstead\n**Solicitor (Sale):** Mishcon de Reya LLP"
+      },
+      {
+        "title": "SIPP Drawdown — Aviva",
+        "content": "## Aviva SIPP — Drawdown Confirmation\n\n**Member:** Professor Michael Ian Clarke\n**Reference:** SIPP-AV-9281746\n**Drawdown Date:** 10 February 2026\n**Amount:** £125,000 (PCLS — 25% tax-free lump sum)\n**Remaining Fund Value:** £375,000\n**Tax Treatment:** No income tax on this PCLS withdrawal\n\nFunds paid to: Joint Barclays Account, Sort Code 20-72-18, Account 91827364"
+      },
+      {
+        "title": "S&S ISA Valuation — Hargreaves Lansdown",
+        "content": "## Hargreaves Lansdown — Stocks & Shares ISA\n**Account Holder:** Dr Sarah E. Worthington-Clarke\n**Valuation Date:** 28 February 2026\n\n### Holdings\n| Fund | Units | Value |\n|---|---|---|\n| Fundsmith Equity Fund | 1,842.31 | £38,400.00 |\n| Vanguard LifeStrategy 80% | 2,104.89 | £28,200.00 |\n| iShares Core FTSE 100 | 1,512.00 | £18,400.00 |\n| **Total** | | **£85,000.00** |\n\n### Contribution History\n- Total contributions (2008–2025): £142,000\n- Current value after market growth: £85,000\n- Note: Significant drawdown of £65,000 in March 2020\n\n**Withdrawal Request:** Full encashment — processing (5 business days)"
+      },
+      {
+        "title": "NS&I Income Bonds — Michael Clarke",
+        "content": "## National Savings & Investments — Income Bonds\n\n**Holder:** Professor Michael I Clarke\n**Holder Number:** 847NS293651\n**Current Balance:** £35,250.00\n**Interest Rate:** 3.44% (variable)\n**Monthly Interest Payments:** £101.05\n\n**Encashment Request:** Full — submitted 20 February 2026"
+      }
+    ],
+    "gold_standard": [
+      {
+        "issue_type": "Legitimate High-Net-Worth Transaction",
+        "severity": "Low",
+        "evidence_source": "All Documents",
+        "evidence_text": "Combined income £270,000. Property chain sale provides £420,000 equity. SIPP and ISA from regulated providers.",
+        "correct_conclusion": "This is a straightforward high-net-worth transaction. Both purchasers are senior professionals with verifiable employment at NHS and LSE. The primary funding source is equity from an existing London property sale (handled by Savills and Mishcon de Reya). The SIPP drawdown from Aviva and ISA encashment from Hargreaves Lansdown are from regulated financial institutions with clear audit trails. NS&I bonds provide a government-backed savings source. Combined annual income of £270,000 is consistent with the asset profile. No red flags identified.",
+        "correct_recommended_action": "Standard CDD. Verify property sale completion and net equity receipt. File note confirming all sources verified through regulated institutions."
+      },
+      {
+        "issue_type": "ISA Value vs. Contributions Discrepancy",
+        "severity": "Low",
+        "evidence_source": "Hargreaves Lansdown ISA Statement",
+        "evidence_text": "Total contributions £142,000, current value £85,000. Drawdown of £65,000 in March 2020.",
+        "correct_conclusion": "The ISA shows total contributions of £142,000 but a current value of only £85,000. This is explained by a £65,000 drawdown in March 2020 (likely during the COVID-19 market crash) plus subsequent market recovery. The remaining shortfall between contributions minus drawdowns (£77,000) and current value (£85,000) shows investment growth. No AML concern.",
+        "correct_recommended_action": "Accept as verified. The Hargreaves Lansdown statement is an official provider document."
+      }
+    ]
+  },
+  {
+    "case_id": "WV-STRESS-008",
+    "title": "Gambling Winnings and Crypto — Double Verification Gap",
+    "property_address": "19 Deansgate, Manchester, M3 1AQ",
+    "purchase_price": 350000,
+    "mortgage_amount": 245000,
+    "sdlt": 5000,
+    "legal_fees": 1800,
+    "tenure": "Leasehold",
+    "transaction_type": "Purchase",
+    "difficulty": "hard",
+    "correct_assessment": "High Risk",
+    "regulations_violated": ["MLR 2017 Regulation 28(11) — Inconsistent with client risk profile", "MLR 2017 Regulation 33 — Complex financial arrangements", "The Gambling Commission — Source of funds for gambling unclear"],
+    "parties": [
+      {
+        "full_name": "Tyler Jake Morgan",
+        "date_of_birth": "1996-01-28",
+        "address": "Flat 12, Northern Quarter Lofts, Manchester, M4 5AZ",
+        "occupation": "Social Media Content Creator",
+        "employer": "Self-employed (TJM Digital Ltd)",
+        "annual_income": 48000
+      }
+    ],
+    "documents": [
+      {
+        "title": "Source of Wealth Declaration",
+        "content": "## Source of Wealth Declaration\n\n**Full Name:** Tyler Jake Morgan\n**Date of Birth:** 28/01/1996\n**Occupation:** Social Media Content Creator / Director, TJM Digital Ltd\n**Annual Income:** £48,000 (estimated — variable)\n\n### Funding Breakdown\n\n| Source | Amount |\n|---|---|\n| Mortgage (Virgin Money) | £245,000 |\n| Gambling Winnings (Bet365 withdrawal) | £52,000 |\n| Cryptocurrency Sale (Binance) | £38,000 |\n| Personal Savings | £18,800 |\n| **Total** | **£353,800** |\n\n### Notes\nI had a significant winning streak on Bet365 in late 2025 playing poker and sports betting. I also sold Ethereum I've held since 2020.\n\n*Signed: Tyler Morgan, Date: 14 February 2026*"
+      },
+      {
+        "title": "Bank Statements — Tyler Morgan (Monzo Current Account)",
+        "content": "## Monzo Current Account\n**Statement Period:** 01/10/2025 — 28/02/2026\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/10/2025 | Balance B/F | | | £6,840.00 |\n| Various | TJM Digital — Ad Revenue (YouTube/TikTok) | ~£4,000/mo | | |\n| 15/10/2025 | Bet365 Withdrawal | £12,000.00 | | £22,840.00 |\n| 28/10/2025 | Bet365 Deposit | | £5,000.00 | £17,840.00 |\n| 05/11/2025 | Bet365 Withdrawal | £18,000.00 | | £35,840.00 |\n| 12/11/2025 | Bet365 Deposit | | £3,000.00 | £32,840.00 |\n| 20/11/2025 | Bet365 Withdrawal | £22,000.00 | | £54,840.00 |\n| 25/11/2025 | Bet365 Deposit | | £8,000.00 | £46,840.00 |\n| 01/12/2025 | Bet365 Withdrawal | £15,000.00 | | £61,840.00 |\n| 10/12/2025 | Binance GBP Withdrawal | £38,000.00 | | £99,840.00 |\n| Various | Living expenses, subscriptions | | ~£2,500/mo | |\n| 28/02/2026 | Closing Balance | | | £108,640.00 |"
+      },
+      {
+        "title": "Bet365 Account Summary (Screenshot)",
+        "content": "## Bet365 Account Summary\n**Account Holder:** Tyler Morgan\n**Member Since:** March 2021\n\n### 12-Month Summary (Mar 2025 — Feb 2026)\n- Total Deposits: £42,000\n- Total Withdrawals: £67,000\n- Net Position: +£25,000\n\n### Lifetime Summary\n- Total Deposits: £128,000\n- Total Withdrawals: £180,000\n- Net Position: +£52,000\n\n*Screenshot captured 1 March 2026*"
+      },
+      {
+        "title": "Binance Transaction History",
+        "content": "## Binance — Withdrawal Confirmation\n\n**Account:** tyler.morgan@gmail.com\n**Transaction Date:** 10 December 2025\n**Asset Sold:** Ethereum (ETH)\n**Quantity:** 12.4 ETH\n**Sale Price:** £38,000.00\n**Withdrawal to:** Monzo — Tyler Morgan\n**Transaction ID:** BN-WD-8827193\n\n### Acquisition History\n| Date | Qty | Price Paid |\n|---|---|---|\n| 15/06/2020 | 5.0 ETH | £920.00 |\n| 22/11/2020 | 4.0 ETH | £1,480.00 |\n| 03/03/2021 | 3.4 ETH | £4,200.00 |\n| **Total** | **12.4 ETH** | **£6,600.00** |"
+      }
+    ],
+    "gold_standard": [
+      {
+        "issue_type": "Gambling Winnings — Source of Gambling Funds Unclear",
+        "severity": "High",
+        "evidence_source": "Bet365 Summary / Monzo Statements",
+        "evidence_text": "Lifetime deposits: £128,000. Net winnings: £52,000. Income: £48,000/year.",
+        "correct_conclusion": "The Bet365 account shows lifetime deposits of £128,000. On a declared income of £48,000 per year, depositing £128,000 into a gambling account since 2021 (approximately £25,600/year) represents a significant proportion of post-tax income. While the net position is +£52,000, the source of the £128,000 in gambling deposits must be investigated. The 12-month period shows £42,000 deposited — nearly equivalent to a full year's gross income. The bank statements also show £16,000 in deposits back to Bet365 within the statement period, confirming active gambling. Under the Law Society AML Guide, gambling winnings are a higher-risk source requiring evidence of the original funds used for gambling.",
+        "correct_recommended_action": "Request 2 years of bank statements to trace the source of gambling deposits. Request Self-Assessment tax returns to verify declared income. Note that the gambling pattern is concerning relative to income. Consider whether the net gambling winnings figure (£52,000) or the gross withdrawals visible on statements should be used."
+      },
+      {
+        "issue_type": "Cryptocurrency — Legitimately Acquired",
+        "severity": "Low",
+        "evidence_source": "Binance Transaction History",
+        "evidence_text": "12.4 ETH purchased in 2020-2021 for £6,600, sold for £38,000.",
+        "correct_conclusion": "The Binance history shows Ethereum was acquired in 2020-2021 for a total of £6,600. The current sale price of £38,000 represents significant capital appreciation, which is consistent with ETH price movements during this period. Crucially, unlike many crypto cases, the full acquisition history is provided showing purchase dates and prices, all of which were relatively small amounts consistent with the client's income at the time.",
+        "correct_recommended_action": "Accept as verified. The acquisition history provides a clear audit trail from original purchase to sale. Note capital gains tax implications for the client (profit of ~£31,400)."
+      },
+      {
+        "issue_type": "Variable Income — Content Creator",
+        "severity": "Medium",
+        "evidence_source": "SOW Declaration / Monzo Statements",
+        "evidence_text": "Income described as '£48,000 (estimated — variable)'. Ad revenue ~£4,000/month visible.",
+        "correct_conclusion": "The declared income of £48,000 is described as 'estimated' and 'variable'. Bank statements show approximately £4,000/month in ad revenue, which annualises to £48,000 — consistent with the declaration. However, as a content creator, income can fluctuate significantly. The mortgage lender (Virgin Money) will have assessed affordability independently.",
+        "correct_recommended_action": "Request HMRC Self-Assessment for 2024/25 and 2023/24 to verify income history. Accept the bank statement pattern as broadly consistent."
+      }
+    ]
+  },
+  {
+    "case_id": "WV-STRESS-009",
+    "title": "Redundancy Payout, Second Property, and SDLT Surcharge Avoidance",
+    "property_address": "8 Marine Crescent, Whitby, North Yorkshire, YO21 3HH",
+    "purchase_price": 195000,
+    "mortgage_amount": 0,
+    "sdlt": 7350,
+    "legal_fees": 1200,
+    "tenure": "Freehold",
+    "transaction_type": "Purchase",
+    "difficulty": "medium",
+    "correct_assessment": "Medium Risk",
+    "regulations_violated": ["MLR 2017 Regulation 28 — Proportionate verification required", "Finance Act 2003 Schedule 4ZA — Additional SDLT surcharge (second property)"],
+    "parties": [
+      {
+        "full_name": "Graham Frederick Booth",
+        "date_of_birth": "1962-03-15",
+        "address": "42 Harrogate Road, Leeds, LS7 4LA",
+        "occupation": "Retired (formerly Operations Manager)",
+        "employer": "Previously: British Steel (Tata Steel UK)",
+        "annual_income": 0
+      }
+    ],
+    "documents": [
+      {
+        "title": "Source of Wealth Declaration",
+        "content": "## Source of Wealth Declaration\n\n**Full Name:** Graham Frederick Booth\n**Date of Birth:** 15 March 1962\n**Occupation:** Retired (made redundant September 2025)\n**Former Employer:** Tata Steel UK Ltd (British Steel)\n**Annual Income:** Nil (State Pension from May 2029)\n\n### Funding Breakdown\n\n| Source | Amount |\n|---|---|\n| Redundancy Payment | £95,000 |\n| SIPP Drawdown (Scottish Widows) | £62,000 |\n| NS&I Premium Bonds | £35,000 |\n| Cash ISA (Halifax) | £10,550 |\n| **Total** | **£202,550** |\n\n### Property Ownership\nI currently own 42 Harrogate Road, Leeds, which I intend to keep and let out. This purchase is for a retirement/holiday home.\n\n*Signed: G. F. Booth, Date: 1 March 2026*"
+      },
+      {
+        "title": "Bank Statements — Graham Booth (Yorkshire Building Society)",
+        "content": "## Yorkshire Building Society Current Account\n**Account:** 78291634\n**Statement Period:** 01/09/2025 — 28/02/2026\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/09/2025 | Balance B/F | | | £3,280.00 |\n| 15/09/2025 | BACS — TATA STEEL UK — REDUNDANCY | £95,000.00 | | £98,280.00 |\n| 15/09/2025 | BACS — TATA STEEL UK — FINAL SALARY | £3,200.00 | | £101,480.00 |\n| 01/10/2025 | Scottish Widows SIPP — PCLS | £62,000.00 | | £163,480.00 |\n| 15/10/2025 | NS&I Premium Bonds Encashment | £35,000.00 | | £198,480.00 |\n| 01/11/2025 | Halifax ISA Withdrawal | £10,550.00 | | £209,030.00 |\n| Various | Living expenses | | ~£1,800/mo | |\n| 28/02/2026 | Closing Balance | | | £200,230.00 |"
+      },
+      {
+        "title": "Redundancy Letter — Tata Steel UK",
+        "content": "## Tata Steel UK Ltd\nShotton Works, Deeside, CH5 2NH\n\nDate: 30 August 2025\n\n**PRIVATE & CONFIDENTIAL**\n\nMr Graham F. Booth\n42 Harrogate Road\nLeeds, LS7 4LA\n\nDear Graham,\n\nRe: Confirmation of Redundancy\n\nFurther to our consultation meetings, I write to confirm that your role of Operations Manager has been made redundant with effect from 15 September 2025.\n\nYour redundancy package is as follows:\n- Statutory redundancy pay: £16,320 (based on 28 years' service)\n- Enhanced redundancy: £58,680\n- Payment in lieu of notice (12 weeks): £20,000\n- **Total gross payment: £95,000**\n\nThe first £30,000 is tax-free under current HMRC rules. Tax will be deducted on the remainder.\n\nWe thank you for your 28 years of dedicated service.\n\nYours sincerely,\nJennifer Walsh\nHR Director, Tata Steel UK Ltd"
+      },
+      {
+        "title": "SIPP Drawdown — Scottish Widows",
+        "content": "## Scottish Widows SIPP — Partial Drawdown\n\n**Member:** Graham Frederick Booth\n**Reference:** SW-SIPP-4829163\n**Drawdown Date:** 1 October 2025\n**Amount:** £62,000 (25% PCLS from uncrystallised funds)\n**Remaining Fund Value:** £186,000\n**Tax:** Nil (PCLS is tax-free)\n\nFunds paid to: Yorkshire Building Society"
+      }
+    ],
+    "gold_standard": [
+      {
+        "issue_type": "Second Property — SDLT Surcharge Applicable",
+        "severity": "Medium",
+        "evidence_source": "SOW Declaration",
+        "evidence_text": "Client states: 'I currently own 42 Harrogate Road, Leeds, which I intend to keep and let out.'",
+        "correct_conclusion": "The client is purchasing a second property while retaining their existing home. Under Finance Act 2003 Schedule 4ZA, an additional 3% SDLT surcharge applies on second property purchases (5% from April 2025). The declared SDLT of £7,350 should be checked against the higher rate calculation. This is not an AML concern per se but a compliance flag — ensuring the correct SDLT is being paid prevents potential issues at completion.",
+        "correct_recommended_action": "Verify the SDLT calculation includes the additional property surcharge. Confirm with the client that they understand the higher rate applies."
+      },
+      {
+        "issue_type": "Redundancy Payment — Legitimate and Well-Evidenced",
+        "severity": "Low",
+        "evidence_source": "Redundancy Letter / Bank Statements",
+        "evidence_text": "£95,000 from Tata Steel UK. Official letter on company letterhead. BACS payment visible.",
+        "correct_conclusion": "The redundancy payment is well-evidenced with an official letter from Tata Steel UK detailing the breakdown (statutory + enhanced + PILON = £95,000). The BACS payment is visible on the bank statement matching the date and amount. Tata Steel UK is a major UK employer. This is a legitimate, low-risk funding source.",
+        "correct_recommended_action": "Accept as verified. Note in compliance file."
+      },
+      {
+        "issue_type": "Cash Purchase — No Mortgage",
+        "severity": "Low",
+        "evidence_source": "SOW Declaration",
+        "evidence_text": "Mortgage amount: £0. Full cash purchase of £195,000.",
+        "correct_conclusion": "This is a cash purchase (no mortgage). Under the Law Society AML Guide, cash purchases require the same level of source of funds verification as mortgaged purchases. All sources are from regulated UK institutions (Tata Steel employer, Scottish Widows, NS&I, Halifax). The absence of a lender's independent affordability check means the conveyancer bears sole responsibility for AML verification.",
+        "correct_recommended_action": "Standard CDD with note that this is a cash purchase. All sources verified through regulated providers."
+      }
+    ]
+  },
+  {
+    "case_id": "WV-STRESS-010",
+    "title": "Multi-Source Complexity — Inheritance, Gift, Crypto, and Bonus",
+    "property_address": "The Gatehouse, Kingswood Warren, Tadworth, Surrey, KT20 6QA",
+    "purchase_price": 680000,
+    "mortgage_amount": 476000,
+    "sdlt": 24000,
+    "legal_fees": 2800,
+    "tenure": "Freehold",
+    "transaction_type": "Purchase",
+    "difficulty": "hard",
+    "correct_assessment": "Medium Risk",
+    "regulations_violated": ["MLR 2017 Regulation 28 — Multiple sources require proportionate verification", "MLR 2017 Regulation 33 — Complex funding structure"],
+    "parties": [
+      {
+        "full_name": "Anika Preet Kaur",
+        "date_of_birth": "1990-07-09",
+        "address": "28 Epsom Road, Guildford, GU1 2BU",
+        "occupation": "Investment Banking Associate",
+        "employer": "Goldman Sachs International",
+        "annual_income": 92000
+      },
+      {
+        "full_name": "James Oliver Hartley",
+        "date_of_birth": "1989-11-22",
+        "address": "28 Epsom Road, Guildford, GU1 2BU",
+        "occupation": "Civil Engineer",
+        "employer": "Mott MacDonald Group",
+        "annual_income": 58000
+      }
+    ],
+    "documents": [
+      {
+        "title": "Source of Wealth Declaration — Joint",
+        "content": "## Source of Wealth Declaration\n\n**Purchaser 1:** Anika Preet Kaur\n**DOB:** 09/07/1990 | **Occupation:** Investment Banking Associate, Goldman Sachs | **Income:** £92,000 (base) + £45,000 (avg bonus)\n\n**Purchaser 2:** James Oliver Hartley\n**DOB:** 22/11/1989 | **Occupation:** Civil Engineer, Mott MacDonald | **Income:** £58,000\n\n### Joint Funding Breakdown\n\n| Source | Amount |\n|---|---|\n| Mortgage (Barclays) | £476,000 |\n| Anika — Goldman Sachs Bonus (2025) | £42,000 |\n| James — Inheritance from Grandmother | £55,000 |\n| James — Coinbase Crypto Sale | £28,500 |\n| Anika — Lifetime ISA (Moneybox) | £24,200 |\n| James — Gift from Parents | £30,000 |\n| Joint Savings | £25,100 |\n| Anika — Premium Bonds | £10,000 |\n| **Total** | **£690,800** |\n\n*Signed: A. Kaur & J. Hartley, Date: 5 March 2026*"
+      },
+      {
+        "title": "Bank Statements — Anika Kaur (HSBC Premier)",
+        "content": "## HSBC Premier Account — Sort Code: 40-04-21 | Account: 62918374\n**Statement Period:** 01/12/2025 — 28/02/2026\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/12/2025 | Balance B/F | | | £38,200.00 |\n| 15/12/2025 | Goldman Sachs — Salary | £5,750.00 | | £43,950.00 |\n| 15/01/2026 | Goldman Sachs — Salary | £5,750.00 | | £49,700.00 |\n| 20/01/2026 | Goldman Sachs — Annual Bonus | £33,600.00 | | £83,300.00 |\n| 01/02/2026 | Moneybox LISA Withdrawal | £24,200.00 | | £107,500.00 |\n| 10/02/2026 | NS&I Premium Bonds | £10,000.00 | | £117,500.00 |\n| 15/02/2026 | Goldman Sachs — Salary | £5,750.00 | | £123,250.00 |\n| 28/02/2026 | Solicitor — Barrett & Co | | £76,200.00 | £47,050.00 |"
+      },
+      {
+        "title": "Bank Statements — James Hartley (Nationwide Current Account)",
+        "content": "## Nationwide Current Account — Sort Code: 07-01-49 | Account: 38271649\n**Statement Period:** 01/11/2025 — 28/02/2026\n\n| Date | Description | Credit | Debit | Balance |\n|---|---|---|---|---|\n| 01/11/2025 | Balance B/F | | | £12,400.00 |\n| 28/11/2025 | Mott MacDonald — Salary | £3,850.00 | | £16,250.00 |\n| 05/12/2025 | BACS — MRS P HARTLEY (EXECUTORS) | £55,000.00 | | £71,250.00 |\n| 15/12/2025 | BACS — MR & MRS R HARTLEY | £30,000.00 | | £101,250.00 |\n| 20/12/2025 | Coinbase Withdrawal | £28,500.00 | | £129,750.00 |\n| 28/12/2025 | Mott MacDonald — Salary | £3,850.00 | | £133,600.00 |\n| 28/01/2026 | Mott MacDonald — Salary | £3,850.00 | | £137,450.00 |\n| 28/02/2026 | Mott MacDonald — Salary | £3,850.00 | | £141,300.00 |\n| 28/02/2026 | Solicitor — Barrett & Co | | £113,500.00 | £27,800.00 |"
+      },
+      {
+        "title": "Grant of Probate — Mrs Patricia Hartley (Deceased)",
+        "content": "## Grant of Probate\n\n**In the High Court of Justice, Family Division**\n**The Senior Registrar**\n\n**Deceased:** Patricia Mary Hartley, late of 14 Oak Drive, Woking, Surrey GU22 8NQ\n**Date of Death:** 18 August 2025\n**Executors:** Robert George Hartley and Sandra Jane Hartley\n\nNet Estate: £312,000\nGross Estate: £312,000\n\n**Grant Issued:** 15 November 2025\n**Probate Registry:** Brighton District Probate Registry\n\n*This grant authorises the named executors to administer the estate of the deceased.*"
+      },
+      {
+        "title": "Gift Letter — Mr & Mrs R Hartley",
+        "content": "## Gift Declaration\n\nWe, Robert George Hartley and Sandra Jane Hartley, of 7 Hillside Close, Guildford, GU2 4HN, confirm that we have gifted £30,000 to our son James Oliver Hartley towards his property purchase.\n\nThese funds come from our personal savings (Nationwide ISA and joint savings account).\n\nThe gift is freely given with no expectation of repayment. We will have no interest in the property.\n\nRelationship: Parents\n\nSigned: Robert Hartley & Sandra Hartley\nDate: 10 December 2025"
+      },
+      {
+        "title": "Coinbase Transaction History — James Hartley",
+        "content": "## Coinbase Account — james.hartley@mottmac.com\n\n### Sale Transaction\n- Date: 20 December 2025\n- Asset: Bitcoin (BTC)\n- Quantity: 0.3521 BTC\n- Sale Price: £28,500.00\n- Withdrawal to: Nationwide Current Account\n- Transaction ID: CB-7829164\n\n### Acquisition History\n| Date | Qty | Price Paid |\n|---|---|---|\n| 10/01/2021 | 0.2000 BTC | £4,800.00 |\n| 15/06/2021 | 0.1521 BTC | £3,900.00 |\n| **Total** | **0.3521 BTC** | **£8,700.00** |"
+      }
+    ],
+    "gold_standard": [
+      {
+        "issue_type": "Bonus — Gross vs Net Discrepancy",
+        "severity": "Medium",
+        "evidence_source": "SOW Declaration / HSBC Statements",
+        "evidence_text": "Declared: Goldman Sachs Bonus £42,000. Bank statement shows: £33,600 received.",
+        "correct_conclusion": "The declaration states a bonus of £42,000 but the bank receipt shows £33,600. The difference (£8,400 / 20%) is consistent with income tax and NI deductions on a bonus payment. The declaration appears to quote the gross figure while the bank shows net. However, only £33,600 is available as actual funds. The funding gap calculation should use the net figure.",
+        "correct_recommended_action": "Request the January 2026 payslip to confirm the gross bonus was £42,000 and net was £33,600. Adjust funding calculations to use the net figure. Note the £8,400 difference in the compliance file."
+      },
+      {
+        "issue_type": "Inheritance — Properly Evidenced",
+        "severity": "Low",
+        "evidence_source": "Grant of Probate / Nationwide Statements",
+        "evidence_text": "£55,000 inheritance. Grant of Probate issued 15 November 2025. BACS from executors visible 5 December 2025.",
+        "correct_conclusion": "The inheritance of £55,000 is supported by a Grant of Probate from Brighton District Probate Registry (estate value £312,000). The executors are James's parents (Robert and Sandra Hartley), and the BACS transfer is visible on the bank statement with an executor reference. This is well-evidenced.",
+        "correct_recommended_action": "Accept as verified. File note with Grant of Probate reference."
+      },
+      {
+        "issue_type": "Cryptocurrency — Acquisition History Provided",
+        "severity": "Low",
+        "evidence_source": "Coinbase Transaction History",
+        "evidence_text": "0.3521 BTC acquired in 2021 for £8,700, sold for £28,500.",
+        "correct_conclusion": "The Coinbase transaction history shows Bitcoin was acquired in January and June 2021 for a total of £8,700 — amounts consistent with a civil engineer's income at the time. The sale price of £28,500 reflects market appreciation. A full acquisition trail is provided.",
+        "correct_recommended_action": "Accept as verified. Note capital gains tax implications (profit ~£19,800)."
+      },
+      {
+        "issue_type": "Parental Gift — Standard",
+        "severity": "Low",
+        "evidence_source": "Gift Letter / Nationwide Statements",
+        "evidence_text": "£30,000 gift from parents Robert & Sandra Hartley. Gift letter signed. BACS visible.",
+        "correct_conclusion": "Gift from immediate family members (parents) with a signed declaration. The BACS transfer is visible on statements. The parents also acted as executors of the grandmother's estate, which is noted but not a concern. Gift letter states funds from ISA and savings — proportionate verification would accept this from immediate family.",
+        "correct_recommended_action": "Accept with file note. Optionally request evidence of parents' savings if firm policy requires it for gifts above £25,000."
+      },
+      {
+        "issue_type": "Funding Gap — Adjusted Calculation",
+        "severity": "Medium",
+        "evidence_source": "All Funding Sources (corrected for net bonus)",
+        "evidence_text": "Required: £680,000 + £24,000 + £2,800 = £706,800. Declared: £690,800. Using net bonus (£33,600 not £42,000): £682,400.",
+        "correct_conclusion": "Using the net bonus figure (£33,600), total available funds are: £476,000 + £33,600 + £55,000 + £28,500 + £24,200 + £30,000 + £25,100 + £10,000 = £682,400. Required: £706,800. Shortfall: £24,400. However, if the gross bonus is used (as declared), total is £690,800 — still short by £16,000. The client may be relying on salary accumulation between now and completion to bridge the gap.",
+        "correct_recommended_action": "Clarify whether the bonus figure is gross or net. Request confirmation of how the shortfall (£16,000-£24,400) will be funded. Confirm completion date to assess whether salary accumulation is feasible."
+      }
+    ]
+  }
+]

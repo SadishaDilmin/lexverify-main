@@ -1,0 +1,1132 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 15">
+<meta name="Originator" content="Microsoft Word 15">
+<style>
+body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.5; margin: 2.54cm; }
+h1 { font-size: 24pt; color: #1a1a2e; border-bottom: 3px solid #1a1a2e; padding-bottom: 8pt; margin-top: 24pt; page-break-before: auto; }
+h2 { font-size: 18pt; color: #16213e; border-bottom: 1.5px solid #ccc; padding-bottom: 6pt; margin-top: 20pt; page-break-before: always; }
+h3 { font-size: 14pt; color: #0f3460; margin-top: 14pt; }
+h4 { font-size: 12pt; color: #333; margin-top: 10pt; }
+table { border-collapse: collapse; width: 100%; margin: 10pt 0; font-size: 10pt; }
+th { background-color: #1a1a2e; color: white; padding: 6pt 8pt; text-align: left; border: 1px solid #333; }
+td { padding: 5pt 8pt; border: 1px solid #999; vertical-align: top; }
+tr:nth-child(even) td { background-color: #f5f5f5; }
+.checkbox { font-family: Wingdings 2; font-size: 14pt; }
+.check-item { margin: 4pt 0 4pt 18pt; text-indent: -18pt; }
+.meta { color: #666; font-size: 10pt; }
+.badge { display: inline-block; padding: 2pt 8pt; border-radius: 3pt; font-size: 9pt; font-weight: bold; }
+.badge-pass { background: #d4edda; color: #155724; }
+.badge-fail { background: #f8d7da; color: #721c24; }
+.badge-skip { background: #fff3cd; color: #856404; }
+.section-intro { font-style: italic; color: #555; margin-bottom: 10pt; }
+.page-break { page-break-before: always; }
+code { font-family: Consolas, monospace; background: #f0f0f0; padding: 1pt 4pt; font-size: 10pt; }
+.toc a { text-decoration: none; color: #0f3460; }
+.toc { margin: 12pt 0; }
+.toc-item { margin: 3pt 0; }
+.result-row td:last-child { width: 80pt; text-align: center; }
+</style>
+</head>
+<body>
+
+<div style="text-align: center; margin-top: 120pt; margin-bottom: 120pt;">
+<h1 style="font-size: 32pt; border: none; text-align: center;">Olimey AI Platform</h1>
+<h1 style="font-size: 28pt; border: none; text-align: center; color: #0f3460;">Comprehensive QA Test Plan</h1>
+<br/><br/>
+<table style="width: 60%; margin: 20pt auto; border: none;">
+<tr><td style="border: none; text-align: right; font-weight: bold; width: 40%;">Version:</td><td style="border: none;">1.0</td></tr>
+<tr><td style="border: none; text-align: right; font-weight: bold;">Date:</td><td style="border: none;">14 March 2026</td></tr>
+<tr><td style="border: none; text-align: right; font-weight: bold;">Platform URL:</td><td style="border: none;">https://lexsentinel-insight.lovable.app</td></tr>
+<tr><td style="border: none; text-align: right; font-weight: bold;">Prepared For:</td><td style="border: none;">QA Specialist</td></tr>
+<tr><td style="border: none; text-align: right; font-weight: bold;">Status:</td><td style="border: none;">Ready for Execution</td></tr>
+</table>
+<br/><br/>
+<p class="meta">This document contains 400+ individual test cases across 25 sections covering all platform functions, tools, tabs, buttons, and systems.</p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<h2 style="page-break-before: always;">Table of Contents</h2>
+<div class="toc">
+<p class="toc-item"><a href="#s1">1. Test Environment &amp; Preconditions</a></p>
+<p class="toc-item"><a href="#s2">2. Public Pages (Unauthenticated)</a></p>
+<p class="toc-item"><a href="#s3">3. Authentication &amp; Account Setup</a></p>
+<p class="toc-item"><a href="#s4">4. AI Disclaimer &amp; Onboarding</a></p>
+<p class="toc-item"><a href="#s5">5. Dashboard</a></p>
+<p class="toc-item"><a href="#s6">6. Case Management</a></p>
+<p class="toc-item"><a href="#s7">7. Case Workspace Tabs</a></p>
+<p class="toc-item"><a href="#s8">8. AI Agents — Overview</a></p>
+<p class="toc-item"><a href="#s9">9. Olimey AI Agent (Source of Wealth)</a></p>
+<p class="toc-item"><a href="#s10">10. TitleShield™ Agent (Draft Review)</a></p>
+<p class="toc-item"><a href="#s11">11. TerraGuard™ Agent (Search Review)</a></p>
+<p class="toc-item"><a href="#s12">12. ExchangeGuard™ Agent (Pre-Exchange)</a></p>
+<p class="toc-item"><a href="#s13">13. Beta Agents (Chat &amp; Form)</a></p>
+<p class="toc-item"><a href="#s14">14. Credits &amp; Billing</a></p>
+<p class="toc-item"><a href="#s15">15. User Management (Admin)</a></p>
+<p class="toc-item"><a href="#s16">16. Admin Tools &amp; Dashboards</a></p>
+<p class="toc-item"><a href="#s17">17. Settings &amp; Account</a></p>
+<p class="toc-item"><a href="#s18">18. Tools &amp; Calculators</a></p>
+<p class="toc-item"><a href="#s19">19. Content Pages</a></p>
+<p class="toc-item"><a href="#s20">20. Global UI Components</a></p>
+<p class="toc-item"><a href="#s21">21. Security &amp; Access Control</a></p>
+<p class="toc-item"><a href="#s22">22. Network Resilience &amp; Error Handling</a></p>
+<p class="toc-item"><a href="#s23">23. Performance &amp; Responsiveness</a></p>
+<p class="toc-item"><a href="#s24">24. Accessibility</a></p>
+<p class="toc-item"><a href="#s25">25. Cross-Browser &amp; Device Testing</a></p>
+<p class="toc-item"><a href="#appA">Appendix A: Edge Functions Inventory</a></p>
+<p class="toc-item"><a href="#appB">Appendix B: Database Tables</a></p>
+<p class="toc-item"><a href="#appC">Appendix C: Automated Test Suites</a></p>
+</div>
+
+<!-- SECTION 1 -->
+<h2 id="s1">1. Test Environment &amp; Preconditions</h2>
+
+<h3>1.1 Required Test Accounts</h3>
+<table>
+<tr><th>Account</th><th>Role</th><th>Purpose</th></tr>
+<tr><td>Admin account</td><td><code>admin</code></td><td>Full access to all admin features</td></tr>
+<tr><td>Support Admin account</td><td><code>support_admin</code></td><td>Test limited admin access</td></tr>
+<tr><td>Auditor account</td><td><code>auditor</code></td><td>Test read-only admin access</td></tr>
+<tr><td>Standard user account</td><td><code>user</code></td><td>Test regular user flows</td></tr>
+<tr><td>Inactive/pending user</td><td><code>user</code> (inactive)</td><td>Test blocked access flow</td></tr>
+<tr><td>Second firm user</td><td><code>user</code></td><td>Test firm-level isolation</td></tr>
+</table>
+
+<h3>1.2 Browsers to Test</h3>
+<p class="check-item">☐ Chrome (latest) — Desktop &amp; Mobile</p>
+<p class="check-item">☐ Safari (latest) — Desktop &amp; Mobile (iOS)</p>
+<p class="check-item">☐ Firefox (latest) — Desktop</p>
+<p class="check-item">☐ Edge (latest) — Desktop</p>
+
+<h3>1.3 Preconditions</h3>
+<p class="check-item">☐ Confirm all test accounts exist and can log in</p>
+<p class="check-item">☐ Confirm at least one approved domain exists in the system</p>
+<p class="check-item">☐ Confirm credits are available for the admin and standard user accounts</p>
+<p class="check-item">☐ Prepare test documents: PDF searches, draft contracts, bank statements, payslips</p>
+
+<!-- SECTION 2 -->
+<h2 id="s2">2. Public Pages (Unauthenticated)</h2>
+
+<h3>2.1 Landing Page (<code>/</code>)</h3>
+<p class="check-item">☐ Page loads without errors</p>
+<p class="check-item">☐ All navigation links in header work (AI Agents, Insights, Pricing, About, etc.)</p>
+<p class="check-item">☐ CTA buttons ("Get Started", "Request Access") navigate correctly</p>
+<p class="check-item">☐ Page is responsive on mobile</p>
+<p class="check-item">☐ SEO: Verify <code>&lt;title&gt;</code>, <code>&lt;meta description&gt;</code>, single <code>&lt;h1&gt;</code></p>
+
+<h3>2.2 AI Agents Page (<code>/ai-agents</code>)</h3>
+<p class="check-item">☐ All agent cards render with correct names, descriptions, icons</p>
+<p class="check-item">☐ Available agents show correct credit cost</p>
+<p class="check-item">☐ Unavailable/upcoming agents show "Coming Soon" or equivalent</p>
+<p class="check-item">☐ Category filter works</p>
+<p class="check-item">☐ Search filter works</p>
+<p class="check-item">☐ "Register Interest" buttons work for unavailable agents</p>
+<p class="check-item">☐ Beta agents display beta badge</p>
+
+<h3>2.3 Pricing Page (<code>/pricing</code>)</h3>
+<p class="check-item">☐ Pricing tiers display correctly</p>
+<p class="check-item">☐ CTA buttons link to signup or contact</p>
+
+<h3>2.4 About Us (<code>/about</code>)</h3>
+<p class="check-item">☐ Team photos and bios load</p>
+<p class="check-item">☐ Page renders without console errors</p>
+
+<h3>2.5 Insights / Blog (<code>/insights</code>)</h3>
+<p class="check-item">☐ Articles list renders</p>
+<p class="check-item">☐ Clicking an article navigates to <code>/insights/:slug</code></p>
+<p class="check-item">☐ Article page renders full content</p>
+<p class="check-item">☐ Audio player appears (if TTS is available for article)</p>
+<p class="check-item">☐ Download button works</p>
+<p class="check-item">☐ Social sharing / copy link works</p>
+
+<h3>2.6 Glossary (<code>/glossary</code>)</h3>
+<p class="check-item">☐ Terms list renders with search/filter</p>
+<p class="check-item">☐ Clicking a term expands its definition</p>
+<p class="check-item">☐ Analytics tracking fires on term views (check network tab)</p>
+
+<h3>2.7 Demo Page (<code>/demo</code>)</h3>
+<p class="check-item">☐ All demo mockup tabs render (Signup, New Case, Upload, Report, Export, Edit, Agents)</p>
+<p class="check-item">☐ Interactive elements respond to clicks</p>
+
+<h3>2.8 SDLT Calculator (<code>/sdlt-calculator</code>)</h3>
+<p class="check-item">☐ Price input works</p>
+<p class="check-item">☐ First-time buyer toggle works</p>
+<p class="check-item">☐ Additional property surcharge toggle works</p>
+<p class="check-item">☐ Calculation produces correct results</p>
+<p class="check-item">☐ PDF download generates valid document</p>
+
+<h3>2.9 Profitability Calculator (<code>/calculator</code>)</h3>
+<p class="check-item">☐ Input fields accept values</p>
+<p class="check-item">☐ Calculation results display</p>
+<p class="check-item">☐ PDF export works</p>
+
+<h3>2.10 Legal Pages</h3>
+<p class="check-item">☐ Terms &amp; Conditions (<code>/terms</code>) — renders, scrollable</p>
+<p class="check-item">☐ Privacy Policy (<code>/privacy</code>) — renders, scrollable</p>
+
+<h3>2.11 404 Page</h3>
+<p class="check-item">☐ Navigating to <code>/nonexistent-page</code> shows branded 404 page</p>
+<p class="check-item">☐ "Go Home" or "Back" link works</p>
+
+<!-- SECTION 3 -->
+<h2 id="s3">3. Authentication &amp; Account Setup</h2>
+
+<h3>3.1 Signup (<code>/signup</code>)</h3>
+<p class="check-item">☐ Form validates required fields (full name, email, password, firm name, position)</p>
+<p class="check-item">☐ Password validation enforces minimum strength requirements</p>
+<p class="check-item">☐ Turnstile CAPTCHA renders and must be completed</p>
+<p class="check-item">☐ Submit with valid data creates account</p>
+<p class="check-item">☐ Email confirmation is sent (check inbox)</p>
+<p class="check-item">☐ User cannot log in until email is confirmed</p>
+<p class="check-item">☐ Duplicate email shows appropriate error</p>
+<p class="check-item">☐ Link to Login page works</p>
+<p class="check-item">☐ Link to Request Access works</p>
+
+<h3>3.2 Login (<code>/login</code>)</h3>
+<p class="check-item">☐ Form validates email and password fields</p>
+<p class="check-item">☐ Turnstile CAPTCHA renders and must be completed</p>
+<p class="check-item">☐ Valid credentials → redirect to <code>/dashboard</code></p>
+<p class="check-item">☐ Invalid credentials → error toast shown</p>
+<p class="check-item">☐ Unconfirmed email → appropriate error message</p>
+<p class="check-item">☐ "Forgot password?" link navigates to <code>/forgot-password</code></p>
+<p class="check-item">☐ "Create account" link navigates to <code>/signup</code></p>
+<p class="check-item">☐ "Request access" link navigates to <code>/request-access</code></p>
+<p class="check-item">☐ Dev-only "Fill demo credentials" button appears only in dev mode</p>
+<p class="check-item">☐ Already authenticated user visiting <code>/login</code> → redirected to <code>/dashboard</code></p>
+
+<h3>3.3 Forgot Password (<code>/forgot-password</code>)</h3>
+<p class="check-item">☐ Email field validates</p>
+<p class="check-item">☐ Submitting sends password reset email</p>
+<p class="check-item">☐ Success message displayed</p>
+<p class="check-item">☐ Link back to login works</p>
+
+<h3>3.4 Reset Password (<code>/reset-password</code>)</h3>
+<p class="check-item">☐ Page loads when accessed via email link with <code>type=recovery</code> hash</p>
+<p class="check-item">☐ Password field validates</p>
+<p class="check-item">☐ Submitting updates password</p>
+<p class="check-item">☐ Success confirmation shown</p>
+<p class="check-item">☐ Can log in with new password</p>
+
+<h3>3.5 Request Access (<code>/request-access</code>)</h3>
+<p class="check-item">☐ Form fields render (name, email, position, reason)</p>
+<p class="check-item">☐ Submit creates access request</p>
+<p class="check-item">☐ Success message displayed</p>
+<p class="check-item">☐ Admin can see pending requests in admin panel</p>
+
+<h3>3.6 Free Trial Request (<code>/request-trial</code>)</h3>
+<p class="check-item">☐ Form renders</p>
+<p class="check-item">☐ Submit creates trial request</p>
+<p class="check-item">☐ Confirmation shown</p>
+
+<h3>3.7 Domain-Based Access Control</h3>
+<p class="check-item">☐ User with unapproved email domain → sees "Account pending approval" screen</p>
+<p class="check-item">☐ Approved domain user → proceeds to disclaimer then dashboard</p>
+<p class="check-item">☐ Admin can add/remove approved domains via <code>/admin/approved-domains</code></p>
+
+<!-- SECTION 4 -->
+<h2 id="s4">4. AI Disclaimer &amp; Onboarding</h2>
+
+<h3>4.1 AI Disclaimer Dialog</h3>
+<p class="check-item">☐ First login after signup → AI Disclaimer dialog appears</p>
+<p class="check-item">☐ Dialog cannot be dismissed without clicking "Accept"</p>
+<p class="check-item">☐ Accepting logs timestamp to user profile</p>
+<p class="check-item">☐ Accepting logs event to audit trail</p>
+<p class="check-item">☐ Subsequent logins (same session) → dialog does NOT appear</p>
+<p class="check-item">☐ Clearing localStorage → dialog re-appears (then syncs from DB)</p>
+<p class="check-item">☐ Cross-tab: accepting in one tab reflects in another on refresh</p>
+
+<h3>4.2 Onboarding Tour</h3>
+<p class="check-item">☐ Dashboard tour triggers on first visit (if implemented)</p>
+<p class="check-item">☐ Tour highlights key navigation elements</p>
+<p class="check-item">☐ Tour can be dismissed/skipped</p>
+
+<!-- SECTION 5 -->
+<h2 id="s5">5. Dashboard</h2>
+
+<h3>5.1 Layout &amp; Navigation</h3>
+<p class="check-item">☐ Sidebar renders with all navigation groups</p>
+<p class="check-item">☐ Sidebar collapse/expand toggle works</p>
+<p class="check-item">☐ Collapsed sidebar shows tooltips on hover</p>
+<p class="check-item">☐ Mobile hamburger menu opens/closes</p>
+<p class="check-item">☐ Active route is highlighted in sidebar</p>
+<p class="check-item">☐ User avatar/initials display in sidebar footer</p>
+<p class="check-item">☐ Credit balance shows in sidebar</p>
+<p class="check-item">☐ "Sign out" button works</p>
+<p class="check-item">☐ Notification bell icon present and clickable</p>
+<p class="check-item">☐ Referral widget present</p>
+
+<h3>5.2 Dashboard Content</h3>
+<p class="check-item">☐ Case list/cards render</p>
+<p class="check-item">☐ Cases show correct status badges (open, review_ready, completed, etc.)</p>
+<p class="check-item">☐ Cases show risk level badges (green, amber, red)</p>
+<p class="check-item">☐ Search/filter cases works</p>
+<p class="check-item">☐ Clicking a case navigates to <code>/case/:id</code></p>
+<p class="check-item">☐ "New Case" button navigates to <code>/case/new</code></p>
+<p class="check-item">☐ Ring chart / analytics widgets render</p>
+<p class="check-item">☐ Recent activity timeline renders</p>
+<p class="check-item">☐ Hovering over a case card prefetches the workspace chunk (verify in Network tab)</p>
+
+<h3>5.3 Oversight Queue (<code>/dashboard/oversight-queue</code>)</h3>
+<p class="check-item">☐ Queue renders pending oversight items</p>
+<p class="check-item">☐ Filter/search works</p>
+<p class="check-item">☐ Can approve/reject items</p>
+<p class="check-item">☐ Actions logged to audit trail</p>
+
+<!-- SECTION 6 -->
+<h2 id="s6">6. Case Management</h2>
+
+<h3>6.1 Create New Case (<code>/case/new</code>)</h3>
+<p class="check-item">☐ Form renders all fields: case reference, property address, transaction type, tenure, property type, fee earner, lender</p>
+<p class="check-item">☐ Required fields are validated</p>
+<p class="check-item">☐ Transaction type dropdown: Purchase / Sale</p>
+<p class="check-item">☐ Tenure dropdown: Freehold / Leasehold / Commonhold / Unknown</p>
+<p class="check-item">☐ Property type dropdown: House / Flat / Maisonette / Other / Unknown</p>
+<p class="check-item">☐ Tool chooser (CaseToolChooser) renders available agents</p>
+<p class="check-item">☐ Submitting creates case and redirects to workspace</p>
+<p class="check-item">☐ Case appears in dashboard list</p>
+
+<h3>6.2 Case Duplication</h3>
+<p class="check-item">☐ Navigating to <code>/case/new?duplicateId=&lt;id&gt;</code> pre-fills metadata from source case</p>
+<p class="check-item">☐ Ownership validation: attempting to duplicate another firm's case → "Case not found or access denied" error</p>
+<p class="check-item">☐ Duplicated case creates new ID with pre-filled fields</p>
+
+<h3>6.3 Case Banner</h3>
+<p class="check-item">☐ CaseBanner shows case reference and property address on all case-related pages</p>
+<p class="check-item">☐ Banner is persistent across tab navigation in workspace</p>
+
+<!-- SECTION 7 -->
+<h2 id="s7">7. Case Workspace Tabs</h2>
+<p class="section-intro">Route: <code>/case/:id</code></p>
+
+<h3>7.1 General</h3>
+<p class="check-item">☐ All tabs render and are navigable</p>
+<p class="check-item">☐ Each tab is wrapped in its own ErrorBoundary (crash in one tab doesn't break others)</p>
+<p class="check-item">☐ Suspense fallback shows loading state for lazy-loaded tabs</p>
+<p class="check-item">☐ Tab state persists when switching between tabs</p>
+
+<h3>7.2 Overview Tab</h3>
+<p class="check-item">☐ Case details display</p>
+<p class="check-item">☐ Status and risk level shown</p>
+<p class="check-item">☐ Edit case details works</p>
+<p class="check-item">☐ Editable parties (EditableParties) — add, edit, remove parties</p>
+<p class="check-item">☐ Document completeness card shows progress</p>
+
+<h3>7.3 Documents / Files Tab</h3>
+<p class="check-item">☐ Document upload works (drag-and-drop and click-to-browse)</p>
+<p class="check-item">☐ Multiple file upload works</p>
+<p class="check-item">☐ Folder upload works</p>
+<p class="check-item">☐ Upload progress indicator shows</p>
+<p class="check-item">☐ Duplicate document detection dialog appears when appropriate</p>
+<p class="check-item">☐ File browser (CaseFileBrowser) lists uploaded documents</p>
+<p class="check-item">☐ Document viewer dialog opens documents</p>
+<p class="check-item">☐ Document classification (auto-categorisation) runs after upload</p>
+<p class="check-item">☐ Protected file detection warns about encrypted/password-protected files</p>
+<p class="check-item">☐ Document rename works</p>
+<p class="check-item">☐ Document version history shows versions</p>
+<p class="check-item">☐ Ingestion status badges show processing state</p>
+
+<h3>7.4 AI Review / Risk Score Tab</h3>
+<p class="check-item">☐ Triggering AI review works (deducts credits)</p>
+<p class="check-item">☐ Risk score displays after review completes</p>
+<p class="check-item">☐ Risk score breakdown shows per-category scores</p>
+<p class="check-item">☐ Risk score trend chart renders historical data</p>
+<p class="check-item">☐ Evidence chips link to source documents</p>
+<p class="check-item">☐ Confidence calibration panel shows AI confidence levels</p>
+<p class="check-item">☐ Structured report tab renders formatted report</p>
+<p class="check-item">☐ Reports can be edited (EditableReportTab)</p>
+<p class="check-item">☐ Reports can be exported (PDF / DOCX)</p>
+
+<h3>7.5 Enquiry Tracker Tab</h3>
+<p class="check-item">☐ Enquiries list renders</p>
+<p class="check-item">☐ Can add/edit/delete enquiries</p>
+<p class="check-item">☐ Enquiry status tracking works</p>
+<p class="check-item">☐ Follow-up reminder panel shows scheduled reminders</p>
+
+<h3>7.6 Draft Review Tab (TitleShield™)</h3>
+<p class="check-item">☐ Draft review results render</p>
+<p class="check-item">☐ HMLR disclosure panel shows</p>
+<p class="check-item">☐ Draft review status card displays</p>
+<p class="check-item">☐ Classification confirm dialog works</p>
+<p class="check-item">☐ Results show evidence citations</p>
+
+<h3>7.7 Agent Chat Tab</h3>
+<p class="check-item">☐ Chat interface renders</p>
+<p class="check-item">☐ Can send messages</p>
+<p class="check-item">☐ Agent responses stream in</p>
+<p class="check-item">☐ File attachments in chat work</p>
+<p class="check-item">☐ Chat history persists</p>
+<p class="check-item">☐ Evidence source navigator works</p>
+<p class="check-item">☐ AI usage disclosure button visible</p>
+
+<h3>7.8 Collaborative Notes Tab</h3>
+<p class="check-item">☐ Can create notes</p>
+<p class="check-item">☐ Notes support threading (replies)</p>
+<p class="check-item">☐ Notes can be pinned</p>
+<p class="check-item">☐ Notes show author name and timestamp</p>
+<p class="check-item">☐ Voice note recorder works (if supported by browser)</p>
+
+<h3>7.9 Audit Log Tab</h3>
+<p class="check-item">☐ Case-specific audit events display</p>
+<p class="check-item">☐ Export audit trail works</p>
+<p class="check-item">☐ Events include timestamps, user info, and event types</p>
+
+<h3>7.10 QA Check Tab</h3>
+<p class="check-item">☐ QA checklist renders</p>
+<p class="check-item">☐ Items can be checked/unchecked</p>
+<p class="check-item">☐ Progress indicator updates</p>
+
+<h3>7.11 Additional Workspace Features</h3>
+<p class="check-item">☐ Conflict check panel works</p>
+<p class="check-item">☐ Cross-case risk patterns display</p>
+<p class="check-item">☐ Title defect detection works</p>
+<p class="check-item">☐ Smart doc pre-read works</p>
+<p class="check-item">☐ Lender rules warning displays when applicable</p>
+<p class="check-item">☐ Case archive export generates downloadable file</p>
+<p class="check-item">☐ Client portal manager — create/revoke portal tokens</p>
+<p class="check-item">☐ Client portal upload works via token-based access</p>
+<p class="check-item">☐ Incremental re-analysis works</p>
+<p class="check-item">☐ Batch analysis panel works</p>
+<p class="check-item">☐ GDPR data export panel works</p>
+<p class="check-item">☐ MFA enforcement card displays</p>
+<p class="check-item">☐ Regulatory report panel works</p>
+
+<!-- SECTION 8 -->
+<h2 id="s8">8. AI Agents — Overview</h2>
+
+<h3>8.1 Agent Selection</h3>
+<p class="check-item">☐ <code>/ai-agents</code> page shows all agents with correct availability status</p>
+<p class="check-item">☐ Credit costs displayed per agent</p>
+<p class="check-item">☐ "Use Agent" / "Start" buttons link to correct flows</p>
+<p class="check-item">☐ Case-review agents link to <code>/case/new</code> or specific workspace</p>
+<p class="check-item">☐ Chat agents link to <code>/agent/:agentId</code></p>
+<p class="check-item">☐ Form agents render inline form</p>
+
+<h3>8.2 Agent Chat (<code>/agent/:agentId</code>)</h3>
+<p class="check-item">☐ Requires authentication (redirects to login if not authenticated)</p>
+<p class="check-item">☐ Case picker dialog appears to select a case</p>
+<p class="check-item">☐ Chat interface loads</p>
+<p class="check-item">☐ Messages send and receive</p>
+<p class="check-item">☐ Streaming responses work</p>
+<p class="check-item">☐ File attachment works</p>
+<p class="check-item">☐ AI disclaimer/disclosure visible</p>
+<p class="check-item">☐ Credits deducted per interaction</p>
+
+<!-- SECTION 9 -->
+<h2 id="s9">9. Olimey AI Agent (Source of Wealth)</h2>
+
+<h3>9.1 Intake Wizard</h3>
+<p class="check-item">☐ Step 1 — Property Details: Purchase price, address, transaction type fields work</p>
+<p class="check-item">☐ Step 2 — Funding Sources: Mortgage, deposit, savings, gift fields work</p>
+<p class="check-item">☐ Step 3 — Risk Context: PEP status, buyer type, relationship fields work</p>
+<p class="check-item">☐ Step 4 — Additional Context: Free-text context field works</p>
+<p class="check-item">☐ Form auto-saves to sessionStorage on every step change (verify via DevTools &gt; Application &gt; Session Storage)</p>
+<p class="check-item">☐ Resuming after page refresh restores form state</p>
+<p class="check-item">☐ Wizard navigation: Next, Back, Submit buttons work</p>
+<p class="check-item">☐ Validation prevents advancing with missing required fields</p>
+
+<h3>9.2 Document Upload</h3>
+<p class="check-item">☐ Upload bank statements, payslips, gift letters, mortgage offers</p>
+<p class="check-item">☐ Bulk upload (BulkAMLUpload) works</p>
+<p class="check-item">☐ AML document classification runs automatically</p>
+<p class="check-item">☐ Document types correctly identified</p>
+<p class="check-item">☐ Upload progress shown</p>
+<p class="check-item">☐ Duplicate detection works</p>
+
+<h3>9.3 Analysis &amp; Results</h3>
+<p class="check-item">☐ Triggering analysis deducts credits (20 credits)</p>
+<p class="check-item">☐ Analysis progress shown (multi-pass parallel processing)</p>
+<p class="check-item">☐ Results page renders:</p>
+<p class="check-item" style="margin-left: 36pt;">☐ Risk rating (High / Medium / Low)</p>
+<p class="check-item" style="margin-left: 36pt;">☐ Funding gap calculation</p>
+<p class="check-item" style="margin-left: 36pt;">☐ Sankey funding flow map</p>
+<p class="check-item" style="margin-left: 36pt;">☐ Person-document attribution</p>
+<p class="check-item" style="margin-left: 36pt;">☐ Evidence citations with document references</p>
+<p class="check-item" style="margin-left: 36pt;">☐ Structured enquiries</p>
+<p class="check-item" style="margin-left: 36pt;">☐ AML check summary</p>
+<p class="check-item">☐ Funding gap calculator (SoWFundingGapCalculator) shows surplus/deficit</p>
+<p class="check-item">☐ Risk guidance panel provides regulatory references</p>
+<p class="check-item">☐ Missing documents panel identifies gaps</p>
+<p class="check-item">☐ SoW comparison view works</p>
+<p class="check-item">☐ Post-analysis actions available</p>
+
+<h3>9.4 Reports &amp; Export</h3>
+<p class="check-item">☐ Internal report generates</p>
+<p class="check-item">☐ Client report generates (with internal notes redacted)</p>
+<p class="check-item">☐ Lender-ready PDF export works</p>
+<p class="check-item">☐ Report includes compliance footer with SRA/CLC firm number</p>
+<p class="check-item">☐ Reports include evidence citations</p>
+<p class="check-item">☐ Reports include AI confidence levels</p>
+
+<h3>9.5 SoW Workspace Features</h3>
+<p class="check-item">☐ SoW case header displays</p>
+<p class="check-item">☐ SoW case progress tracker shows workflow steps</p>
+<p class="check-item">☐ SoW action sidebar provides quick actions</p>
+<p class="check-item">☐ Document completeness card updates</p>
+<p class="check-item">☐ Transaction dialog works</p>
+<p class="check-item">☐ Incremental re-analysis after new documents</p>
+
+<h3>9.6 Stress Testing (Admin Only)</h3>
+<p class="check-item">☐ <code>/admin/stress-test</code> loads adversarial test cases</p>
+<p class="check-item">☐ UK adversarial SoW dataset loads</p>
+<p class="check-item">☐ Olimey AI UK stress test dataset loads</p>
+<p class="check-item">☐ Running stress tests produces results with correct assessments</p>
+<p class="check-item">☐ Scoring against ground truth works</p>
+
+<!-- SECTION 10 -->
+<h2 id="s10">10. TitleShield™ Agent (Draft Review)</h2>
+
+<h3>10.1 Document Upload &amp; Classification</h3>
+<p class="check-item">☐ Upload draft contracts, TR1, title docs, leases, protocol forms</p>
+<p class="check-item">☐ Auto-classification identifies document types</p>
+<p class="check-item">☐ Classification confirmation dialog allows corrections</p>
+
+<h3>10.2 Review Execution</h3>
+<p class="check-item">☐ Triggering review deducts credits (15 credits)</p>
+<p class="check-item">☐ Review processes all uploaded documents</p>
+<p class="check-item">☐ Results render in DraftReviewWorkspace</p>
+<p class="check-item">☐ Draft review results show categorised findings</p>
+<p class="check-item">☐ HMLR disclosure panel displays compliance info</p>
+<p class="check-item">☐ Evidence references link to source documents</p>
+
+<h3>10.3 Reply Ingestion</h3>
+<p class="check-item">☐ Uploading seller's replies costs 1 additional credit</p>
+<p class="check-item">☐ Re-analysis incorporates replies</p>
+<p class="check-item">☐ Updated results display</p>
+
+<!-- SECTION 11 -->
+<h2 id="s11">11. TerraGuard™ Agent (Search Review)</h2>
+
+<h3>11.1 Document Upload</h3>
+<p class="check-item">☐ Upload local authority searches, environmental reports, drainage &amp; water, EPCs</p>
+<p class="check-item">☐ Document classification identifies search types</p>
+
+<h3>11.2 Review &amp; Results</h3>
+<p class="check-item">☐ Triggering review deducts credits (7 credits)</p>
+<p class="check-item">☐ Risk-scored findings display with evidence citations</p>
+<p class="check-item">☐ Client report auto-generates</p>
+<p class="check-item">☐ Draft enquiry email auto-generates</p>
+<p class="check-item">☐ Full audit trail recorded</p>
+
+<!-- SECTION 12 -->
+<h2 id="s12">12. ExchangeGuard™ Agent (Pre-Exchange)</h2>
+
+<h3>12.1 Setup</h3>
+<p class="check-item">☐ Navigate to <code>/exchange-guard</code></p>
+<p class="check-item">☐ Case selection works</p>
+<p class="check-item">☐ Form auto-saves state (useFormDraft integration)</p>
+
+<h3>12.2 Document Upload</h3>
+<p class="check-item">☐ Bulk file ingestion works</p>
+<p class="check-item">☐ Auto-classification and indexing runs</p>
+<p class="check-item">☐ Missing document detection based on transaction type and lender</p>
+
+<h3>12.3 Analysis</h3>
+<p class="check-item">☐ Triggering analysis deducts credits (25 credits)</p>
+<p class="check-item">☐ Exchange readiness report generates</p>
+<p class="check-item">☐ Risk ratings: Green / Amber / Red / Critical</p>
+<p class="check-item">☐ Exchange decision support provided</p>
+<p class="check-item">☐ Further enquiries generated with document references</p>
+<p class="check-item">☐ Workspace at <code>/exchange-guard/:id</code> displays results</p>
+
+<!-- SECTION 13 -->
+<h2 id="s13">13. Beta Agents (Chat &amp; Form)</h2>
+
+<h3>13.1 Contract Clause Analyser</h3>
+<p class="check-item">☐ Form renders: clause text, context dropdown, concern field</p>
+<p class="check-item">☐ Submit analyses clause and returns structured breakdown</p>
+<p class="check-item">☐ Credits deducted (2 credits)</p>
+<p class="check-item">☐ Beta badge visible</p>
+
+<h3>13.2 Regulatory Compliance Checker</h3>
+<p class="check-item">☐ Chat interface loads</p>
+<p class="check-item">☐ Can ask compliance questions</p>
+<p class="check-item">☐ Responses reference SRA, CLC, LSAG</p>
+<p class="check-item">☐ Credits deducted (2 credits)</p>
+
+<h3>13.3 Case Law Research Assistant</h3>
+<p class="check-item">☐ Chat interface loads</p>
+<p class="check-item">☐ Can search for case law</p>
+<p class="check-item">☐ Responses include case references</p>
+<p class="check-item">☐ Credits deducted (3 credits)</p>
+
+<h3>13.4 Legal Document Summariser</h3>
+<p class="check-item">☐ Form renders: document text, document type, focus areas</p>
+<p class="check-item">☐ Submit returns structured summary</p>
+<p class="check-item">☐ Credits deducted (2 credits)</p>
+
+<h3>13.5 Statute Lookup Tool</h3>
+<p class="check-item">☐ Chat interface loads</p>
+<p class="check-item">☐ Can look up statutory provisions</p>
+<p class="check-item">☐ Responses reference specific Acts and sections</p>
+<p class="check-item">☐ Credits deducted (1 credit)</p>
+
+<!-- SECTION 14 -->
+<h2 id="s14">14. Credits &amp; Billing</h2>
+
+<h3>14.1 Buy Credits (<code>/buy-credits</code>)</h3>
+<p class="check-item">☐ Credit packages display with prices</p>
+<p class="check-item">☐ Selecting a package initiates Stripe checkout</p>
+<p class="check-item">☐ Payment success redirects to <code>/payment-success</code></p>
+<p class="check-item">☐ Credits added to account after payment</p>
+<p class="check-item">☐ Credit balance updates in sidebar</p>
+
+<h3>14.2 Payment Success (<code>/payment-success</code>)</h3>
+<p class="check-item">☐ Success confirmation displays</p>
+<p class="check-item">☐ Credit balance reflects new credits</p>
+
+<h3>14.3 Transaction History (<code>/transactions</code>)</h3>
+<p class="check-item">☐ All credit transactions listed</p>
+<p class="check-item">☐ Shows: date, type (purchase, deduction, refund), amount, balance after</p>
+<p class="check-item">☐ Case-linked transactions show case reference</p>
+<p class="check-item">☐ Pagination works for long lists</p>
+
+<h3>14.4 Credit Deduction</h3>
+<p class="check-item">☐ Each agent run deducts correct credit amount</p>
+<p class="check-item">☐ Insufficient credits → appropriate error message (prevent run)</p>
+<p class="check-item">☐ Credit badge in sidebar updates in real-time</p>
+<p class="check-item">☐ Free trial badge shows for trial accounts</p>
+
+<!-- SECTION 15 -->
+<h2 id="s15">15. User Management (Admin)</h2>
+
+<h3>15.1 User Directory (<code>/admin/users</code>)</h3>
+<p class="check-item">☐ User list renders with: name, email, position, firm, role, status</p>
+<p class="check-item">☐ Search by name/email works</p>
+<p class="check-item">☐ Filter by role works</p>
+<p class="check-item">☐ Filter by status works</p>
+<p class="check-item">☐ Sort columns work</p>
+<p class="check-item">☐ Pagination works</p>
+
+<h3>15.2 Create User</h3>
+<p class="check-item">☐ "Create User" button opens dialog</p>
+<p class="check-item">☐ Form validates: email, full name, position, firm, role</p>
+<p class="check-item">☐ Only assignable roles shown (based on current user's role)</p>
+<p class="check-item">☐ Creating user sends invitation email</p>
+<p class="check-item">☐ New user appears in directory with "pending_invite" status</p>
+
+<h3>15.3 User Invitations</h3>
+<p class="check-item">☐ Admin can invite users by email</p>
+<p class="check-item">☐ Duplicate invite prevention (cannot invite same email twice if active)</p>
+<p class="check-item">☐ Resend invitation button works</p>
+<p class="check-item">☐ Cancel invitation button works</p>
+<p class="check-item">☐ Invitation status tracking: pending, accepted, expired, cancelled</p>
+
+<h3>15.4 Edit User</h3>
+<p class="check-item">☐ Clicking user opens detail panel</p>
+<p class="check-item">☐ Can edit: full name, position, firm name, role</p>
+<p class="check-item">☐ Role dropdown only shows roles at or below current user's rank</p>
+<p class="check-item">☐ Save updates user profile</p>
+<p class="check-item">☐ Changes logged to audit trail</p>
+
+<h3>15.5 User Status Management</h3>
+<p class="check-item">☐ Activate user (inactive → active)</p>
+<p class="check-item">☐ Deactivate user (active → inactive)</p>
+<p class="check-item">☐ Suspend user (with reason) → user sees suspension message on login</p>
+<p class="check-item">☐ Unlock user (locked → active)</p>
+<p class="check-item">☐ Status transitions logged to <code>user_status_history</code></p>
+
+<h3>15.6 User Deletion</h3>
+<p class="check-item">☐ Soft delete: sets <code>deleted_at</code> timestamp</p>
+<p class="check-item">☐ Confirmation dialog requires typed confirmation</p>
+<p class="check-item">☐ Cannot delete yourself</p>
+<p class="check-item">☐ Cannot delete the last admin</p>
+<p class="check-item">☐ Permanent delete: restricted to super admins only</p>
+<p class="check-item">☐ Deleted users cannot log in</p>
+
+<h3>15.7 Bulk Actions</h3>
+<p class="check-item">☐ Select multiple users via checkboxes</p>
+<p class="check-item">☐ Bulk activate works</p>
+<p class="check-item">☐ Bulk deactivate works</p>
+<p class="check-item">☐ Bulk role change works</p>
+<p class="check-item">☐ Bulk action toolbar appears when users selected</p>
+
+<h3>15.8 User Export</h3>
+<p class="check-item">☐ CSV export button works</p>
+<p class="check-item">☐ Export includes all user fields</p>
+<p class="check-item">☐ Export respects current filters</p>
+
+<h3>15.9 Role-Based Permission Checks</h3>
+<table>
+<tr><th>Action</th><th>Admin</th><th>Support Admin</th><th>Auditor</th><th>User</th></tr>
+<tr><td>View users</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>Create users</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>Edit users</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>Delete users</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>Manage roles</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>Reset credentials</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>Bulk actions</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>Export users</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>View audit log</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>Permanent delete</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+</table>
+<p class="check-item">☐ Verify each cell in the table above by logging in as each role</p>
+
+<!-- SECTION 16 -->
+<h2 id="s16">16. Admin Tools &amp; Dashboards</h2>
+
+<h3>16.1 Feedback (<code>/admin/feedback</code>)</h3>
+<p class="check-item">☐ Feedback list renders</p>
+<p class="check-item">☐ Filter by status/type works</p>
+<p class="check-item">☐ Can review and respond to feedback</p>
+<p class="check-item">☐ Can promote feedback to enhancement (PromoteToEnhancementDialog)</p>
+<p class="check-item">☐ Can dismiss feedback (FeedbackDismissDialog)</p>
+
+<h3>16.2 Agent Interest (<code>/admin/agent-interest</code>)</h3>
+<p class="check-item">☐ Interest submissions list renders</p>
+<p class="check-item">☐ Filter by agent type works</p>
+<p class="check-item">☐ Status tracking (pending, contacted, etc.)</p>
+
+<h3>16.3 Free Trials (<code>/admin/free-trials</code>)</h3>
+<p class="check-item">☐ Pending trial requests list renders</p>
+<p class="check-item">☐ Approve button works → user gets trial credits</p>
+<p class="check-item">☐ Reject button works</p>
+<p class="check-item">☐ Pending count badge in sidebar updates</p>
+
+<h3>16.4 Knowledge Base (<code>/admin/knowledge-base</code>)</h3>
+<p class="check-item">☐ Knowledge articles/docs list renders</p>
+<p class="check-item">☐ Upload new knowledge documents works</p>
+<p class="check-item">☐ Search knowledge base works</p>
+<p class="check-item">☐ Export CSV works</p>
+<p class="check-item">☐ Classification of uploaded docs works</p>
+
+<h3>16.5 Retrieval Logs (<code>/admin/retrieval-logs</code>)</h3>
+<p class="check-item">☐ RAG retrieval logs display</p>
+<p class="check-item">☐ Filter by date/agent works</p>
+<p class="check-item">☐ Log details show query, retrieved chunks, scores</p>
+
+<h3>16.6 SDLT Rates (<code>/admin/sdlt-rates</code>)</h3>
+<p class="check-item">☐ Current rate bands display</p>
+<p class="check-item">☐ Can edit rate bands</p>
+<p class="check-item">☐ Changes reflect in public SDLT calculator</p>
+
+<h3>16.7 Referrals (<code>/admin/referrals</code>)</h3>
+<p class="check-item">☐ Referral submissions list renders</p>
+<p class="check-item">☐ Status tracking works</p>
+<p class="check-item">☐ Referral invite sending works</p>
+
+<h3>16.8 Glossary Management (<code>/admin/glossary</code>)</h3>
+<p class="check-item">☐ Terms list renders</p>
+<p class="check-item">☐ Can add new terms</p>
+<p class="check-item">☐ Can edit existing terms</p>
+<p class="check-item">☐ Can delete terms</p>
+<p class="check-item">☐ Changes reflect on public glossary page</p>
+
+<h3>16.9 CMS Integrations (<code>/admin/cms-integrations</code>)</h3>
+<p class="check-item">☐ Integration list renders</p>
+<p class="check-item">☐ Can configure Hoowla integration</p>
+<p class="check-item">☐ API key management works</p>
+<p class="check-item">☐ Sync status displays</p>
+
+<h3>16.10 Approved Domains (<code>/admin/approved-domains</code>)</h3>
+<p class="check-item">☐ Domain list renders</p>
+<p class="check-item">☐ Can add new domain with firm name</p>
+<p class="check-item">☐ Can remove domain</p>
+<p class="check-item">☐ Users with matching domains are auto-approved</p>
+
+<h3>16.11 AI Chat Logs (<code>/admin/ai-chat-logs</code>)</h3>
+<p class="check-item">☐ Chat session logs render</p>
+<p class="check-item">☐ Can filter by user/agent/date</p>
+<p class="check-item">☐ Can view full conversation detail</p>
+
+<h3>16.12 Article Audio (<code>/admin/article-audio</code>)</h3>
+<p class="check-item">☐ Article list with TTS status</p>
+<p class="check-item">☐ Can generate audio for articles</p>
+<p class="check-item">☐ Audio player works</p>
+
+<h3>16.13 Document Checklists (<code>/admin/document-checklists</code>)</h3>
+<p class="check-item">☐ Checklist items render by agent type</p>
+<p class="check-item">☐ Can add/edit/remove checklist items</p>
+<p class="check-item">☐ Transaction type and tenure filters work</p>
+<p class="check-item">☐ Sort order is editable</p>
+
+<h3>16.14 AI Learning Engine / Benchmark Dashboard (<code>/admin/benchmark-dashboard</code>)</h3>
+<p class="check-item">☐ Benchmark cases list renders</p>
+<p class="check-item">☐ Can create new benchmark case</p>
+<p class="check-item">☐ Benchmark comparison results display</p>
+<p class="check-item">☐ Precision/recall scores shown</p>
+<p class="check-item">☐ Judge calibration modal works</p>
+<p class="check-item">☐ Batch benchmark runs work</p>
+<p class="check-item">☐ Failure pattern analysis displays</p>
+
+<h3>16.15 Prompt Management (<code>/admin/prompt-management</code>)</h3>
+<p class="check-item">☐ Prompt versions list renders</p>
+<p class="check-item">☐ Can create new prompt version</p>
+<p class="check-item">☐ Can edit prompts</p>
+<p class="check-item">☐ Prompt deployment verification works</p>
+<p class="check-item">☐ Prompt patch generation works</p>
+
+<h3>16.16 Synthetic Case Generator (<code>/admin/synthetic-generator</code>)</h3>
+<p class="check-item">☐ Can generate synthetic test cases</p>
+<p class="check-item">☐ Generated cases appear in benchmark vault</p>
+
+<h3>16.17 Benchmark Vault (<code>/admin/benchmark-vault</code>)</h3>
+<p class="check-item">☐ Benchmark cases stored with documents</p>
+<p class="check-item">☐ Can upload ground truth outputs</p>
+<p class="check-item">☐ Source type filter works</p>
+
+<h3>16.18 Stress Test (<code>/admin/stress-test</code>)</h3>
+<p class="check-item">☐ Adversarial datasets load</p>
+<p class="check-item">☐ Can run stress tests against Olimey AI</p>
+<p class="check-item">☐ Scoring against ground truth displays</p>
+
+<h3>16.19 Self-Healing AI (<code>/admin/self-healing</code>)</h3>
+<p class="check-item">☐ Correction review panel shows pending corrections</p>
+<p class="check-item">☐ Failure triage view categorises failures</p>
+<p class="check-item">☐ Can approve/reject corrections</p>
+<p class="check-item">☐ Clause pattern healing results display</p>
+
+<h3>16.20 Stability Manifest (<code>/admin/stability-manifest</code>)</h3>
+<p class="check-item">☐ STABILITY_MANIFEST.json data renders</p>
+<p class="check-item">☐ Test suite results display</p>
+<p class="check-item">☐ Pass/fail indicators correct</p>
+
+<h3>16.21 Integrations (<code>/admin/integrations</code>)</h3>
+<p class="check-item">☐ SRA/CLC firm number registration works</p>
+<p class="check-item">☐ DMS integration configuration works</p>
+<p class="check-item">☐ Integration status indicators correct</p>
+
+<h3>16.22 Compliance Dashboard (<code>/admin/compliance-dashboard</code>)</h3>
+<p class="check-item">☐ Regulatory compliance metrics display</p>
+<p class="check-item">☐ Compliance report generation works</p>
+
+<h3>16.23 Retrospective Audit (<code>/admin/retrospective-audit</code>)</h3>
+<p class="check-item">☐ Historical audit data renders</p>
+<p class="check-item">☐ Filter by date range works</p>
+
+<h3>16.24 Notifications (<code>/admin/notifications</code>)</h3>
+<p class="check-item">☐ Notification settings render</p>
+<p class="check-item">☐ Can configure notification types</p>
+<p class="check-item">☐ Test notification delivery works</p>
+
+<h3>16.25 AI Help Guide (<code>/admin/ai-help-guide</code>)</h3>
+<p class="check-item">☐ Help documentation renders</p>
+<p class="check-item">☐ Searchable</p>
+
+<h3>16.26 Benchmark Guide (<code>/admin/benchmark-guide</code>)</h3>
+<p class="check-item">☐ Guide content renders</p>
+<p class="check-item">☐ Steps are clear and navigable</p>
+
+<!-- SECTION 17 -->
+<h2 id="s17">17. Settings &amp; Account</h2>
+
+<h3>17.1 Settings Page (<code>/settings</code>)</h3>
+<p class="check-item">☐ Profile section: name, email, position display</p>
+<p class="check-item">☐ Can edit profile fields</p>
+<p class="check-item">☐ Save changes works</p>
+<p class="check-item">☐ Password change works (if applicable)</p>
+
+<h3>17.2 Audit Log (<code>/audit-log</code>)</h3>
+<p class="check-item">☐ All events for current user display</p>
+<p class="check-item">☐ Filter by event type works</p>
+<p class="check-item">☐ Filter by date range works</p>
+<p class="check-item">☐ Export audit trail works</p>
+<p class="check-item">☐ Events include: login, AI runs, document uploads, case changes, admin actions</p>
+
+<!-- SECTION 18 -->
+<h2 id="s18">18. Tools &amp; Calculators</h2>
+
+<h3>18.1 SDLT Calculator (<code>/sdlt-calculator</code>)</h3>
+<p class="check-item">☐ Input: purchase price</p>
+<p class="check-item">☐ Toggle: first-time buyer</p>
+<p class="check-item">☐ Toggle: additional property</p>
+<p class="check-item">☐ Correct calculation for each scenario:</p>
+<p class="check-item" style="margin-left: 36pt;">☐ Standard residential rates</p>
+<p class="check-item" style="margin-left: 36pt;">☐ First-time buyer relief</p>
+<p class="check-item" style="margin-left: 36pt;">☐ Additional property surcharge</p>
+<p class="check-item" style="margin-left: 36pt;">☐ Non-residential rates</p>
+<p class="check-item">☐ Breakdown table displays per-band amounts</p>
+<p class="check-item">☐ PDF export generates correct document</p>
+
+<h3>18.2 Profitability/Benefit Calculator (<code>/calculator</code>)</h3>
+<p class="check-item">☐ Input: cases per month, average time savings</p>
+<p class="check-item">☐ Output: estimated savings and ROI</p>
+<p class="check-item">☐ PDF export works</p>
+
+<!-- SECTION 19 -->
+<h2 id="s19">19. Content Pages</h2>
+
+<h3>19.1 Insights Articles</h3>
+<p class="check-item">☐ Article list paginates</p>
+<p class="check-item">☐ Article content renders markdown/rich text</p>
+<p class="check-item">☐ Code blocks format correctly (if any)</p>
+<p class="check-item">☐ Images load</p>
+<p class="check-item">☐ Related articles shown</p>
+
+<h3>19.2 Article Features</h3>
+<p class="check-item">☐ Audio player (ArticleAudioPlayer) plays TTS version</p>
+<p class="check-item">☐ Download button (ArticleDownloadButton) downloads article</p>
+<p class="check-item">☐ Clickable timestamps in audio (useClickableTimestamps)</p>
+
+<!-- SECTION 20 -->
+<h2 id="s20">20. Global UI Components</h2>
+
+<h3>20.1 Network Status Indicator</h3>
+<p class="check-item">☐ "Offline" banner appears when internet disconnected</p>
+<p class="check-item">☐ "Syncing..." indicator appears during active mutations</p>
+<p class="check-item">☐ "Saving..." indicator appears during data writes</p>
+<p class="check-item">☐ Banner dismisses when back online</p>
+
+<h3>20.2 Error Boundary</h3>
+<p class="check-item">☐ Production mode: shows branded "Something went wrong" UI (no raw error/stack)</p>
+<p class="check-item">☐ Error details logged to console</p>
+<p class="check-item">☐ "Try again" button resets the boundary</p>
+<p class="check-item">☐ Compact mode (in tabs): shows inline error with "Retry" button</p>
+
+<h3>20.3 Cookie Consent Banner</h3>
+<p class="check-item">☐ Appears on first visit</p>
+<p class="check-item">☐ Accept/reject buttons work</p>
+<p class="check-item">☐ Preference persisted</p>
+
+<h3>20.4 Support Chat Widget</h3>
+<p class="check-item">☐ Widget appears (deferred loading after idle)</p>
+<p class="check-item">☐ Can open chat</p>
+<p class="check-item">☐ Can send messages</p>
+<p class="check-item">☐ Responses received</p>
+
+<h3>20.5 Toast Notifications</h3>
+<p class="check-item">☐ Success toasts show (green)</p>
+<p class="check-item">☐ Error toasts show (red/destructive)</p>
+<p class="check-item">☐ Info toasts show</p>
+<p class="check-item">☐ Toasts auto-dismiss after timeout</p>
+<p class="check-item">☐ Multiple toasts stack</p>
+
+<h3>20.6 Notification Bell (NotificationBell)</h3>
+<p class="check-item">☐ Bell icon shows unread count badge</p>
+<p class="check-item">☐ Clicking opens notification dropdown</p>
+<p class="check-item">☐ Notifications can be marked as read</p>
+<p class="check-item">☐ Real-time notifications work (if enabled)</p>
+
+<h3>20.7 Referral Widget</h3>
+<p class="check-item">☐ Widget renders</p>
+<p class="check-item">☐ Can enter referral email</p>
+<p class="check-item">☐ Invite sends</p>
+
+<h3>20.8 Floating Case Files</h3>
+<p class="check-item">☐ Panel shows when in case context</p>
+<p class="check-item">☐ Can quick-access case documents</p>
+
+<h3>20.9 Proactive Feed</h3>
+<p class="check-item">☐ Renders in sidebar</p>
+<p class="check-item">☐ Shows relevant tips/alerts</p>
+
+<!-- SECTION 21 -->
+<h2 id="s21">21. Security &amp; Access Control</h2>
+
+<h3>21.1 Route Protection</h3>
+<p class="check-item">☐ All <code>/dashboard/*</code> routes redirect to <code>/login</code> when unauthenticated</p>
+<p class="check-item">☐ All <code>/admin/*</code> routes redirect to <code>/dashboard</code> for non-admin roles</p>
+<p class="check-item">☐ All <code>/case/*</code> routes require authentication</p>
+<p class="check-item">☐ <code>/agent/:id</code> routes require authentication</p>
+<p class="check-item">☐ Public routes accessible without authentication</p>
+
+<h3>21.2 Role Hierarchy Enforcement</h3>
+<p class="check-item">☐ Admin (rank 100) can access everything</p>
+<p class="check-item">☐ Support Admin (rank 75) can access admin pages but not manage roles or delete users</p>
+<p class="check-item">☐ Auditor (rank 50) has view-only admin access (no create/edit/delete)</p>
+<p class="check-item">☐ User (rank 10) cannot access any admin routes</p>
+<p class="check-item">☐ Role displayed correctly in user management UI</p>
+
+<h3>21.3 Ownership &amp; Firm Isolation</h3>
+<p class="check-item">☐ Users can only see their own firm's cases</p>
+<p class="check-item">☐ Users cannot access cases from other firms via URL manipulation</p>
+<p class="check-item">☐ Case duplication validates ownership before pre-filling</p>
+<p class="check-item">☐ TitleShield results are accessible to firm colleagues</p>
+
+<h3>21.4 Session Management</h3>
+<p class="check-item">☐ Session persists on page refresh</p>
+<p class="check-item">☐ Session expires appropriately</p>
+<p class="check-item">☐ Role re-validation on tab focus (using requestIdleCallback)</p>
+<p class="check-item">☐ Cross-tab role cache invalidation works (localStorage storage event)</p>
+<p class="check-item">☐ Signing out clears all cached data (localStorage, sessionStorage)</p>
+
+<h3>21.5 CAPTCHA</h3>
+<p class="check-item">☐ Turnstile renders on Login page</p>
+<p class="check-item">☐ Turnstile renders on Signup page</p>
+<p class="check-item">☐ Cannot submit forms without completing CAPTCHA</p>
+<p class="check-item">☐ CAPTCHA token expires and requires re-verification</p>
+
+<h3>21.6 Inactive User Block</h3>
+<p class="check-item">☐ Inactive users see "Account pending approval" screen</p>
+<p class="check-item">☐ Cannot navigate to any protected route</p>
+<p class="check-item">☐ Contact support email link works</p>
+
+<!-- SECTION 22 -->
+<h2 id="s22">22. Network Resilience &amp; Error Handling</h2>
+
+<h3>22.1 Exponential Backoff (React Query)</h3>
+<p class="check-item">☐ Failed API requests retry up to 3 times</p>
+<p class="check-item">☐ Retry delays follow exponential pattern: ~1s, ~2s, ~4s (capped at 30s)</p>
+<p class="check-item">☐ 401/403 errors do NOT trigger retries</p>
+<p class="check-item">☐ Verify via Network tab (throttle to offline, observe retry attempts)</p>
+
+<h3>22.2 Auto-Save (Form State Persistence)</h3>
+<p class="check-item">☐ DraftDocReview form state saves to sessionStorage on every change</p>
+<p class="check-item">☐ ExchangeGuard form state saves to sessionStorage on every change</p>
+<p class="check-item">☐ Olimey AI intake wizard saves per-step</p>
+<p class="check-item">☐ Refreshing page restores form state</p>
+
+<h3>22.3 Adaptive Debounce</h3>
+<p class="check-item">☐ On fast connection: saves at base delay (~500ms)</p>
+<p class="check-item">☐ On slow connection (simulate via DevTools &gt; Network &gt; Slow 3G): saves at increased delay</p>
+<p class="check-item">☐ On Save-Data header: delay increases to 2000ms</p>
+
+<h3>22.4 Sync State (useSyncState)</h3>
+<p class="check-item">☐ State persists to localStorage</p>
+<p class="check-item">☐ Skips write if value is identical to current (I/O optimization)</p>
+<p class="check-item">☐ Cross-tab sync works via storage events</p>
+
+<h3>22.5 Offline Recovery</h3>
+<p class="check-item">☐ Going offline → "Offline" banner appears</p>
+<p class="check-item">☐ Queued mutations execute when back online</p>
+<p class="check-item">☐ No data loss during offline period</p>
+
+<!-- SECTION 23 -->
+<h2 id="s23">23. Performance &amp; Responsiveness</h2>
+
+<h3>23.1 Page Load Performance</h3>
+<p class="check-item">☐ Landing page loads in &lt; 3 seconds</p>
+<p class="check-item">☐ Dashboard loads in &lt; 2 seconds (after auth)</p>
+<p class="check-item">☐ Case workspace loads in &lt; 2 seconds</p>
+<p class="check-item">☐ No visible layout shifts (CLS &lt; 0.1)</p>
+
+<h3>23.2 Code Splitting</h3>
+<p class="check-item">☐ Each route loads its own chunk (verify in Network tab)</p>
+<p class="check-item">☐ Hovering over case cards prefetches workspace chunk</p>
+<p class="check-item">☐ SupportChatWidget loads deferred (after idle)</p>
+
+<h3>23.3 Memoization</h3>
+<p class="check-item">☐ Dashboard doesn't re-render excessively (verify with React DevTools Profiler)</p>
+<p class="check-item">☐ RingChart, RecentActivityTimeline wrapped in React.memo</p>
+<p class="check-item">☐ NetworkStatus wrapped in React.memo</p>
+
+<h3>23.4 Mobile Responsiveness</h3>
+<p class="check-item">☐ All pages render correctly on mobile (375px width)</p>
+<p class="check-item">☐ Sidebar collapses to hamburger menu on mobile</p>
+<p class="check-item">☐ Forms are usable on mobile</p>
+<p class="check-item">☐ Tables scroll horizontally on small screens</p>
+<p class="check-item">☐ Touch targets are at least 44px</p>
+
+<!-- SECTION 24 -->
+<h2 id="s24">24. Accessibility</h2>
+
+<p class="check-item">☐ All form inputs have associated labels</p>
+<p class="check-item">☐ Focus management: Tab navigation works through all interactive elements</p>
+<p class="check-item">☐ Color contrast meets WCAG AA standards</p>
+<p class="check-item">☐ Screen reader: key actions are announced</p>
+<p class="check-item">☐ Modals/dialogs trap focus</p>
+<p class="check-item">☐ Escape key closes dialogs</p>
+<p class="check-item">☐ Error messages are associated with form fields</p>
+<p class="check-item">☐ Alt text on all meaningful images</p>
+<p class="check-item">☐ Skip navigation link (if applicable)</p>
+
+<!-- SECTION 25 -->
+<h2 id="s25">25. Cross-Browser &amp; Device Testing</h2>
+
+<h3>25.1 Desktop Browsers</h3>
+<table>
+<tr><th>Browser</th><th>Login</th><th>Dashboard</th><th>Case Workspace</th><th>Admin</th><th>SDLT Calc</th></tr>
+<tr><td>Chrome</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Safari</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Firefox</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Edge</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+</table>
+
+<h3>25.2 Mobile Devices</h3>
+<table>
+<tr><th>Device</th><th>Login</th><th>Dashboard</th><th>Case Workspace</th><th>Upload</th></tr>
+<tr><td>iPhone 15 (Safari)</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>iPhone SE (Safari)</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Pixel 8 (Chrome)</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>iPad (Safari)</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+</table>
+
+<h3>25.3 Viewport Breakpoints</h3>
+<p class="check-item">☐ 375px (mobile)</p>
+<p class="check-item">☐ 768px (tablet)</p>
+<p class="check-item">☐ 1024px (small desktop)</p>
+<p class="check-item">☐ 1440px (large desktop)</p>
+<p class="check-item">☐ 1920px (full HD)</p>
+
+<!-- APPENDIX A -->
+<h2 id="appA">Appendix A: Edge Functions Inventory</h2>
+<p class="section-intro">These backend functions power the platform. Verify they respond correctly via the features that use them.</p>
+
+<table>
+<tr><th>Function</th><th>Triggered By</th></tr>
+<tr><td><code>admin-user-actions</code></td><td>User management (admin)</td></tr>
+<tr><td><code>agent-chat</code></td><td>Agent chat interface</td></tr>
+<tr><td><code>agent-query</code></td><td>Agent queries</td></tr>
+<tr><td><code>ai-case-search</code></td><td>AI-powered case search</td></tr>
+<tr><td><code>ai-review</code></td><td>Triggering AI review on a case</td></tr>
+<tr><td><code>analyze-sow-intake</code></td><td>Olimey AI intake analysis</td></tr>
+<tr><td><code>article-tts</code></td><td>Article audio generation</td></tr>
+<tr><td><code>benchmark-compare</code></td><td>Benchmark comparison runs</td></tr>
+<tr><td><code>benchmark-worker</code></td><td>Batch benchmark processing</td></tr>
+<tr><td><code>classify-aml-docs</code></td><td>AML document classification</td></tr>
+<tr><td><code>classify-draft-docs</code></td><td>Draft review doc classification</td></tr>
+<tr><td><code>classify-exchange-docs</code></td><td>Exchange guard doc classification</td></tr>
+<tr><td><code>classify-knowledge-docs</code></td><td>Knowledge base doc classification</td></tr>
+<tr><td><code>create-checkout</code></td><td>Stripe checkout session</td></tr>
+<tr><td><code>detect-title-defects</code></td><td>Title defect detection</td></tr>
+<tr><td><code>draft-doc-review</code></td><td>TitleShield™ review</td></tr>
+<tr><td><code>exchange-guard</code></td><td>ExchangeGuard™ analysis</td></tr>
+<tr><td><code>extract-doc-summaries</code></td><td>Document summary extraction</td></tr>
+<tr><td><code>generate-compliance-report</code></td><td>Compliance report generation</td></tr>
+<tr><td><code>ingest-file-to-text</code></td><td>File text extraction</td></tr>
+<tr><td><code>search-knowledge-base</code></td><td>Knowledge base search</td></tr>
+<tr><td><code>send-referral-invite</code></td><td>Referral email sending</td></tr>
+<tr><td><code>send-welcome-email</code></td><td>Welcome email on signup</td></tr>
+<tr><td><code>stress-test-sow</code></td><td>Olimey AI stress testing</td></tr>
+<tr><td><code>support-chat</code></td><td>Support chat widget</td></tr>
+<tr><td><code>sync-hoowla</code></td><td>Hoowla CMS sync</td></tr>
+<tr><td><code>verify-payment</code></td><td>Payment verification</td></tr>
+</table>
+
+<!-- APPENDIX B -->
+<h2 id="appB">Appendix B: Database Tables (Key Tables)</h2>
+<p class="section-intro">For data integrity verification.</p>
+
+<table>
+<tr><th>Table</th><th>Purpose</th></tr>
+<tr><td><code>profiles</code></td><td>User profile data</td></tr>
+<tr><td><code>user_roles</code></td><td>Role assignments (admin, support_admin, auditor, user)</td></tr>
+<tr><td><code>cases</code></td><td>Case records</td></tr>
+<tr><td><code>documents</code></td><td>Uploaded documents</td></tr>
+<tr><td><code>ai_reports</code></td><td>AI-generated reports</td></tr>
+<tr><td><code>audit_log</code></td><td>Audit trail events</td></tr>
+<tr><td><code>credit_transactions</code></td><td>Credit purchase/deduction history</td></tr>
+<tr><td><code>benchmark_cases</code></td><td>Benchmark test cases</td></tr>
+<tr><td><code>agent_feedback</code></td><td>User feedback on agent responses</td></tr>
+<tr><td><code>approved_domains</code></td><td>Whitelisted email domains</td></tr>
+<tr><td><code>access_requests</code></td><td>Access request submissions</td></tr>
+<tr><td><code>client_portal_tokens</code></td><td>Client portal access tokens</td></tr>
+</table>
+
+<!-- APPENDIX C -->
+<h2 id="appC">Appendix C: Key Automated Test Suites</h2>
+<p>The platform has 319+ automated tests. Verify these pass before release:</p>
+
+<p><code>npm run test:full</code> — All tests<br/>
+<code>npm run test:burn-in</code> — 150-iteration stability burn-in</p>
+
+<h3>Test Categories</h3>
+<table>
+<tr><th>Category</th><th>Coverage</th></tr>
+<tr><td><b>Refresh &amp; Resume</b></td><td>State persistence after page refresh</td></tr>
+<tr><td><b>Integrity Guard</b></td><td>Optimistic locking / version conflicts</td></tr>
+<tr><td><b>Fortress Auth</b></td><td>Role-based access control enforcement</td></tr>
+<tr><td><b>Chaos Network</b></td><td>Slow 3G / session expiry resilience</td></tr>
+<tr><td><b>Concurrency Sync</b></td><td>Multi-tab / cross-device integrity</td></tr>
+<tr><td><b>Memory &amp; Performance</b></td><td>Leak detection / large payload stress</td></tr>
+</table>
+
+<br/><br/>
+<hr/>
+<p style="text-align: center; color: #999; font-size: 9pt;"><i>End of QA Test Plan — Olimey AI Platform v1.0 — 14 March 2026</i></p>
+
+</body>
+</html>

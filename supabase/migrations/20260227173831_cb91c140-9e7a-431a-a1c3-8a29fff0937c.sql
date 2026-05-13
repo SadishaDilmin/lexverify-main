@@ -1,0 +1,1 @@
+ALTER TABLE public.ai_reports ADD COLUMN client_report text;

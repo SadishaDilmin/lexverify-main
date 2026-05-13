@@ -1,0 +1,1 @@
+DROP POLICY "System can insert credits" ON public.user_credits;

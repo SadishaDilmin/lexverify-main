@@ -1,0 +1,1 @@
+UPDATE knowledge_chunks SET embedding = NULL WHERE id IN ('d99f947f-f1f0-4ba6-8bf9-8363230e03a7', 'd77f6b81-05dc-4a81-99c0-071929e9b9de')

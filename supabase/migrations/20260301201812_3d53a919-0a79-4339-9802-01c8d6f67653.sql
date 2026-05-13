@@ -1,0 +1,1 @@
+ALTER TABLE public.case_parties ADD COLUMN IF NOT EXISTS buyer_type text DEFAULT 'standard';

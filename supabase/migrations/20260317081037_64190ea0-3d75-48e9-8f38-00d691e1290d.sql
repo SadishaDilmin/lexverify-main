@@ -1,0 +1,1 @@
+DROP POLICY "Deny anonymous select on cases" ON public.cases;

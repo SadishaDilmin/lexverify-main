@@ -1,0 +1,2 @@
+ALTER TABLE public.cases DROP CONSTRAINT cases_tenure_check;
+ALTER TABLE public.cases ADD CONSTRAINT cases_tenure_check CHECK (tenure = ANY (ARRAY['Freehold'::text, 'Leasehold'::text, 'Commonhold'::text, 'Unknown'::text]));

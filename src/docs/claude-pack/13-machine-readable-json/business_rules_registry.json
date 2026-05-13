@@ -1,0 +1,32 @@
+{
+  "policy_thresholds": [
+    {"key": "thirdPartyMaterialityThreshold", "type": "number", "unit": "GBP", "description": "Min amount for third-party contribution to be material", "configurable": true},
+    {"key": "spouseFundsAlwaysTriggerLender", "type": "boolean", "description": "Spouse funds on sole-name purchase triggers lender consideration", "configurable": true},
+    {"key": "screenshotsAcceptableAsPrimary", "type": "boolean", "description": "Whether screenshots accepted as primary evidence", "configurable": true},
+    {"key": "fundingGapBlockingThreshold", "type": "number", "unit": "GBP", "description": "Min funding gap to block readiness", "configurable": true},
+    {"key": "unexplainedCreditMlroThreshold", "type": "number", "unit": "GBP", "description": "Unexplained credit amount triggering MLRO", "configurable": true},
+    {"key": "contradictionBlockingCount", "type": "number", "description": "Number of material contradictions blocking readiness", "configurable": true},
+    {"key": "overreachSofteningLevel", "type": "enum", "values": ["strict","moderate","permissive"], "description": "How aggressively to soften overconfident assertions", "configurable": true},
+    {"key": "companyDirectorFundsAlwaysTriggerLender", "type": "boolean", "description": "Company purchaser + director funds triggers lender", "configurable": true},
+    {"key": "beneficialInterestTriggerLender", "type": "boolean", "description": "Beneficial interest from funding triggers lender", "configurable": true},
+    {"key": "undeclaredGiftMaterialityThreshold", "type": "number", "unit": "GBP", "description": "Min undeclared gift to be material", "configurable": true}
+  ],
+  "finding_categories": [
+    "unexplained_credit", "third_party_contribution", "gift_declaration",
+    "funding_gap", "identity_verification", "source_of_funds",
+    "source_of_wealth", "deposit_structure", "mortgage_details",
+    "velocity_of_funds", "sanctions_pep", "linked_transactions",
+    "document_quality", "contradiction", "beneficial_interest"
+  ],
+  "document_classifications": [
+    "Bank Statement", "Payslip", "P60 / P45", "Tax Return / SA302",
+    "Gift Letter / Declaration", "Mortgage Offer / Agreement in Principle",
+    "ID Document (Passport / Driving Licence)", "Proof of Address",
+    "Open Banking Report", "Savings / ISA Statement", "Pension Statement",
+    "Investment / Share Certificate", "Business Accounts / Company Financials",
+    "Tenancy Agreement / Rental Income", "Inheritance / Probate Documentation",
+    "Compensation / Settlement Agreement", "Insurance Policy", "Utility Bill",
+    "Council Tax Bill", "Purchase Instruction Form", "Solicitor Completion Statement",
+    "Property Valuation", "Other / Unknown"
+  ]
+}
